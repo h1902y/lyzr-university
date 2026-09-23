@@ -1,0 +1,30 @@
+{% comment %}
+  This is the product catalog page that shows a list of all your products, and
+  lets you search and filter by category.
+{% endcomment %}
+
+<main class="collections" id="main-content" role="main">
+  <div class="collections__container">
+    <h2 class="collections__heading">
+      {{ 'liquid.views.collections_landing_page.header_products' | translate }}
+    </h2>
+    {% section 'collections' %}
+  </div>
+  {{ content_for_page }}
+</main>
+
+{% schema %}
+{
+  "sections":{
+    "options":[
+      "course_cards",
+      "call_to_action",
+      "countdown",
+      "frequently_asked_questions",
+      "rich_text",
+      "video"
+    ],
+    "defaults":[]
+  }
+}
+{% endschema %}

@@ -1,0 +1,114 @@
+// Countdown Timer
+// ======================================
+
+.countdown {
+
+  &.section__column-layout__one-column {
+    @include screen-lg-min {
+      li {
+        &:not(:first-child) {
+          border-left: 0;
+        }
+      }
+    }
+
+    .section__headings,
+    .section__body {
+      text-align: center;
+    }
+  }
+
+  &.section__column-layout__two-column {
+
+    .section__headings {
+      @include screen-lg-min {
+        text-align: left;
+      }
+
+      text-align: center;
+    }
+
+    .section__button-group {
+      @include screen-md-max {
+        @include justify-content(center);
+      }
+    }
+
+    li {
+      @include screen-lg-min {
+        min-width: 50%;
+      }
+      @include screen-xl-min {
+        min-width: 110px;
+
+        &:not(:first-child) {
+          border-left: 0;
+        }
+      }
+    }
+  }
+
+  .section__button-group {
+    @include screen-md-min {
+      padding-top: $gutter-width;
+    }
+
+    padding-top: $gutter-width / 2;
+  }
+
+  ul {
+    @include display(flex);
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    margin-left: 0;
+  }
+}
+
+.countdown__container {
+  @include make-container;
+}
+
+.countdown__wrapper {
+  @include make-row(true);
+  @include align-items(center);
+}
+
+.countdown-clock {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+
+  li {
+    @include screen-sm-min {
+      font-size: 3rem;
+    }
+    @include screen-md-min {
+      min-width: 110px;
+    }
+
+    display: inline-block;
+    min-width: 50%;
+    padding: 1.75rem 1rem;
+    border: $interface__border;
+    background: $interface__background-color;
+    font-family: $secondary-heading__font-family;
+    font-size: 2rem;
+    font-weight: $secondary-heading__font-weight;
+    line-height: 1;
+    text-align: center;
+    word-break: normal;
+
+    strong {
+      @include screen-md-min {
+        font-size: $body__font-size;
+      }
+      display: block;
+      padding: 5px 0 0;
+      font-family: $body__font-family;
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+  }
+}

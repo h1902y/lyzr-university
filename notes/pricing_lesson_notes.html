@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&family=JetBrains+Mono&display=swap');
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    line-height: 1.6;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  h1 { font-family: 'Playfair Display', serif; font-style: italic; color: #111; font-size: 32px; border-bottom: 2px solid #E05638; padding-bottom: 12px; }
+  h2 { color: #E05638; font-size: 22px; margin-top: 28px; }
+  h3 { color: #333; font-size: 18px; }
+  code, pre { font-family: 'JetBrains Mono', monospace; background: #f4f4f5; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+  pre { padding: 16px; display: block; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+  th, td { border: 1px solid #e4e4e7; padding: 10px 14px; text-align: left; }
+  th { background: #f4f4f5; color: #111; font-weight: 600; }
+  blockquote { border-left: 4px solid #E05638; margin: 20px 0; padding: 10px 20px; background: #fafafa; font-style: italic; }
+  .header-badge { background: #E05638; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; letter-spacing: 1px; display: inline-block; margin-bottom: 12px; }
+</style>
+</head>
+<body>
+  <div class="header-badge">LYZR UNIVERSITY · OFFICIAL LESSON NOTES</div>
+  <h1>💰 Lyzr Platform Pricing & Token Economics
+
+Understanding how Lyzr is priced, how Agent Processing Credits (APCs) work, and how to estimate deployment costs across SaaS and Virtual Private Cloud (VPC).
+
+---
+
+#<h1>🎯 Executive Summary & Core Philosophy
+
+The traditional way to price AI platforms is **per-agent** or with arbitrary **complexity tiers**. This approach creates friction because enterprise teams cannot accurately predict how many agents or tiers they will need prior to deployment.
+
+Lyzr solves this by pricing on **tokens**—the exact same unit used by foundation model providers (OpenAI, Anthropic, Google). 
+
+##<h1>Key Principles of Lyzr Pricing:
+* **Parity with Model Pricing:** Cost is directly tied to token usage.
+* **Zero Feature Gating:** Every customer receives access to the complete enterprise platform (RAG, Knowledge Graphs, SuperFlows, Guardrails, Memory).
+* **Parity Across Deployments:** The exact same APC unit applies whether running on Lyzr SaaS or On-Premise VPC.
+* **No Hidden Fees:** Zero markup on inference model costs.
+
+---
+
+#<h1>🧠 What is an Agent Processing Credit (APC)?
+
+An **Agent Processing Credit (APC)** is Lyzr's standardized billing unit. 
+
+$$\text{1 APC} = \text{1 Token} \approx \text{4 Characters} \approx \text{0.75 Words}$$
+
+##<h1>How a Single Execution Consumes APCs:
+$$\text{Total APCs} = \text{Input Tokens} + \text{Output Tokens}$$
+
+1. **Input Tokens:** Includes user query, agent instructions/system prompt, conversation history, retrieved Knowledge Base context, and tool definitions.
+2. **Output Tokens:** The agent's generated response, reasoning steps, and tool arguments.
+3. **Symmetric Rate:** Input and output tokens are billed at the **exact same 1:1 APC rate**, making cost forecasting straightforward.
+
+---
+
+#<h1>☁️ Deployment Models: SaaS vs. On-Premise VPC
+
+| Metric / Dimension | Lyzr SaaS (Shared Cloud) | Lyzr VPC (Private Cloud / On-Prem) |
+| :--- | :--- | :--- |
+| **Data Perimeter** | Hosted on Lyzr multi-tenant infrastructure | 100% inside your private cloud / data center |
+| **Setup Fee** | **$0** (Instant Onboarding) | One-time upfront deployment fee |
+| **Annual Subscription Base** | $100,000 / year (5 Billion APCs) | $250,000 / year (50 Billion APCs) |
+| **Volume Efficiency** | ~50 Billion APCs per $1M | ~200 Billion APCs per $1M (4x Capacity per $) |
+| **Best For** | Fast quarterly deployment & experimentation | Regulated enterprise & strict data residency |
+
+---
+
+#<h1>🔑 Model Cost & Billing Transparency (BYOK vs. Pass-Through)
+
+Lyzr never marks up foundation model inference costs. You choose how model execution is handled:
+
+##<h1>Option A: Bring Your Own Keys (BYOK)
+* You configure your own OpenAI, Anthropic, or Google API keys inside Lyzr.
+* You pay Lyzr only for APC platform credits.
+* Model providers bill your enterprise directly under your negotiated rates.
+
+##<h1>Option B: Pass-Through Provisioning
+* Lyzr provisions foundation models on your behalf.
+* Model costs pass through at **exact list price with zero markup** as an itemized line item.
+
+---
+
+#<h1>🔄 Carry-Forward & Rollover Protection
+
+To eliminate the risk of under-utilization, **unused APC subscription credits carry forward** into subsequent years. Enterprise teams can commit to long-term capacity without fearing lost budget during ramp-up phases.
+
+</body>
+</html>

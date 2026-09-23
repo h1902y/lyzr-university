@@ -1,0 +1,69 @@
+# =============================================================
+#  Lyzr University Platform — .gitignore
+#  Keeps code, docs, liquid theme, Remotion sources, notes, and PDFs.
+#  Excludes secrets, build artifacts, browser profiles, and large media.
+# =============================================================
+
+# --- Large media: video / audio ---
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.wav
+*.mp3
+*.m4a
+*.flac
+
+# --- Temporary renders & scratch working directories ---
+scratch_*/
+revamp/
+revamp_branded/
+branded_output_videos/
+
+# --- Dependencies & build artifacts ---
+node_modules/
+dist/
+out/
+build/
+.cache/
+.parcel-cache/
+*.tsbuildinfo
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# --- Browser automation profiles & runtime state ---
+.browser-profile/
+auth.json
+progress.json
+screenshots/
+*.log
+
+# --- Secrets & local environment (keep .env.example) ---
+.env
+.env.*
+!.env.example
+!.env*.example
+*token*.json
+*credential*.json
+lyzr_official_youtube_token.json
+
+# --- Archives ---
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.rar
+
+# --- OS / editor files ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/

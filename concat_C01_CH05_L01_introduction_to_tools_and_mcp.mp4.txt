@@ -1,0 +1,3 @@
+file '/Users/hkc/Documents/lyzr/university/remotion-branding/public/intro_bumper.mp4'
+file '/Users/hkc/Documents/lyzr/university/revamp/C01_CH05_L01_introduction_to_tools_and_mcp.mp4'
+file '/Users/hkc/Documents/lyzr/university/remotion-branding/public/outro_bumper.mp4'

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lyzr for Developers — landing images</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ---------- 01: Hero ---------- */
+    .hero {
+      display: grid; grid-template-columns: 1fr 1fr; height: 100%;
+    }
+    .hero__copy {
+      padding: 110px 80px 110px 120px;
+      display: flex; flex-direction: column; justify-content: center; gap: 28px;
+    }
+    .hero__headline { font-size: 88px; max-width: 640px; }
+    .hero__sub { font-size: 24px; max-width: 560px; color: #3a3a3a; }
+    .hero__art { position: relative; overflow: hidden; }
+    /* Code-texture overlay on hero — very subtle */
+    .hero__code {
+      position: absolute; inset: 0;
+      font-family: var(--font-mono); font-size: 18px; line-height: 1.5;
+      color: var(--congo-brown); opacity: 0.10;
+      padding: 60px 60px 60px 80px;
+      white-space: pre; overflow: hidden;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* ---------- 02: Capstones grid ---------- */
+    .cap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 24px;
+      padding: 60px;
+      background: var(--white-amber);
+    }
+    .cap__cell {
+      position: relative;
+      background: var(--cream-skin);
+      padding: 56px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+    .cap__cell:nth-child(odd) { background: var(--cream-skin); }
+    .cap__cell:nth-child(even) { background: #ECE2DA; }
+    .cap__num {
+      font-family: var(--font-mono); font-size: 14px;
+      letter-spacing: 0.22em; color: var(--ferra); text-transform: uppercase;
+    }
+    .cap__title {
+      font-family: var(--font-display); font-weight: 600;
+      font-size: 42px; color: var(--lyzr-black); line-height: 1.1;
+      max-width: 80%;
+    }
+    .cap__icon {
+      position: absolute; right: 40px; bottom: 40px;
+      width: 96px; height: 96px; color: var(--congo-brown);
+    }
+    .cap__icon svg { width: 100%; height: 100%; }
+
+    /* ---------- 03: Curriculum schematic ---------- */
+    .curr {
+      background: var(--white-amber);
+      display: flex; flex-direction: column;
+      padding: 110px 100px;
+      position: relative;
+      gap: 60px;
+    }
+    .curr__row {
+      display: flex; align-items: center; gap: 28px;
+    }
+    .curr__label {
+      font-family: var(--font-display); font-weight: 600;
+      font-size: 28px; color: var(--lyzr-black); width: 240px;
+    }
+    .curr__dots {
+      display: flex; align-items: center; gap: 18px; flex: 1;
+    }
+    .curr__dot {
+      width: 26px; height: 26px; border-radius: 999px;
+      background: var(--cream-skin);
+    }
+    .curr__dot--cap {
+      width: 56px; height: 56px;
+      background: var(--ferra);
+      margin-left: 16px;
+    }
+    .curr__corner {
+      position: absolute; right: 0; bottom: 0; width: 380px; height: 280px;
+      pointer-events: none; overflow: hidden;
+    }
+
+    /* ---------- 04: What's different ---------- */
+    .diff {
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; height: 100%;
+    }
+    .diff__side {
+      position: relative; height: 100%;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 60px;
+    }
+    .diff__side--chaos { background: var(--white-amber); }
+    .diff__side--order { background: var(--cream-skin); }
+    .diff__caption {
+      position: absolute; top: 60px; left: 80px;
+      font-family: var(--font-mono); font-size: 14px;
+      letter-spacing: 0.22em; color: var(--ferra); text-transform: uppercase;
+    }
+    .diff__title {
+      position: absolute; bottom: 60px; left: 80px; right: 80px;
+      font-family: var(--font-display); font-weight: 600;
+      font-size: 36px; color: var(--lyzr-black); line-height: 1.15;
+    }
+
+    /* ---------- 05: How it works ---------- */
+    .how {
+      background: var(--white-amber);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 56px; padding: 80px;
+      position: relative;
+    }
+    .how__row {
+      display: flex; align-items: center; gap: 80px;
+    }
+    .how__node {
+      display: flex; flex-direction: column; align-items: center; gap: 18px;
+    }
+    .how__icon-wrap {
+      width: 140px; height: 140px; border-radius: 16px;
+      background: var(--cream-skin);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--congo-brown);
+    }
+    .how__icon-wrap--ferra { background: var(--ferra); color: var(--white-amber); }
+    .how__icon-wrap svg { width: 64px; height: 64px; }
+    .how__node-label {
+      font-family: var(--font-display); font-weight: 600;
+      font-size: 24px; color: var(--lyzr-black);
+    }
+    .how__arrow {
+      width: 64px; height: 2px; background: var(--ferra);
+      position: relative;
+    }
+    .how__arrow::after {
+      content: ""; position: absolute; right: -2px; top: -6px;
+      border-left: 10px solid var(--ferra);
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+    }
+    .how__title {
+      font-family: var(--font-display); font-weight: 600;
+      font-size: 56px; color: var(--lyzr-black); text-align: center;
+      max-width: 720px; line-height: 1.1;
+    }
+    .how__sub {
+      font-family: var(--font-body); font-size: 22px;
+      color: var(--congo-brown); text-align: center; max-width: 640px;
+    }
+
+    /* ---------- 06: Closing banner ---------- */
+    .close {
+      position: relative; overflow: hidden;
+    }
+    .close__band {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      height: 33%; background: var(--ferra);
+    }
+    .close__copy {
+      position: absolute; left: 140px; top: 50%; transform: translateY(-90%);
+      max-width: 1100px;
+    }
+    .close__head {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: 96px; line-height: 1.05; color: var(--lyzr-black);
+    }
+    .close__sub {
+      font-family: var(--font-body); font-size: 26px;
+      color: var(--congo-brown); margin-top: 28px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1 class="page-title">Lyzr for Developers — landing images</h1>
+    <p class="page-subtitle">Open in browser. Maximise window. Screenshot each frame using Cmd+Shift+4 (Mac) or Win+Shift+S (Windows). Crop to the frame edge.</p>
+
+    <!-- ============================================================
+         01 — HERO BANNER (16:9 · 1600×900)
+         ============================================================ -->
+    <div>
+      <div class="frame-label">01 · Hero banner · 1600×900 · SDK course landing — top of page</div>
+      <div class="frame frame--16x9 hero">
+        <div class="hero__copy">
+          <div class="eyebrow">Lyzr Academy · SDK Track</div>
+          <h1 class="headline hero__headline">Twenty-one lessons.<br>Four projects.<br>Zero hand-waving.</h1>
+          <div class="divider"></div>
+          <p class="subhead hero__sub">Build production-shaped AI agents with the Lyzr Agent Development Kit — the Python module we use to ship agents ourselves. Free. Self-paced.</p>
+        </div>
+        <div class="hero__art">
+          <pre class="hero__code">from lyzr import Agent
+
+agent = Agent(
+  name="researcher",
+  llm="openai/gpt-5",
+  memory=True,
+  tools=[web_search, calculator],
+)
+
+response = agent.run(
+  "what changed in agent
+   building this quarter?"
+)
+
+for chunk in response.stream():
+  print(chunk, end="")
+</pre>
+          <div class="elevate">
+            <svg viewBox="0 0 800 900" preserveAspectRatio="xMidYMid slice">
+              <defs><clipPath id="cl-sdkhero"><rect width="800" height="900"/></clipPath></defs>
+              <g clip-path="url(#cl-sdkhero)">
+                <g transform="rotate(-28 400 450)">
+                  <rect x="-200" y="60"  width="1600" height="180" fill="#DEC6B6" opacity="0.22"/>
+                  <rect x="-200" y="180" width="1600" height="160" fill="#C6A89A" opacity="0.32"/>
+                  <rect x="-200" y="280" width="1600" height="150" fill="#9E7A73" opacity="0.46"/>
+                  <rect x="-200" y="380" width="1600" height="140" fill="#7F5D5A" opacity="0.62"/>
+                  <rect x="-200" y="470" width="1600" height="130" fill="#4A2F2D" opacity="0.82"/>
+                </g>
+                <circle cx="660" cy="740" r="130" fill="#71514F" opacity="0.32"/>
+                <circle cx="660" cy="740" r="80"  fill="#4A2F2D" opacity="0.55"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         02 — CAPSTONES GRID (16:9 · 1600×900)
+         ============================================================ -->
+    <div>
+      <div class="frame-label">02 · Capstones grid · 1600×900 · "What you'll build" section</div>
+      <div class="frame frame--16x9 cap">
+
+        <div class="cap__cell">
+          <div>
+            <div class="cap__num">Capstone 01 · Module Foundations</div>
+            <div style="height:24px;"></div>
+            <div class="cap__title">Multi-provider chatbot</div>
+          </div>
+          <div class="cap__icon">
+            <!-- Lucide: messages-square -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
+          </div>
+        </div>
+
+        <div class="cap__cell">
+          <div>
+            <div class="cap__num">Capstone 02 · Module Multimodal</div>
+            <div style="height:24px;"></div>
+            <div class="cap__title">Creative assistant</div>
+          </div>
+          <div class="cap__icon">
+            <!-- Lucide: image -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+          </div>
+        </div>
+
+        <div class="cap__cell">
+          <div>
+            <div class="cap__num">Capstone 03 · Module Knowledge &amp; Memory</div>
+            <div style="height:24px;"></div>
+            <div class="cap__title">Document Q&amp;A bot</div>
+          </div>
+          <div class="cap__icon">
+            <!-- Lucide: database -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/></svg>
+          </div>
+        </div>
+
+        <div class="cap__cell">
+          <div>
+            <div class="cap__num">Capstone 04 · Module Tools &amp; Workflows</div>
+            <div style="height:24px;"></div>
+            <div class="cap__title">Workflow agent</div>
+          </div>
+          <div class="cap__icon">
+            <!-- Lucide: workflow -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ============================================================
+         03 — CURRICULUM SCHEMATIC (square · 1000×1000)
+         ============================================================ -->
+    <div>
+      <div class="frame-label">03 · Curriculum schematic · 1000×1000 · "The curriculum" section</div>
+      <div class="frame frame--square curr">
+        <div class="curr__row">
+          <div class="curr__label">Foundations</div>
+          <div class="curr__dots">
+            <div class="curr__dot"></div><div class="curr__dot"></div><div class="curr__dot"></div>
+            <div class="curr__dot"></div><div class="curr__dot"></div>
+            <div class="curr__dot curr__dot--cap"></div>
+          </div>
+        </div>
+        <div class="curr__row">
+          <div class="curr__label">Multimodal</div>
+          <div class="curr__dots">
+            <div class="curr__dot"></div><div class="curr__dot"></div>
+            <div class="curr__dot curr__dot--cap"></div>
+          </div>
+        </div>
+        <div class="curr__row">
+          <div class="curr__label">Knowledge<br>&amp; Memory</div>
+          <div class="curr__dots">
+            <div class="curr__dot"></div><div class="curr__dot"></div><div class="curr__dot"></div>
+            <div class="curr__dot"></div><div class="curr__dot"></div>
+            <div class="curr__dot curr__dot--cap"></div>
+          </div>
+        </div>
+        <div class="curr__row">
+          <div class="curr__label">Tools<br>&amp; Workflows</div>
+          <div class="curr__dots">
+            <div class="curr__dot"></div><div class="curr__dot"></div><div class="curr__dot"></div>
+            <div class="curr__dot"></div><div class="curr__dot"></div>
+            <div class="curr__dot curr__dot--cap"></div>
+          </div>
+        </div>
+
+        <div class="curr__corner">
+          <svg viewBox="0 0 380 280" preserveAspectRatio="xMaxYMax slice">
+            <g transform="rotate(-30 190 140)">
+              <rect x="-100" y="60"  width="800" height="40" fill="#DEC6B6" opacity="0.30"/>
+              <rect x="-100" y="110" width="800" height="36" fill="#C6A89A" opacity="0.42"/>
+              <rect x="-100" y="156" width="800" height="32" fill="#9E7A73" opacity="0.55"/>
+              <rect x="-100" y="200" width="800" height="28" fill="#71514F" opacity="0.72"/>
+              <rect x="-100" y="236" width="800" height="24" fill="#4A2F2D" opacity="0.85"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         04 — WHAT'S DIFFERENT (16:9 · 1600×900)
+         ============================================================ -->
+    <div>
+      <div class="frame-label">04 · What's different · 1600×900 · Differentiator section</div>
+      <div class="frame frame--16x9 diff">
+
+        <div class="diff__side diff__side--chaos">
+          <div class="diff__caption">The usual way</div>
+          <svg viewBox="0 0 600 600" style="width:520px;height:520px;">
+            <!-- Tangled lines suggesting glue/stitched libs -->
+            <g stroke="#71514F" stroke-width="1.4" fill="none" stroke-linecap="round" opacity="0.55">
+              <path d="M60 120 Q 200 80, 300 200 T 540 180"/>
+              <path d="M80 220 Q 260 320, 400 260 T 540 360"/>
+              <path d="M60 320 Q 180 280, 320 380 T 540 420"/>
+              <path d="M80 420 Q 240 480, 380 400 T 540 500"/>
+              <path d="M100 80 Q 220 200, 360 140 T 540 80"/>
+              <path d="M120 500 Q 240 420, 360 520 T 540 460"/>
+              <path d="M60 200 Q 240 360, 400 200 T 540 280"/>
+              <path d="M100 360 Q 280 220, 420 320 T 540 200"/>
+            </g>
+            <!-- Small dots at intersections -->
+            <g fill="#4A2F2D" opacity="0.7">
+              <circle cx="220" cy="180" r="5"/>
+              <circle cx="320" cy="280" r="5"/>
+              <circle cx="380" cy="360" r="5"/>
+              <circle cx="260" cy="420" r="5"/>
+              <circle cx="420" cy="220" r="5"/>
+            </g>
+          </svg>
+          <div class="diff__title">Three libraries.<br>Two providers.<br>A weekend of glue.</div>
+        </div>
+
+        <div class="diff__side diff__side--order">
+          <div class="diff__caption">The Lyzr way</div>
+          <svg viewBox="0 0 600 600" style="width:520px;height:520px;">
+            <g transform="rotate(-22 300 300)">
+              <rect x="-100" y="180" width="900" height="44" fill="#DEC6B6" opacity="0.55"/>
+              <rect x="-100" y="240" width="900" height="40" fill="#C6A89A" opacity="0.70"/>
+              <rect x="-100" y="296" width="900" height="36" fill="#9E7A73" opacity="0.80"/>
+              <rect x="-100" y="348" width="900" height="32" fill="#71514F" opacity="0.92"/>
+              <rect x="-100" y="396" width="900" height="28" fill="#4A2F2D" opacity="1.0"/>
+            </g>
+            <circle cx="300" cy="300" r="56" fill="#4A2F2D" opacity="0.85"/>
+            <circle cx="300" cy="300" r="22" fill="#F3EFEA"/>
+          </svg>
+          <div class="diff__title">One module.<br>One coherent surface.<br>Build first, ship second.</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ============================================================
+         05 — HOW IT WORKS (square · 1000×1000)
+         ============================================================ -->
+    <div>
+      <div class="frame-label">05 · How it works · 1000×1000 · "How it works" section</div>
+      <div class="frame frame--square how">
+        <div class="how__title">Enroll. Learn. Ship. Certify.</div>
+
+        <div class="how__row">
+          <div class="how__node">
+            <div class="how__icon-wrap">
+              <!-- Lucide: log-in -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" x2="3" y1="12" y2="12"/></svg>
+            </div>
+            <div class="how__node-label">Enroll</div>
+          </div>
+
+          <div class="how__arrow"></div>
+
+          <div class="how__node">
+            <div class="how__icon-wrap">
+              <!-- Lucide: book-open -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <div class="how__node-label">Learn</div>
+          </div>
+
+          <div class="how__arrow"></div>
+
+          <div class="how__node">
+            <div class="how__icon-wrap">
+              <!-- Lucide: rocket -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+            </div>
+            <div class="how__node-label">Ship</div>
+          </div>
+
+          <div class="how__arrow"></div>
+
+          <div class="how__node">
+            <div class="how__icon-wrap how__icon-wrap--ferra">
+              <!-- Lucide: award -->
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+            <div class="how__node-label">Certify</div>
+          </div>
+        </div>
+
+        <div class="how__sub">21 lessons · 4 capstones · Thinkific-hosted · Free, forever</div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         06 — CLOSING BANNER (21:9 · 2100×900)
+         ============================================================ -->
+    <div>
+      <div class="frame-label">06 · Closing banner · 2100×900 · Final CTA</div>
+      <div class="frame frame--21x9 close">
+        <div class="elevate">
+          <svg viewBox="0 0 2100 900" preserveAspectRatio="xMidYMid slice">
+            <g transform="rotate(-22 1700 200)">
+              <rect x="800"  y="40"  width="1600" height="120" fill="#DEC6B6" opacity="0.22"/>
+              <rect x="800"  y="170" width="1600" height="110" fill="#C6A89A" opacity="0.32"/>
+              <rect x="800"  y="290" width="1600" height="100" fill="#9E7A73" opacity="0.46"/>
+              <rect x="800"  y="400" width="1600" height="90"  fill="#7F5D5A" opacity="0.62"/>
+              <rect x="800"  y="500" width="1600" height="80"  fill="#4A2F2D" opacity="0.82"/>
+            </g>
+          </svg>
+        </div>
+        <div class="close__band"></div>
+        <div class="close__copy">
+          <div class="eyebrow" style="color:var(--ferra); margin-bottom: 28px;">21 lessons · 4 projects · Free</div>
+          <div class="close__head">Enroll free.<br>Start lesson 01<br>today.</div>
+          <div class="close__sub">Lyzr for Developers — the SDK Track →</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

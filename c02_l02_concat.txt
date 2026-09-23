@@ -1,0 +1,3 @@
+file '/Users/hkc/Documents/lyzr/university/remotion-branding/public/intro_bumper.mp4'
+file '/Users/hkc/Documents/lyzr/university/revamp/C02_CH01_L02_build_choose_type_and_create_agent.mp4'
+file '/Users/hkc/Documents/lyzr/university/remotion-branding/public/outro_bumper.mp4'

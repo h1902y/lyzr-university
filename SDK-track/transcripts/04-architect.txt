@@ -1,0 +1,2 @@
+So, as I mentioned, Architect is the most sophisticated layer where you can just put out your thoughts as to what type of application you want to build. The Architect puts together a detailed document explaining what it is going to build, the type of UI that it is going to have, as well as the different agents that it is going to create in order to power the front end.
+Once you are happy with the plan, you can proceed, and it will actually create the agents in Studio. Once the agents are created, it will create a front end that will be powered by this agentic backend

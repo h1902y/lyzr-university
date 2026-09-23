@@ -1,0 +1,43 @@
+{% comment %}
+  Lyzr University — "Choose your track" card.
+  Audience-led + fully code-rendered (no baked-title art → no image uploads).
+  Copy + icon are keyed by category id:
+    1456222 Foundations · 1445649 Studio (business) · 1445650 ADK (developers)
+{% endcomment %}
+{% if product %}
+  {%- assign tk_title = product.name -%}
+  {%- assign tk_desc = '' -%}
+  {%- assign tk_kicker = 'Track' -%}
+  {%- assign tk_icon = 'spark' -%}
+  {%- case product.id -%}
+    {%- when 1456222 -%}
+      {%- assign tk_title = 'Foundations' -%}
+      {%- assign tk_kicker = 'Start here' -%}
+      {%- assign tk_desc = 'AI agent essentials — the shared groundwork for everyone.' -%}
+      {%- assign tk_icon = 'book' -%}
+    {%- when 1445649 -%}
+      {%- assign tk_title = 'Studio' -%}
+      {%- assign tk_kicker = 'The visual path' -%}
+      {%- assign tk_desc = 'Build agents visually in Lyzr’s AI Studio.' -%}
+      {%- assign tk_icon = 'layers' -%}
+    {%- when 1445650 -%}
+      {%- assign tk_title = 'Code' -%}
+      {%- assign tk_kicker = 'The code path' -%}
+      {%- assign tk_desc = 'Build agents in code with the Agent Development Kit (Python).' -%}
+      {%- assign tk_icon = 'code' -%}
+  {%- endcase -%}
+  <a aria-label="{{ tk_title }}" class="card card--category track-card" href="{{ product.url }}">
+    <span class="track-card__icon" aria-hidden="true">
+      {%- case tk_icon -%}
+        {%- when 'book' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        {%- when 'layers' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg>
+        {%- when 'code' -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+        {%- else -%}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/></svg>
+      {%- endcase -%}
+    </span>
+    <span class="track-card__kicker">{{ tk_kicker }}</span>
+    <span class="track-card__title">{{ tk_title }}</span>
+    {%- if tk_desc != '' -%}<span class="track-card__desc">{{ tk_desc }}</span>{%- endif -%}
+    <span class="track-card__cta">Start the track <span class="track-card__arrow">&#8594;</span></span>
+  </a>
+{% endif %}

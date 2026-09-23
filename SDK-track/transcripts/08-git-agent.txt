@@ -1,0 +1,5 @@
+One of the offerings of Lyzr which has become really famous. 
+Git Agent is a Git native multimodal AI agent harness. Here, the agent definition lies entirely in the Git repository.
+Be it the agent's role, goal, and instructions, the tools that the agent is integrated with, the model, the skills, all of it lies as files in the Git repository. The Git agent can be installed with a simple command, and then it can run this particular agent, which is present in the Git repository
+That's a brief about Lysr and the different offerings that Lysr has.
+Thank you

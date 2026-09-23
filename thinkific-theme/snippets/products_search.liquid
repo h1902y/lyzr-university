@@ -1,0 +1,34 @@
+{% comment %}
+  This is the search box and categories that appears on your course catalog pages.
+{% endcomment %}
+
+<div class="products__search">
+  <nav aria-label="{{ 'liquid.views.collections_landing_page.navigation_categories' | translate }}">
+    <ul class="products__collections-list">
+      {% for collection in site.collections %}
+        <li class="products__collections-list-item">
+          <a
+            href="{{ collection.url }}"
+            {% if page.collection.id != nil and page.collection.id == collection.id %}
+              class="active"
+              aria-current="page"
+            {% endif %}
+            id="category-name"
+          >
+            {{ collection.name }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+  <form action="{{ site.collections_url }}" method="get" id="search-form" class="products__search-form">
+    <div class="products__search-box">
+      <div class="form__search">
+        <label for="q" class="sr-only">
+          {{ 'liquid.partials.product_search.search_placeholder' | translate }}
+        </label>
+        <input type="search" id="q" name="q" placeholder="{{ 'liquid.partials.product_search.search_placeholder' | translate }}" value="{{ page.search_query }}" class="form__control form__control-search"/>
+      </div>
+    </div>
+  </form>
+</div>

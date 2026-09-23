@@ -1,0 +1,471 @@
+Course Track,Chapter,Lesson Title,Video Filename,Descript Link,Lesson Notes / Transcript
+Lyzr Foundations,Chapter 01: Lyzr Platform & Ecosystem Overview,Introduction to Lyzr Platform,C01_CH01_L01_introduction_to_lyzr_platform.mp4,https://share.descript.com/view/C01,"# Introduction to Lyzr Platform
+
+*Course Track:* Lyzr Foundations | *Chapter:* Chapter 01: Lyzr Platform & Ecosystem Overview
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Introduction to Lyzr Platform.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Foundations,Chapter 01: Lyzr Platform & Ecosystem Overview,Client Success Stories,C01_CH01_L02_client_success_stories.mp4,https://share.descript.com/view/C01,"So here is an example of how we have helped WTW put together a retirement advisory solution. Yet another example that we have is for Accenture, where we have put together a corporate venture capital function for them, and now they have Agentic OS running two hundred plus agents, multiple functions, and it has just made their life very easy Here is yet another example of how we have helped KPMG to put together their procurement lifecycle solutions"
+Lyzr Foundations,Chapter 01: Lyzr Platform & Ecosystem Overview,The Lyzr Stack and Architecture,C01_CH01_L03_the_lyzr_stack_and_architecture.mp4,https://share.descript.com/view/C01,"# The Lyzr Stack and Architecture
+
+*Course Track:* Lyzr Foundations | *Chapter:* Chapter 01: Lyzr Platform & Ecosystem Overview
+
+## Lesson Overview & Objectives
+- Understand the core concepts of The Lyzr Stack and Architecture.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Foundations,Chapter 02: Architect & Studio Overview,Architect Overview,C01_CH02_L01_architect_overview.mp4,https://share.descript.com/view/C01,"# Architect Overview
+
+*Course Track:* Lyzr Foundations | *Chapter:* Chapter 02: Architect & Studio Overview
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Architect Overview.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Foundations,Chapter 02: Architect & Studio Overview,Studio Overview,C01_CH02_L02_studio_overview.mp4,https://share.descript.com/view/C01,"# Studio Overview
+
+*Course Track:* Lyzr Foundations | *Chapter:* Chapter 02: Architect & Studio Overview
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Studio Overview.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Foundations,Chapter 02: Architect & Studio Overview,Lyzr Capabilities,C01_CH02_L03_lyzr_capabilities.mp4,https://share.descript.com/view/C01,"Everything that you need to build agentic AI at scale is supported by Leiser. You can put together a simple agent, or you can make it a complex workflow, be it a managerial workflow or a predetermined workflow. Also, you can build voice agents. You can integrate your agents with knowledge base. You can have guardrails associated with your agents.
+you can put in memory models, not just the commercial models, but also your pre-trained models can be integrated with the agents. Leiser also comes in with a very sophisticated testing framework for evals
+So without Lyzr, you have multiple solutions which solves one part of this puzzle. But with Lyzr, you get all the offerings at one place. You have support across different models, be it any commercial model, or you can also bring in your own model. You can integrate with multiple third-party tools, MCP servers, and skills.
+You can put together RAG in multiple formats. It could be a simple RAG, or it could be a knowledge graph. Also, it has very rich support for guardrails, wherein you can put together any compliance policy, and it's just supported seamlessly by Lyzr   This is yet another way in which you can see how Lyzr has been put together. The bottommost layer specifies the infra layer, and you can see that multiple cloud providers are supported by Lyzr. it also supports bare metal and virtual machine, so it can be deployed seamlessly on on-prem infra as well.
+Then it supports multiple models. It could be commercial models, or it could also be your pre-trained models, which you can host at different locations. And then on top of these two layers is where your agent functions. You build your agent, integrate with multiple different stuffs like RAG, tools, skills, have hallucination manager in place, have agentic app builder, tool integrator, memory manager.
+All of this has been put together as one solution by Lyzr
+Let us take a little closer look at how your agent is functioning behind the scene. So if you look at it, whatever data comes in from the left is first filtered by your responsible and safe AI layer. If there is any PII data, it can be redacted. There is a toxicity check, a prompt injection check, and an agent entitlement.
+Only after these checks, the input goes to the agent CPU. The agent then interacts with the LLM, with the RAG, with the tools, and whatever output is generated is again sent to the hallucination manager and responsible safe AI layer. After that, the loop continues, uh, to the feedback, back to the agent till you get a satisfactory final result.
+And only when you have the final output that it goes into the output processing layer. That means it is going to multiple places like in the memory, so that your further conversations have context of the interactions that you have had with the agent, and then to the agent eval for testing purposes and to the agent REST for observability.
+And once the output has made to these places, it is given out to you as a user"
+Lyzr Foundations,Chapter 03: Autonomous Agents,Computer Agent,C01_CH03_L01_computer_agent.mp4,https://share.descript.com/view/C01,"So now that we have seen the lighter offerings in the form of Studio and Architect, we also have one other solution for you, which is Computer Agent. As a computed agent, you can bring your own open gap, that is your agent present in the form of files on GitHub or on GitLab, and then you can bring your own harness, you can bring your own runtime.
+That is where the agent is supposed to run. You can bring your own memory, and then you can have this agent put out the output to any of the communication channels. So Computer Agent is yet another powerful framework that we have brought to the world And last but not the least, we have Git agent."
+Lyzr Foundations,Chapter 03: Autonomous Agents,Git Agent,C01_CH03_L02_git_agent.mp4,https://share.descript.com/view/C01,"One of the offerings of Lyzr which has become really famous. 
+Git Agent is a Git native multimodal AI agent harness. Here, the agent definition lies entirely in the Git repository.
+Be it the agent's role, goal, and instructions, the tools that the agent is integrated with, the model, the skills, all of it lies as files in the Git repository. The Git agent can be installed with a simple command, and then it can run this particular agent, which is present in the Git repository
+That's a brief about Lysr and the different offerings that Lysr has.
+Thank you"
+Lyzr Foundations,Chapter 04: Knowledge Bases & Parsing,Designing Knowledge Bases,C01_CH04_L01_designing_knowledge_bases.mp4,https://share.descript.com/view/C01,"# Designing Knowledge Bases
+
+*Course Track:* Lyzr Foundations | *Chapter:* Chapter 04: Knowledge Bases & Parsing
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Designing Knowledge Bases.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Foundations,Chapter 04: Knowledge Bases & Parsing,PDF Parsing Strategies,C01_CH04_L02_pdf_parsing_strategies.mp4,https://share.descript.com/view/C01,"# PDF Parsing Strategies
+
+*Course Track:* Lyzr Foundations | *Chapter:* Chapter 04: Knowledge Bases & Parsing
+
+## Lesson Overview & Objectives
+- Understand the core concepts of PDF Parsing Strategies.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Foundations,Chapter 04: Knowledge Bases & Parsing,Retrieval Algorithms,C01_CH04_L03_retrieval_algorithms.mp4,https://share.descript.com/view/C01,"# Retrieval Algorithms
+
+*Course Track:* Lyzr Foundations | *Chapter:* Chapter 04: Knowledge Bases & Parsing
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Retrieval Algorithms.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Foundations,Chapter 04: Knowledge Bases & Parsing,Wiring KB to Agent,C01_CH04_L04_wiring_kb_to_agent.mp4,https://share.descript.com/view/C01,"# Wiring KB to Agent
+
+*Course Track:* Lyzr Foundations | *Chapter:* Chapter 04: Knowledge Bases & Parsing
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Wiring KB to Agent.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Foundations,Chapter 05: Tools & MCP Servers,Introduction to Tools and MCP,C01_CH05_L01_introduction_to_tools_and_mcp.mp4,https://share.descript.com/view/C01,"# Introduction to Tools and MCP
+
+*Course Track:* Lyzr Foundations | *Chapter:* Chapter 05: Tools & MCP Servers
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Introduction to Tools and MCP.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Foundations,Chapter 05: Tools & MCP Servers,Configuring Tavily MCP Server,C01_CH05_L02_configuring_tavily_mcp_server.mp4,https://share.descript.com/view/C01,"# Configuring Tavily MCP Server
+
+*Course Track:* Lyzr Foundations | *Chapter:* Chapter 05: Tools & MCP Servers
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Configuring Tavily MCP Server.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Foundations,Chapter 05: Tools & MCP Servers,Integrating Gmail & Email Tools,C01_CH05_L03_integrating_gmail_email_tools.mp4,https://share.descript.com/view/C01,"# Integrating Gmail & Email Tools
+
+*Course Track:* Lyzr Foundations | *Chapter:* Chapter 05: Tools & MCP Servers
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Integrating Gmail & Email Tools.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Platform Studio,Chapter 01: Agent Studio Lifecycle,Welcome to Agent Studio & Lifecycle,C02_CH01_L01_welcome_to_agent_studio_lifecycle.mp4,https://share.descript.com/view/C02,"# Welcome to Agent Studio & Lifecycle
+
+*Course Track:* Lyzr Platform Studio | *Chapter:* Chapter 01: Agent Studio Lifecycle
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Welcome to Agent Studio & Lifecycle.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Platform Studio,Chapter 01: Agent Studio Lifecycle,Build: Choose Type and Create Agent,C02_CH01_L02_build_choose_type_and_create_agent.mp4,https://share.descript.com/view/C02,"# Build: Choose Type and Create Agent
+
+*Course Track:* Lyzr Platform Studio | *Chapter:* Chapter 01: Agent Studio Lifecycle
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Build: Choose Type and Create Agent.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Platform Studio,Chapter 01: Agent Studio Lifecycle,"Equip: Model, Tool, Memory, Knowledge",C02_CH01_L03_equip_model_tool_memory_knowledge.mp4,https://share.descript.com/view/C02,"# Equip: Model, Tool, Memory, Knowledge
+
+*Course Track:* Lyzr Platform Studio | *Chapter:* Chapter 01: Agent Studio Lifecycle
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Equip: Model, Tool, Memory, Knowledge.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Platform Studio,Chapter 01: Agent Studio Lifecycle,What Agent Type Should I Build?,C02_CH01_L04_what_agent_type_should_i_build.mp4,https://share.descript.com/view/C02,"# What Agent Type Should I Build?
+
+*Course Track:* Lyzr Platform Studio | *Chapter:* Chapter 01: Agent Studio Lifecycle
+
+## Lesson Overview & Objectives
+- Understand the core concepts of What Agent Type Should I Build?.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Platform Studio,Chapter 02: Orchestration & Swarms,Lyzr Manager Orchestration,C02_CH02_L01_lyzr_manager_orchestration.mp4,https://share.descript.com/view/C02,"# Lyzr Manager Orchestration
+
+*Course Track:* Lyzr Platform Studio | *Chapter:* Chapter 02: Orchestration & Swarms
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Lyzr Manager Orchestration.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Platform Studio,Chapter 02: Orchestration & Swarms,SuperFlow Basic & Dynamic Flows,C02_CH02_L02_superflow_basic_dynamic_flows.mp4,https://share.descript.com/view/C02,"# SuperFlow Basic & Dynamic Flows
+
+*Course Track:* Lyzr Platform Studio | *Chapter:* Chapter 02: Orchestration & Swarms
+
+## Lesson Overview & Objectives
+- Understand the core concepts of SuperFlow Basic & Dynamic Flows.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Platform Studio,Chapter 02: Orchestration & Swarms,SuperFlow Advanced Routing & Loops,C02_CH02_L03_superflow_advanced_routing_loops.mp4,https://share.descript.com/view/C02,"# SuperFlow Advanced Routing & Loops
+
+*Course Track:* Lyzr Platform Studio | *Chapter:* Chapter 02: Orchestration & Swarms
+
+## Lesson Overview & Objectives
+- Understand the core concepts of SuperFlow Advanced Routing & Loops.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Platform Studio,Chapter 03: Knowledge Base Engineering,RAG in Studio,C02_CH03_L01_rag_in_studio.mp4,https://share.descript.com/view/C02,"# RAG in Studio
+
+*Lesson 01 · Knowledge & RAG*
+
+## What you'll learn
+
+- Explain why a plain model answers business-specific questions confidently but wrongly, and what grounding fixes
+- Describe the retrieve-then-answer loop that turns an attached knowledge base into a sourced answer
+- Read a RAG retrieval step inside the trace timeline to verify exactly which content an answer came from
+- Recognise how an agent draws from multiple attached knowledge bases based on what the question needs
+
+## Key concepts
+
+**A model only knows what it was trained on — it doesn't know your prices, your policies, or your product.** Ask a plain model about your business and it will answer with total confidence and be completely wrong. The entire Knowledge track exists to fix that single gap: grounding the agent in your own knowledge instead of its training data.
+
+**RAG — retrieval-augmented generation — means the agent retrieves the most relevant pieces of your knowledge before it writes, then answers from those.** When the Northwind support agent is asked for the laptop warranty policy, it pulls the exact terms from the attached support docs and answers from them: a one-year limited manufacturer warranty covering defects in materials and workmanship, excluding accidental, liquid, and wear damage. Every bit of that came straight from the documents, not the model's imagination.
+
+**A trace lets you prove the answer came from your documents, not from guesswork.** Open the traces for a message, go into the trace timeline, and click the RAG retrieval step — you see exactly what the agent searched for and the content it pulled back from the knowledge base to build the answer. That verifiability is what separates an agent that genuinely knows your business from one that just sounds like it does.
+
+**Attach more than one knowledge base and the agent pulls from whichever ones are relevant to the question.** You're not locked to a single source — Studio routes the retrieval to the knowledge that actually matters for each query, so a support agent and a policy library can coexist behind one conversation.
+
+## In Studio
+
+Primary surface: **Knowledge → Knowledge Base**, with verification in the agent's **Traces**.
+
+This lesson leans on a knowledge base built earlier (you build one from scratch in the next lesson), so here the focus is seeing RAG work and proving it:
+
+1. Open the agent that already has a knowledge base attached — here, the **Northwind support agent** with the support docs attached as its knowledge base.
+2. In the chat, ask something specific to the business, e.g. *""What's the warranty policy for laptops at Northwind?""*
+3. Read the answer — it returns the warranty terms drawn straight from the documents, and even offers to pull the terms for monitors or accessories.
+4. Open **Traces** for that message and go into the **trace timeline**.
+5. Click the **RAG retrieval** step to see exactly what the agent searched for and the content it pulled back from the knowledge base to build the answer.
+6. (When applicable) attach additional knowledge bases to the agent — it will retrieve from whichever ones are relevant to each question.
+
+## Try this
+
+1. Take an agent with a knowledge base attached and ask it a question whose answer lives only in those documents. Then ask the same model the question with no knowledge base — compare how confident, and how wrong, the ungrounded answer is.
+2. Open the **Traces** for that grounded answer, find the **RAG retrieval** step in the trace timeline, and read the retrieved chunks. Confirm that every claim in the answer traces back to a pulled passage — and flag any sentence that doesn't.
+3. Attach a second knowledge base covering a different topic, then ask a question that only the new source can answer. Check the trace to confirm the agent retrieved from the right knowledge base.
+
+## Transcript
+
+Welcome to the knowledge track. In the last track, we gave our agent a brain and a memory. But a brain only knows what it was trained on. It doesn't know your prices, your policies, or your product. Ask a plain model about your business and it will answer with total confidence and be completely wrong. This whole track is about fixing that, grounding your agent in your own knowledge. So let's see how it actually works Here's our Northwind support agent with our support docs attached as a knowledge base. Watch what happens when I ask it something specific to our business. What's the warranty policy for laptops at Northwind? And there's the answer. Northwind laptops include a one-year limited manufacturer warranty covering defects in materials and workmanship, and it does not cover accidental damage, liquid damage, or normal wear. It even offers to pull the terms for monitors or accessories. Every bit of that came straight from our documents, not from the model's imagination. That's RAG, retrieval-augmented generation. Before the agent answers, it retrieves the most relevant pieces of your knowledge and writes its answer from those And I don't want you to just take my word for it, so let me prove it. I'll open the traces for that message, go into the trace timeline, and click the RAG retrieval step. Right here, you can see exactly what the agent searched for and the content it pulled back from the knowledge base to build that answer That's the difference between an agent that genuinely knows your business and one that just sounds like it does. And when you attach more than one knowledge base, it pulls from whichever ones are relevant to the question So that's RAG in Studio. Attach your knowledge, the agent grounds its answers in it, and you get a full trace to verify every single answer. Right now, we're leaning on a knowledge base we built earlier. In the next video, we build one from scratch. I'm Felipe Willizer. See you there"
+Lyzr Platform Studio,Chapter 03: Knowledge Base Engineering,Build a Knowledge Base,C02_CH03_L02_build_a_knowledge_base.mp4,https://share.descript.com/view/C02,"# Build a Knowledge Base
+
+*Lesson 02 · Knowledge & RAG*
+
+## What you'll learn
+
+- Create a knowledge base from an empty slate in Lyzr Agent Studio in about five minutes
+- Choose a vector store and embedding model — and know why the defaults are the safe call
+- Fill a knowledge base from three source types: a text file, a PDF, and a live website crawl
+- Test retrieval with the built-in analyzer before you trust the knowledge base with a customer
+- Attach the finished knowledge base to an agent and prove it's grounded in your documents
+
+## Key concepts
+
+**A knowledge base starts empty, and the choices you make while building it decide how good your answers turn out.** Building one from scratch takes about five minutes: name it, accept two technical defaults, add your sources, and test. The whole point is to go from a blank slate to an agent that can answer from your documents.
+
+**The two technical choices — vector store and embedding model — both have defaults that just work.** The vector store is where the searchable version of your documents lives; Lyzr's hosted Qdrant is already selected. The embedding model turns your text into something the agent can actually search; its default is fine too. You can change them, but for almost every build you accept both and move on to the part that matters: the knowledge.
+
+**One simple flow ingests every source type — files and the web alike.** Add a text file or a PDF and Lyzr reads it, breaks it into chunks, and indexes it; two different file types go through the same flow. Because so much knowledge already lives on a website, you can also point Lyzr at a doc site by pasting its URL and crawling it, pulling that content in the same way.
+
+**Test retrieval before you wire the knowledge base to anything — it's the fastest way to know it works.** Type a query right in the knowledge base and the analyzer shows you exactly what it pulls back and how well each piece scores. A top match around seventy-nine percent from your support docs, with the next results coming from the PDF, tells you the index is healthy before a single customer ever asks.
+
+**Attaching the knowledge base to an agent is the whole point — that's what grounds it in your documents.** Tuning lives under Configure (retrieval strategy, how many chunks come back, a score threshold to filter weak matches), but the defaults are good. The real final step is opening your agent, adding the knowledge base, and proving in Playground that it now answers from documents that didn't exist when you started.
+
+## In Studio
+
+Primary surface: **Knowledge → Knowledge Base**.
+
+1. Go to **Knowledge → Knowledge Base → New**, and give the knowledge base a name.
+2. Confirm the two technical choices: the **vector store** (Lyzr-hosted **Qdrant** is already selected) and the **embedding model** (leave the default). Click **Create**.
+3. Click **Add source → Add file** and bring in your documents — for example a support-policies text file and a product-warranty PDF. Lyzr reads each one, chunks it, and indexes it.
+4. Click **Add source → Website**, paste your doc-site URL, optionally open the advanced options to control how it crawls, then **Crawl website** to pull that content in too.
+5. Test retrieval right there: type a query like `return policy`. The analyzer shows what it pulls back and each piece's score — e.g. a top match around 79% from the support docs, followed by results from the product PDF.
+6. To tune retrieval, open **Configure** — the retrieval strategy, the number of chunks returned, and a score threshold to filter out weak matches. The defaults are good; leave them and **Save**.
+7. Attach it: open your agent (e.g. the **Northwind** agent), go to **Knowledge**, and add the knowledge base you just built.
+8. Prove it landed in **Playground** — ask `what is the warranty policy?` and confirm the answer (down to detail like dead pixels and backlit defects on a specific monitor) comes straight from the uploaded PDF.
+
+## Try this
+
+1. Create a brand-new knowledge base from **Knowledge → Knowledge Base → New**, accept the default Qdrant vector store and embedding model, and add two sources of different types — one file (text or PDF) and one website URL.
+2. Before attaching it to anything, type a real question into the knowledge base and read the analyzer scores. Note which source the top match came from and its percentage, then try a query you *expect* to fail and confirm it returns weak or no matches.
+3. Attach the knowledge base to one of your agents under its **Knowledge** tab, then ask the same question in **Playground**. Verify the answer cites a detail that could only have come from a document you just uploaded.
+
+## Transcript
+
+Last video, RAG leaned on a knowledge base we had already built. Now let's build one from scratch, from an empty slate to an agent that can answer from it. It takes about five minutes, and the choices you make here decide how good your answers turn out. I'll head to knowledge, knowledge base, and new. I'll give it a name. Then two technical choices the vector store, which is where the searchable version of your documents live The Lyzr hosted Qdrant is already selected and it just works. And the embedding model, which turns your text into something the agent can actually search. The default's fine. Let's go ahead and create it. Now the real knowledge. Add source, add file. I'll bring in two documents, our support policies as a text file, and a product warranty guide as a PDF. Lyzr reads them, breaks them into chunks, and indexes them. Two different file types, same simple flow A lot of your knowledge already lives on a website, so I'll also point Lyzr at our doc site. Add source, website, paste the URL. There are advanced options if you want to control how it crawls and then crawl website. Now that content comes in too. Before I trust this with a customer, I test it. Right here, I type a query, return policy, analyzer shows me exactly what it pulls back and how well each piece scores. The top match, around seventy-nine percent, comes from our support docs, and the next results comes from the PDF, and the next results come from the product PDF. This is the fastest way to know your knowledge base actually works before you wire it to anything. If you want to tune retrieval, that's under configure. The retrieval strategy, how many chunks come back, and a score threshold to filter out weak matches. The defaults are good, so I'll leave them and save. Last step, and it's the whole point, attach it. I'll open our Northwind agent, go to knowledge, and add the knowledge base we just built. Let's prove it landed. In Playground, I ask, what is the warranty policy? And look at this, laptops and monitors, a one-year limited warranty, et cetera. And for the Northview twenty-seven monitor specifically, it even calls out dead pixels and backlit defects. That detail came straight from the product PDF we uploaded two minutes ago. The agent is now grounded in documents that didn't exist when we started this video. So that's Knowledge Base end-to-end. Create it, fill it from files and the web, test the retrieval, and attach it. In the next video, we go one level deeper into how documents get parsed and ingested and why that quietly decides how good your answers are. I'm Felipe Widlizer. I'll see you there"
+Lyzr Platform Studio,Chapter 03: Knowledge Base Engineering,Document Parsing & Ingestion,C02_CH03_L03_document_parsing_ingestion.mp4,https://share.descript.com/view/C02,"# Document Parsing & Ingestion
+
+*Course Track:* Lyzr Platform Studio | *Chapter:* Chapter 03: Knowledge Base Engineering
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Document Parsing & Ingestion.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Platform Studio,Chapter 03: Knowledge Base Engineering,Data Connectors as Live Sources,C02_CH03_L04_data_connectors_as_live_sources.mp4,https://share.descript.com/view/C02,"# Data Connectors as Live Sources
+
+*Course Track:* Lyzr Platform Studio | *Chapter:* Chapter 03: Knowledge Base Engineering
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Data Connectors as Live Sources.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Platform Studio,Chapter 04: Memory & Knowledge Graphs,Agent Memory in Depth,C02_CH04_L01_agent_memory_in_depth.mp4,https://share.descript.com/view/C02,"# Agent memory in depth
+
+*Lesson 05 · Knowledge & RAG*
+
+## What you'll learn
+
+- Turn memory on for an agent in Studio and read its two settings without guessing what they do
+- Tell a session apart from a user, and decide which one your memory should be scoped to
+- Configure cross-session memory so a returning customer is recognised instead of starting over
+- Prove memory works by storing a fact in one chat and recalling it from a brand-new one
+- Connect Studio's memory scope to how you pass session IDs when you call the agent's API
+
+## Key concepts
+
+**Memory is what stops every conversation from starting at a blank slate.** Without it, a customer has to reintroduce themselves on every visit; with it, the agent remembers the person and the things they told it. The interesting work isn't switching memory on — it's deciding what counts as the same conversation and what counts as the same person.
+
+**Memory is a feature you toggle, and the default provider is the right answer for almost everyone.** You enable it under Features, which opens its settings; the first choice is the provider. Studio gives you a few, but the production-grade default (Cognee) is one you should leave untouched unless you have a specific reason not to.
+
+**The setting that actually matters is scope, and it's the one people get wrong.** Two ideas make it clear: a session is one conversation, and a user is one person who may have many conversations over time. By default memory lives inside a single session, so a brand-new chat starts clean. Turn cross-session on and memory follows the person across all their conversations.
+
+**Extraction instructions let you steer what the agent bothers to remember.** There's a separate tab where you can shape what gets stored, but the default is fine for most agents — you don't need to touch it to get useful memory. Reach for it only when you want tighter control over what the agent retains.
+
+**Out in your own product, you control conversations through the session ID you pass to the API.** On the Deploy tab the agent exposes an API; when you call it you pass the agent's ID and a session ID. Reusing the same session ID continues a conversation, while a new one starts fresh — and because cross-session ties memory to the person behind those sessions, you manage the sessions and Lyzr handles the memory.
+
+## In Studio
+
+Primary surface: **Connections → Memory** — toggling memory on, choosing the provider, and setting scope, then proving it in the Playground.
+
+1. Open your agent and go to **Connections → Memory** → switch on **Memory**. Turning it on opens its settings.
+2. Under **provider**, leave the default (**Cognee**) selected — it's production-grade and you don't need to change it.
+3. Find the **cross-session** setting. Off (the default) means memory lives inside a single session and each new chat starts clean. Switch it **on** so memory follows the person across all their conversations.
+4. Optionally open the **extraction instructions** tab to steer what the agent remembers. The default is fine, so leave it unless you have a reason to narrow it.
+5. **Save** the settings and **update the agent** so the changes take effect.
+6. Open the **Playground** and tell the agent something personal — for example your name and that you prefer email updates. It acknowledges and quietly stores it.
+7. Start a **completely new chat** (a different session). Ask who you are and how you like to be contacted — with cross-session on, it still answers correctly. That's the proof: it remembered the person, not just the conversation.
+8. Go to the **Deploy** tab to see the agent's **API**. When you call it you pass the agent's ID and a **session ID** — the same session ID continues a conversation, a new one starts fresh.
+
+## Try this
+
+1. On a test agent, switch on Memory under Features, keep the default provider, and leave cross-session **off**. In the Playground tell it your name, then open a new chat and ask who you are — confirm it has forgotten. Now turn cross-session **on**, save, and repeat the test to watch the behaviour flip.
+2. Store a preference (""I prefer email updates"") in one chat, then start a fresh chat and ask the agent how you like to be contacted. Confirm it recalls the preference across sessions, not just within the same conversation.
+3. Open the Deploy tab and find where you pass the **session ID**. Write down, in one sentence each, what reusing the same session ID does versus passing a new one — and how cross-session memory changes a returning user's experience either way.
+
+## Transcript
+
+Your agent has a brain. Now let's give it a memory. Without one, every conversation starts from a blank slate, and your customer has to reintroduce themselves every time. With it, the agent remembers. The interesting part isn't switching it on. It's deciding what counts as the same conversation and what counts as the same person. Memory is a feature you turn on. Under Features, I'll open the full list, switch on Memory, and that opens its settings. First choice is the provider. Lyzr gives you a few, but the default is Cognee, and for almost everyone, that's the answer. It's production-grade memory, and you really don't need to touch it. I'll leave it on Cognee. Now the setting that actually matters, and the one people get wrong: cross-session. To understand it, you need two ideas. A session is one conversation. A user is one person who might have many conversations over time. By default, memory lives inside a single session, so a brand-new chat starts clean. Turn cross-session on, and memory follows the person across all their conversations. I'm turning it on, and in a second, you see exactly what that changes There's also an extraction instructions tab where you can steer what the agent bothers to remember. The default is fine, so I'll leave it. I'll save that and update the agent Now let's test it. In the playground, I'll tell it something personal, my name, and that I prefer email updates It acknowledges and quietly stores that for later. Here's the proof. I'll start a completely new chat. Normally, that's a clean slate, a different session, no memory of the last one. But watch. I'll ask who I am and how I like to be contacted, and it answers, Your name is Felipe, and you prefer to receive updates by email."" Brand-new session, and it still knows me. That's cross-session memory. It remembered the person, not just the conversation. And here's what that looks like when you wire it into your own product, which is where this gets slightly technical. On the Deploy tab, you've got the agent's API. When you call it, you pass the agent's ID and a session ID. The same session ID continues a conversation. A new one starts fresh. That's how you control what a conversation means out in the real world. And because we turned on cross-session, the agent ties memory to the person behind those sessions, so a returning customer is recognized instead of starting over. You manage the sessions, Lyzr handles the memory Turn it on, keep Cognee as the provider, and the real decision is scope. A normal session when each conversation should stand alone. Cross-session when you want the agent to remember the person across visits. Map a session to a conversation, and you're in control. That wraps the agent's essentials track. Next, we move into knowledge, grounding your agent in your own documents. I'm Felipe with Lyzr. See you there"
+Lyzr Platform Studio,Chapter 04: Memory & Knowledge Graphs,Beyond Vectors: Structured Knowledge,C02_CH04_L02_beyond_vectors_structured_knowledge.mp4,https://share.descript.com/view/C02,"# Beyond Vectors: Structured Knowledge
+
+*Course Track:* Lyzr Platform Studio | *Chapter:* Chapter 04: Memory & Knowledge Graphs
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Beyond Vectors: Structured Knowledge.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Platform Studio,Chapter 04: Memory & Knowledge Graphs,Build a Knowledge Graph,C02_CH04_L03_build_a_knowledge_graph.mp4,https://share.descript.com/view/C02,"# Build a Knowledge Graph
+
+*Course Track:* Lyzr Platform Studio | *Chapter:* Chapter 04: Memory & Knowledge Graphs
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Build a Knowledge Graph.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Platform Studio,Chapter 04: Memory & Knowledge Graphs,The Semantic Model & Global Context,C02_CH04_L04_the_semantic_model_global_context.mp4,https://share.descript.com/view/C02,"# The Semantic Model & Global Context
+
+*Course Track:* Lyzr Platform Studio | *Chapter:* Chapter 04: Memory & Knowledge Graphs
+
+## Lesson Overview & Objectives
+- Understand the core concepts of The Semantic Model & Global Context.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Platform Studio,Chapter 05: Responsible AI & Observability,Responsible AI & Guardrails,C02_CH05_L01_responsible_ai_guardrails.mp4,https://share.descript.com/view/C02,"# Responsible AI & Guardrails
+
+*Course Track:* Lyzr Platform Studio | *Chapter:* Chapter 05: Responsible AI & Observability
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Responsible AI & Guardrails.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Platform Studio,Chapter 05: Responsible AI & Observability,Agent Simulation & Observability,C02_CH05_L02_agent_simulation_observability.mp4,https://share.descript.com/view/C02,"# Agent Simulation & Observability
+
+*Course Track:* Lyzr Platform Studio | *Chapter:* Chapter 05: Responsible AI & Observability
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Agent Simulation & Observability.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Code Libraries,Chapter 01: ADK Foundations,What is a Lyzr Agent?,C03_CH01_L01_what_is_a_lyzr_agent.mp4,https://share.descript.com/view/C03,"# What is a Lyzr Agent?
+
+*Course Track:* Lyzr Code Libraries | *Chapter:* Chapter 01: ADK Foundations
+
+## Lesson Overview & Objectives
+- Understand the core concepts of What is a Lyzr Agent?.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Code Libraries,Chapter 01: ADK Foundations,Building Your First Agent,C03_CH01_L02_building_your_first_agent.mp4,https://share.descript.com/view/C03,"# Building Your First Agent
+
+*Course Track:* Lyzr Code Libraries | *Chapter:* Chapter 01: ADK Foundations
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Building Your First Agent.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Code Libraries,Chapter 01: ADK Foundations,Swapping LLM Providers,C03_CH01_L03_swapping_llm_providers.mp4,https://share.descript.com/view/C03,"One string changes your entire backend. The provider parameter on create underscore agent takes the name of a model, and that's it. Lies routes. The call to the right place, same agent, different brain. Today we swap through four providers on the same prompt and watch the answers change. Usual setup. If you've watched the first two videos, this is familiar. Two formats work short form, just the model name, DPT four oh, cloud sonnet, et cetera. L figures out which provider it belongs to and routes the call, or explicit form provider slash model OpenAI slash gpt four oh, et cetera. Short form is what I use day to day. It's cleaner. And if Pfizer can auto detect for some reason, the error message tells you to use the explicit form. So start short, fall back explicitly only when you need to. Multiple providers work out of the box. OpenAI. Andro, Google Grok. Perplexity, AWS Bedrock. We're gonna run four of them today. Starting with OpenAI, GPT-4 O, same role goal instructions you've seen in the last two videos. Prompt in two sentences. What's the most elegant idea in programming abstraction? Classic textbook answer. Measured, explanatory, enables developers to build upon existing functionality. That's the baseline. Open AI register. Safe, complete, not electric. Swap, one string, collude, sonnet 4.5. Everything else identical. Also abstraction, but feel the voice shift. It's shorter drowning in the details. Claude reached for a turn of phrase where open AI reached for a definition, same idea, different instincts. Let's go with Google Gemini 2.5 Pro. Abstraction again, Gemini leans more formal, enormously complex systems, understandable parts, cleaner clauses, a little more academic. Three models, same answer. And gr, I'm using Yama 3.3 70 billion parameters, same open weight models. Most places run, but served fast. Here's the outlier. Yama didn't say abstraction. It went with recursion. Only disagreement across the four smaller open weight models aren't pooling from the exact same associations as the frontier closed models and an open-ended prompts like this one, you feel it. Also, speed grok serves that noticeably faster than the others, which is the thing GR is actually selling. Quick note before the rundown. Four of these five landed on abstraction. That's the real headline. Models converge on canonical safe answers. Provider comparisons earn their keep on open-ended work. Creative angles, especially tasks. Anything with room for taste, not on definition shaped questions. Keep that in mind when you do your own side by sides, you don't need to memorize the catalog. Here's how I think about picking default, the latest DPT or Claude Sonnet broad capability, reliable what most apps ship with fast and cheap. The latest GPT Mini, Claude Haiku, the latest Gemini flesh when you're doing high volume, and each call doesn't need to be brilliant. Now research and citations, perplexity models are tuned for grounded answers with sources. It's a different job. The honest version. For most prototypes, the model choice matters less than the prompt. Get your agent working on the latest DPT or CLO sonnet, then try swapping providers. Once you know what good looks like, that's when the comparison is useful. One string changes the brain. Start with a default swap when you have a reason. Okay, next up, streaming responses, the same agent, but getting the text back, token by token instead of all at once. Until next time."
+Lyzr Code Libraries,Chapter 01: ADK Foundations,Streaming Responses,C03_CH01_L04_streaming_responses.mp4,https://share.descript.com/view/C03,"Today we're turning on streaming. One parameter on agent run stream equals true. Instead of waiting for the full answer, you get tokens As the model produces them, the UX feels completely different and the code change is about four lines. Usual setup, same M file and same studio in it you've seen in the first three videos. If you've been following along, skip ahead. Baseline. First standard agent, standard call prompt. Write a short paragraph about why streams feel fast, even when total time is the same Couple of seconds of silence. Then the whole paragraph lands that. Pause is the problem. Streaming solves. The motto is generating tokens the whole time. We're just not showing them until it's done. Here's the change. Same agent. Run one extra keyword streams equal true that flips the return type. Instead of a response object, you get an iterator. Each pass of the loop is one chunk, Four lines. Loop first thing in the body, check chunk done and break. If it's the last chunk, then print chunk content and equals empty string. And flush equals true. So Python doesn't buffer because the whole point is to see the text arrive. Why break before the print? The final chunk in this SDK carries the full accumulated text in dot content, not just the last token. If you print it, you get your whole answer twice. We've already admitted every token via the chunks that came before. So skipping the done chunk is the right move there. It is. Same agent, same prompt, same total time, roughly. But the words arrive as they're generated for anything user facing, a chat ui, a writing tool, a code assistant. This is the difference between is it working and it's working Quick look at what's actually on each chunk, so you're not guessing. I'm running a tiny prompt count to three and dumping the fields on every chunk until the loop naturally exits undone. One thing to notice, look at the Chunk Zero through five. Continent Delta are identical in each one. Both give you the new text for this chunk, just a token or two. That's why our simple print loop works. Each chunk is the next piece and equals empty string, glues them together. You get the running output for free. Two more fields worth knowing about, but not using today. Structured underscore data is populated on the done chunk. If you set a response underscore model, that's the next video. An artifact underscore files shows up when the agent generates files, which will hit when we get to image generation. For most streaming code, chunk, content and chunk done are all you need. One. Gotcha. You need to know before you ship this, when you attach a responsible AI policy to an agent. Guardrails for PII, toxicity, prompt injection, any of that streaming turns off silently. Your code still runs the loop Seal works. You just get one big chunk at the end instead of tokens arriving live. The SDK falls back to non streaming, so the guardrail can scan the full response before any of it reaches the user. That's the right behavior for safety Streaming. Half an answer past a policy chunk, defeats the point, but it's silent, no warning, and we will make your streaming UI look broken. The moment someone attaches a policy, if you're building something user facing with guardrails, plan for it. Show a spinner on policy enabled agents or render the final chunk as if it were streamed. will cover our AI policies and future videos that's streaming one flag, one iterator chunk, content and chunk done for the 90% case. Next up structured outputs. Instead of a freeform text, you hand the agent a ENT model and get back a typed object. I'm Felipe er until next time."
+Lyzr Code Libraries,Chapter 01: ADK Foundations,Structured Outputs,C03_CH01_L05_structured_outputs.mp4,https://share.descript.com/view/C03,"Today we're getting structured data out of an agent, not a string. You have to parse, not Jason. You have to hope is valid. A identical model validated typed ready to use one parameter on create underscore agent and the shape of the return value changes completely. Same setup as always. Install low, the key spin up studio. I've pinned the reviewer going to analyze to a review variable so we can feed the exact same input to every agent in this video. Before we do this the right way, let me show you the wrong way because this is what most people reach for. First, ask the model for Jason in the prompt. Return adjacent object with sentiment and confidence. Then parse the string on the other side. Look at that, the model wrapped it in a markdown code fence, triple back ticks. Jason tag then the object inside. Technically correct, Jason, completely impossible without stripping those chances first. And this time it's skip the, here's your js ON preamble, but run it again or run it in a different provider and you'll get one. There's no contract, there's no guarantee. This is the re. You end up riding a parser with three fallbacks and it still breaks on the fourth case you didn't think of, that's not the model's fault you didn't tell it the shape you just hoped. Here's the fix. Define a den model for the shape you want. Pass it to create underscore agent as response underscore model, and that's it. Three fields. Sentiment is an enum, one of the three strings. Confidence is a float. Sum is a string standard pedantic. Notice something agent.run didn't return an agent response object. It returned a review analysis instance directly. No dot response to unwrap. I can pull dot sentiment and dot confidence off it like any tic object and they're typed. My IDE knows sentiment is one of those three strings. If the motto ever tries to return something that doesn't fit the schema. Denti raises before the bad data reaches my code. That's the whole feature. Your prompt stops carrying schema instructions. Your code stops carrying parsers. The SDK handles both ends. The simple case is cheap, but the real payoff is when the schema gets real nested issue. Model a list of them, a float with a zero to one constraint, a Boolean and field description everywhere. Those descriptions are not decorators. The SDK passes them to the motto as part of the schema, which means they steer the output. If you want a field, field a certain way, put it in a description, not in the prompt. Same input, richer output. Three issues this time. Shipping quality support. Each one categorized each one with a one line description pulled from the review. Would underscore recommend flagged false? All typed ready to drop into a database, a dashboard or a follow up agent? Whatever's next in your pipeline. And notice the field descriptions are their keep I told the description field it should be one sentence issue summary and the model. Honor that. Know the customer mentioned that padding just the substance. That's structured outputs. One parameter, one ENT class, A typed object on the other side. This is one of those features where once you use it, you stop writing parsing code forever. Next video is the first capstone. We take everything from the last three multi provider swapping, streaming, structured outputs, and build a small chat bot that uses all three. I'm Felipe with Lizer Until next time."
+Lyzr Code Libraries,Chapter 01: ADK Foundations,Project: Multi-Provider Chatbot,C03_CH01_L06_project_multi_provider_chatbot.mp4,https://share.descript.com/view/C03,"# Project: Multi-Provider Chatbot
+
+*Course Track:* Lyzr Code Libraries | *Chapter:* Chapter 01: ADK Foundations
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Project: Multi-Provider Chatbot.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Code Libraries,Chapter 02: Multimodal Agents,Image Generation Agents,C03_CH02_L01_image_generation_agents.mp4,https://share.descript.com/view/C03,"# Image Generation Agents
+
+*Course Track:* Lyzr Code Libraries | *Chapter:* Chapter 02: Multimodal Agents
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Image Generation Agents.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Code Libraries,Chapter 02: Multimodal Agents,File Generation Agents,C03_CH02_L02_file_generation_agents.mp4,https://share.descript.com/view/C03,"# File Generation Agents
+
+*Course Track:* Lyzr Code Libraries | *Chapter:* Chapter 02: Multimodal Agents
+
+## Lesson Overview & Objectives
+- Understand the core concepts of File Generation Agents.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Code Libraries,Chapter 02: Multimodal Agents,Project: Creative Assistant,C03_CH02_L03_project_creative_assistant.mp4,https://share.descript.com/view/C03,"# Project: Creative Assistant
+
+*Course Track:* Lyzr Code Libraries | *Chapter:* Chapter 02: Multimodal Agents
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Project: Creative Assistant.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Code Libraries,Chapter 03: RAG & Memory,Technical RAG Fundamentals,C03_CH03_L01_technical_rag_fundamentals.mp4,https://share.descript.com/view/C03,"# Technical RAG Fundamentals
+
+*Course Track:* Lyzr Code Libraries | *Chapter:* Chapter 03: RAG & Memory
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Technical RAG Fundamentals.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Code Libraries,Chapter 03: RAG & Memory,Document Ingestion Pipelines,C03_CH03_L02_document_ingestion_pipelines.mp4,https://share.descript.com/view/C03,"# Document Ingestion Pipelines
+
+*Course Track:* Lyzr Code Libraries | *Chapter:* Chapter 03: RAG & Memory
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Document Ingestion Pipelines.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Code Libraries,Chapter 03: RAG & Memory,Vector Stores & Custom Retrievers,C03_CH03_L03_vector_stores_custom_retrievers.mp4,https://share.descript.com/view/C03,"# Vector Stores & Custom Retrievers
+
+*Course Track:* Lyzr Code Libraries | *Chapter:* Chapter 03: RAG & Memory
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Vector Stores & Custom Retrievers.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Code Libraries,Chapter 03: RAG & Memory,Agent Memory Basics,C03_CH03_L04_agent_memory_basics.mp4,https://share.descript.com/view/C03,"Agents are stateless by default. Run two queries through the same agent, the second one has no idea what happened in the first. Today, we add memory, three kinds of it, depending on what you actually need to remember and for how long. We'll run two of them live, the simple in-session case and persistent semantic memory, and walk through the third. Same setup as the rest of the series. Quick demo to make stateless concrete. Agent has no memory parameter, no session ID. Two turns. First one establishes context. Second one needs that context. Watch what happens. There it is. The agent has no idea I told it I have eight engineers, so it gave me a generic playbook covering every team size from eight to sixty plus, with rules of thumb for each bracket and then four clarifying questions at the bottom. Useful content, but it's working blind. The team size from turn one didn't carry into turn two. That's what stateless looks like in practice. Two changes. Memory equals ten on create_agent. That's a rolling window of the last ten messages. And every agent.run gets a session ID. Same string on both turns means the SDK threads them together. Different string means different conversation, fresh context. And completely different answer. First line, for a data infra team of eight engineers. Both the team size and the data infrastructure context from turn one are right there. Specific recommendation, six seats default, eight if everyone logs in, four for a minimal subset. Same agent shape as before, two new lines of code. Memory parameter on create_agent and session ID on every turn. The agent went from, ""Here's a playbook for every possible team size,"" to, ""Here's the answer for your team."" One gotcha worth stating out loud. If you forget session ID, the SDK auto-generates one per call. Memory is on, but every call lands in a fresh session, so nothing connects. This is the most common why isn't memory working bug. Check the session ID first. What we just used is one of many memory systems in Leizer. They solve different problems. One, conversation memory. What we just did, a rolling window of the last end messages scoped by session ID. Lives in the agent, expires with the conversation. Reach for this when the agent needs to remember what the user said two turns ago. That's eighty percent case. Chatbots, support flows, anything multi-turn. Two, Cognis. Persistent semantic memory, a separate client. Stores conversations long term, scoped by owner and agent and session, and you can search them by meaning later. Different sessions, different days. The agent can still recall what the user told it months ago. Let's run it. There's the result. Score one point zero. Perfect match. And the original messages comes back. Our compliance team needs SOC two evidence quarterly, and we use Vanta for evidence collection. Different session, different question wording. Cognis still pull the SOC two mention back. That's the cross-session piece conversation memory can't do. On a fresh Cognis account, you get exactly the doc you put in. On a real account with months of conversation, the same search returns ranked results across everything that's relevant. Owner ID, agent ID, and session ID give you the scoping to keep one tenant's memory separate from another's. Now, third memory kind, external memory providers. Memzero AWS, Agent Core, Supermemory. Onboarded as Studio credentials with create_memory_credential and attached to an agent's memory config. We're not running this one. The surface is the same shape as creating any other credential. Reach for these when your team already has a memory backend in production. Don't introduce a new memory system you don't need. Short version: default to conversation memory, memory equals N, and session ID. That covers most agents. Switch to Cognis when you need facts to persist across sessions. Reach for external providers only when your team is already invested in one. Whichever you pick, the most common bug is forgetting to thread the session ID. Memory is on, but every call lands in a fresh session, so nothing connects. If your agent seems to have amnesia, check the session ID first. That's the landscape. Conversa-conversation memory for in-session context, Cognis for cross-section facts, external providers for existing infrastructure. Next video, we go deeper on conversation memory specifically, the patterns you'll actually use in production. I'm Felipe with Lizr. Until next time."
+Lyzr Code Libraries,Chapter 03: RAG & Memory,Conversation Memory & Persistence,C03_CH03_L05_conversation_memory_persistence.mp4,https://share.descript.com/view/C03,"# Conversation Memory & Persistence
+
+*Course Track:* Lyzr Code Libraries | *Chapter:* Chapter 03: RAG & Memory
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Conversation Memory & Persistence.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Code Libraries,Chapter 03: RAG & Memory,Project: Document Q&A Bot,C03_CH03_L06_project_document_q_a_bot.mp4,https://share.descript.com/view/C03,"# Project: Document Q&A Bot
+
+*Course Track:* Lyzr Code Libraries | *Chapter:* Chapter 03: RAG & Memory
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Project: Document Q&A Bot.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Code Libraries,Chapter 04: Tools & MCP,Why Tools Matter,C03_CH04_L01_why_tools_matter.mp4,https://share.descript.com/view/C03,"agents are text models. By default, they can't query your database, hit an API, or check the current state of anything. Today we close that gap. The SDK lets you hand the agent a Python function, anything that's callable, and the agent figures out when to call it. We'll do the before, after, and look at when this is the right reach versus reg or just stuffing context into the prompt. Same setup as the rest of the series with one tweak The install line uses Laser 80K Jupyter that pulls in nest asyncio so that tool calls work inside a notebook event loop. We have a real business question. We have a customer asking about a specific product SKU. Agent has no tools, no knowledge base, no way to check the actual inventory system. Watch what happens There it is. The agent admitted that it can't see real-time inventory and offered to interpret a snapshot if I paste one Honest, but the customer still doesn't have an answer The agent is a text model. It can reason about the question, ask the right follow-ups, and even tell me which fields to pull. But it can't go look at the data itself. That's the gap. A tool analyzer is a Python function. That's it. No decorators, no special class. The docstring becomes the description the model reads. The type hints become the schema. The SDK does the rest In a real system, this hits a database or an API. For the demo, it's a hard-coded dict. Same shape from the agent's perspective The function takes a SKU and returns a string with the inventory status. The model reads the docstring to know when to call it, reads the type hint to know what argument to pass, and the SDK handles the call and return loop. One line to write it up, agent.add_tool check inventory, then rerun the same question. Same agent, same question. The answer, in stock forty-seven units DC East. Three lines The agent read the docstring on check inventory and recognized it was the right tool for the question. It also parsed GH-2400 out of my prompt, called the function, and got the result back. And also reformatted it as clean bullets. That's the loop. Docstring tells the model what the tool does. Type hints tell it what to pass. The SDK handles the call. Quick rundown so you know when to reach for this versus the other patterns we've covered. Tools are for actions in real-time state. Anything the agent needs to do or look up that isn't already in its training data and isn't in a static document. Inventory lookups, database queries, API calls, sending emails, running calculations on live data. If the answer changes after the agent was trained, you need a tool RAG is for static knowledge, documentation, policies, manuals, things that don't change minute to minute and that the agent reads once per query. We cover this in videos ten through 15. Prompt context is for small, stable info you can just paste in: the user's name, the current date if you really want it pinned, system rules, anything that fits in a few hundred tokens and doesn't justify infrastructure. The picking rule is short. Tools when the answer requires doing something. Rag when the answer is a document you control. Prompt when it's a sentence or two of context. Most production agents use all three. That's the fundamentals. A tool in a Python function. The agent reads the docstring, calls it when it makes sense, uses the result next video, we go deeper on writing local tools, the patterns that hold up in production, the edge cases, and the structured output patterns for richer return types. I'm Felipe with Lysar, until next time"
+Lyzr Code Libraries,Chapter 04: Tools & MCP,Writing Custom Local Tools,C03_CH04_L02_writing_custom_local_tools.mp4,https://share.descript.com/view/C03,"# Writing Custom Local Tools
+
+*Course Track:* Lyzr Code Libraries | *Chapter:* Chapter 04: Tools & MCP
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Writing Custom Local Tools.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Foundations,Chapter 01: Lyzr Platform & Ecosystem Overview,Lyzr Platform Pricing & Token Economics,C01_CH01_L04_lyzr_platform_pricing.mp4,https://share.descript.com/view/C01,"# Lyzr Platform Pricing & Token Economics
+
+*Course Track:* Lyzr Foundations | *Chapter:* Chapter 01: Lyzr Platform & Ecosystem Overview
+
+## Lesson Overview & Objectives
+- Understand the core concepts of Lyzr Platform Pricing & Token Economics.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."
+Lyzr Code Libraries,Chapter 04: Tools & MCP,GitAgent Harness: Repo as Source of Truth,C03_CH04_L03_gitagent_harness.mp4,https://share.descript.com/view/C03,"# GitAgent Harness: Repo as Source of Truth
+
+*Course Track:* Lyzr Code Libraries | *Chapter:* Chapter 04: Tools & MCP
+
+## Lesson Overview & Objectives
+- Understand the core concepts of GitAgent Harness: Repo as Source of Truth.
+- Learn step-by-step implementation & configurations in Lyzr.
+- Apply best practices for enterprise deployment."

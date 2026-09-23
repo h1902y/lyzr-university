@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lyzr University — Course Catalog</title>
+<link rel="stylesheet" href="catalog-styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <span class="nav-brand">Lyzr University</span>
+  <a href="course-catalog-demo.html" class="active">Course Catalog</a>
+  <a href="thumbnail/">Thumbnail Generator</a>
+  <a href="banner/">Banner Generator</a>
+</nav>
+
+<div class="header">
+  <div class="header-overline">Lyzr University</div>
+  <h1>Course <em>Catalog</em></h1>
+  <p class="header-sub">Three collections &middot; Tracks teach a tool &middot; Modules teach a craft &middot; Functions teach a domain</p>
+</div>
+
+<div class="toggle-bar" id="toggle-bar"></div>
+
+<div class="filters">
+  <div class="filter-group">
+    <div class="filter-label">Module</div>
+    <div class="chips" id="module-chips"></div>
+  </div>
+  <div class="filter-group">
+    <div class="filter-label">Function</div>
+    <div class="chips" id="function-chips"></div>
+  </div>
+</div>
+
+<div class="stats" id="stats"></div>
+<div class="shelves" id="shelves"></div>
+
+<!-- Per-course detail modal -->
+<div class="modal-backdrop" id="modal" hidden>
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="m-title">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <div class="m-banner" id="m-banner">
+      <div class="m-bands"><span class="b b1"></span><span class="b b2"></span><span class="b b3"></span><span class="b b4"></span><span class="b b5"></span></div>
+      <div class="m-wm" id="m-wm"></div>
+      <div class="m-banner-inner">
+        <div class="m-eyebrow" id="m-eyebrow"></div>
+        <h2 class="m-title" id="m-title"></h2>
+        <div class="m-bar"></div>
+      </div>
+    </div>
+    <div class="m-body">
+      <div class="m-toprow" id="m-toprow"></div>
+      <div class="m-owner" id="m-owner"></div>
+      <p class="m-desc" id="m-desc"></p>
+      <div class="m-stats" id="m-stats"></div>
+      <div class="m-section" id="m-covers"></div>
+      <div class="m-section" id="m-lessons"></div>
+      <div class="m-actions" id="m-actions"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+var DATA = null;
+var META = null;
+var activeCollection = null;  // null = all, or "track" | "module" | "function"
+var activeFilters = { module: new Set(), function: new Set() };
+
+var COLLECTION_ORDER = ["track", "module", "function"];
+var PRODUCT_ORDER = ["ADK", "Studio", "Architect"];
+
+Promise.all([
+  fetch('catalog-data.json').then(function(r) { return r.json(); }),
+  fetch('category-meta.json').then(function(r) { return r.json(); })
+]).then(function(res) {
+  DATA = res[0];
+  META = res[1];
+  renderToggle();
+  renderChips();
+  render();
+  openFromHash();           // deep-link: #course=<slug> opens the modal
+});
+
+window.addEventListener('hashchange', openFromHash);
+
+// ── Category icon/color lookup (shared shape with the thumbnail generator) ──
+function lookupMeta(label) {
+  return META.products[label] || META.modules[label] || META.usecases[label] || null;
+}
+function svgNode(svgString) {
+  var doc = new DOMParser().parseFromString(svgString, 'image/svg+xml');
+  return document.importNode(doc.documentElement, true);
+}
+function collectionMeta(id) {
+  return DATA.collections.find(function(c) { return c.id === id; });
+}
+
+/* ─────────────────────────  Filters  ───────────────────────── */
+
+function renderToggle() {
+  var bar = document.getElementById('toggle-bar');
+  bar.replaceChildren();
+
+  var label = document.createElement('span');
+  label.className = 'toggle-label';
+  label.textContent = 'Collection';
+  bar.appendChild(label);
+
+  var group = document.createElement('div');
+  group.className = 'toggle-group';
+  DATA.collections.forEach(function(col) {
+    var btn = document.createElement('button');
+    btn.className = 'toggle-btn' + (activeCollection === col.id ? ' active' : '');
+    btn.textContent = col.name;
+    btn.addEventListener('click', function() {
+      activeCollection = (activeCollection === col.id) ? null : col.id;
+      renderToggle();
+      render();
+    });
+    group.appendChild(btn);
+  });
+  bar.appendChild(group);
+
+  var count = document.createElement('span');
+  count.className = 'toggle-count';
+  count.textContent = DATA.courses.length + ' courses · 3 live';
+  bar.appendChild(count);
+}
+
+function createChip(dim, val) {
+  var el = document.createElement('div');
+  el.className = 'chip' + (activeFilters[dim].has(val) ? ' active' : '');
+  el.dataset.dim = dim;
+  el.dataset.val = val;
+  el.textContent = val;
+  el.addEventListener('click', function() { toggleFilter(dim, val); });
+  return el;
+}
+
+function renderChips() {
+  document.getElementById('module-chips').replaceChildren(
+    ...DATA.categories.modules.map(function(m) { return createChip('module', m); })
+  );
+  document.getElementById('function-chips').replaceChildren(
+    ...DATA.categories.functions.map(function(f) { return createChip('function', f); })
+  );
+}
+
+function toggleFilter(dim, val) {
+  if (activeFilters[dim].has(val)) activeFilters[dim].delete(val);
+  else activeFilters[dim].add(val);
+  renderChips();
+  render();
+}
+
+function matchesFilters(c) {
+  if (activeFilters.module.size && !(c.modules || []).some(function(m) { return activeFilters.module.has(m); })) return false;
+  if (activeFilters.function.size && !activeFilters.function.has(c.function)) return false;
+  return true;
+}
+
+/* ─────────────────────────  Shelves  ───────────────────────── */
+
+function render() {
+  var root = document.getElementById('shelves');
+  root.replaceChildren();
+
+  var collections = activeCollection ? [activeCollection] : COLLECTION_ORDER;
+  var shown = 0, n = 0;
+
+  collections.forEach(function(colId) {
+    var courses = DATA.courses.filter(function(c) { return c.collection === colId && matchesFilters(c); });
+    if (!courses.length) return;
+    shown += courses.length;
+
+    var col = collectionMeta(colId);
+    var shelf = document.createElement('section');
+    shelf.className = 'shelf';
+
+    var head = document.createElement('div');
+    head.className = 'shelf-header';
+    var h = document.createElement('h2'); h.className = 'shelf-title'; h.textContent = col.name;
+    var tag = document.createElement('span'); tag.className = 'shelf-tagline'; tag.textContent = col.tagline;
+    var cnt = document.createElement('span'); cnt.className = 'shelf-count'; cnt.textContent = courses.length;
+    head.append(h, tag, cnt);
+    shelf.appendChild(head);
+
+    if (colId === 'track') {
+      // group by product
+      PRODUCT_ORDER.forEach(function(prod) {
+        var inProd = courses.filter(function(c) { return c.product === prod; });
+        if (!inProd.length) return;
+        var sub = document.createElement('div');
+        sub.className = 'shelf-subgroup';
+        sub.textContent = prod;
+        shelf.appendChild(sub);
+        var grid = document.createElement('div'); grid.className = 'grid';
+        inProd.forEach(function(c) { grid.appendChild(createCard(c, ++n)); });
+        shelf.appendChild(grid);
+      });
+    } else {
+      var grid = document.createElement('div'); grid.className = 'grid';
+      courses.forEach(function(c) { grid.appendChild(createCard(c, ++n)); });
+      shelf.appendChild(grid);
+    }
+    root.appendChild(shelf);
+  });
+
+  // Stats
+  var stats = document.getElementById('stats');
+  stats.replaceChildren();
+  stats.appendChild(document.createTextNode('Showing '));
+  var s = document.createElement('strong'); s.textContent = shown;
+  stats.append(s, document.createTextNode(' of ' + DATA.courses.length + ' courses'));
+
+  if (!shown) {
+    var empty = document.createElement('div');
+    empty.className = 'empty-msg';
+    empty.textContent = 'No courses match the selected filters';
+    root.appendChild(empty);
+  }
+}
+
+// Badge text/class per collection
+function badgeFor(c) {
+  if (c.collection === 'track') return { text: c.product, cls: c.product.toLowerCase().replace(/ /g, '-') };
+  if (c.collection === 'module') return { text: 'Module', cls: 'module' };
+  return { text: 'Function', cls: 'function' };
+}
+
+function createCard(c, num) {
+  var card = document.createElement('div');
+  card.className = 'card' + (c.status === 'coming-soon' ? ' is-coming-soon' : '');
+  card.tabIndex = 0;
+  card.setAttribute('role', 'button');
+  card.addEventListener('click', function() { openCourse(c.slug); });
+  card.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openCourse(c.slug); }
+  });
+
+  var numEl = document.createElement('div');
+  numEl.className = 'card-number';
+  numEl.textContent = String(num).padStart(2, '0');
+  card.appendChild(numEl);
+
+  var topRow = document.createElement('div');
+  topRow.className = 'card-toprow';
+  var b = badgeFor(c);
+  var badge = document.createElement('span');
+  badge.className = 'card-product ' + b.cls;
+  badge.textContent = b.text;
+  topRow.appendChild(badge);
+  if (c.level) {
+    var lvl = document.createElement('span');
+    lvl.className = 'card-level';
+    lvl.textContent = c.level;
+    topRow.appendChild(lvl);
+  }
+  card.appendChild(topRow);
+
+  var title = document.createElement('div');
+  title.className = 'card-title';
+  title.textContent = c.name;
+  card.appendChild(title);
+
+  var owner = document.createElement('div');
+  owner.className = 'card-owner';
+  owner.textContent = c.instructor;
+  card.appendChild(owner);
+
+  if (c.description) {
+    var descEl = document.createElement('div');
+    descEl.className = 'card-desc';
+    descEl.textContent = c.description;
+    card.appendChild(descEl);
+  }
+
+  var meta = document.createElement('div');
+  meta.className = 'card-meta';
+  if (c.videos) {
+    var vSpan = document.createElement('span');
+    vSpan.className = 'meta-videos';
+    vSpan.textContent = c.videos + (c.videos === 1 ? ' video' : ' videos');
+    meta.appendChild(vSpan);
+  }
+  var dSpan = document.createElement('span');
+  dSpan.className = 'meta-duration';
+  dSpan.textContent = c.duration;
+  meta.appendChild(dSpan);
+  var sSpan = document.createElement('span');
+  sSpan.className = 'meta-status ' + c.status;
+  sSpan.textContent = c.status.replace(/-/g, ' ');
+  meta.appendChild(sSpan);
+  card.appendChild(meta);
+
+  // tag chips: modules + function
+  var tags = document.createElement('div');
+  tags.className = 'card-tags';
+  (c.modules || []).forEach(function(m) {
+    var t = document.createElement('span'); t.className = 'card-tag'; t.textContent = m; tags.appendChild(t);
+  });
+  if (c.function) {
+    var t = document.createElement('span'); t.className = 'card-tag usecase'; t.textContent = c.function; tags.appendChild(t);
+  }
+  if (tags.childNodes.length) card.appendChild(tags);
+
+  return card;
+}
+
+/* ─────────────────────────  Per-course detail modal  ───────────────────────── */
+
+function pill(text, cls) {
+  var el = document.createElement('span');
+  el.className = cls;
+  el.textContent = text;
+  return el;
+}
+
+function metaChip(label) {
+  var cm = lookupMeta(label);
+  var chip = document.createElement('span');
+  chip.className = 'm-chip';
+  if (cm) {
+    chip.style.borderColor = hexAlpha(cm.color, 0.4);
+    chip.style.color = cm.color;
+    var ico = document.createElement('span');
+    ico.className = 'm-chip-ico';
+    ico.style.color = cm.color;
+    ico.appendChild(svgNode(cm.icon));
+    chip.appendChild(ico);
+  }
+  var t = document.createElement('span');
+  t.textContent = label;
+  chip.appendChild(t);
+  return chip;
+}
+
+function hexAlpha(hex, a) {
+  var h = hex.replace('#', '');
+  return 'rgba(' + parseInt(h.slice(0,2),16) + ',' + parseInt(h.slice(2,4),16) + ',' + parseInt(h.slice(4,6),16) + ',' + a + ')';
+}
+
+function primaryLabel(c) {
+  if (c.collection === 'track') return c.product;
+  if (c.collection === 'module') return (c.modules && c.modules[0]) || c.name;
+  return c.function;
+}
+
+function eyebrowText(c) {
+  if (c.collection === 'track') return c.product + ' Track' + (c.level ? ' · ' + c.level : '');
+  if (c.collection === 'module') return 'Module' + (c.level ? ' · ' + c.level : '');
+  return 'Function' + (c.level ? ' · ' + c.level : '');
+}
+
+// ── Copy-to-clipboard button (icon + flash feedback) ──
+function copyButton(text, what) {
+  var b = document.createElement('button');
+  b.type = 'button';
+  b.className = 'copy-btn';
+  b.title = 'Copy ' + (what || 'to clipboard');
+  b.setAttribute('aria-label', 'Copy ' + (what || 'to clipboard'));
+  b.innerHTML =
+    '<svg class="ico-copy" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>' +
+    '<svg class="ico-check" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
+  b.addEventListener('click', function(e) {
+    e.stopPropagation();
+    function flash() {
+      b.classList.add('copied');
+      setTimeout(function() { b.classList.remove('copied'); }, 1200);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(flash, function() { fallbackCopy(text); flash(); });
+    } else { fallbackCopy(text); flash(); }
+  });
+  return b;
+}
+function fallbackCopy(text) {
+  var ta = document.createElement('textarea');
+  ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); } catch (e) {}
+  document.body.removeChild(ta);
+}
+
+// ── Lessons / syllabus section, each datapoint copyable ──
+function fillLessons(c) {
+  var box = document.getElementById('m-lessons');
+  box.replaceChildren();
+  if (!c.syllabus || !c.syllabus.length) return;
+
+  var head = document.createElement('div');
+  head.className = 'm-lessons-head';
+  head.appendChild(pill('Lessons', 'm-section-label'));
+  // Copy the whole syllabus as "NN  Title — Summary" lines, handy for bulk paste.
+  var allText = c.syllabus.map(function(L) {
+    return L.n + '  ' + L.title + (L.summary ? ' — ' + L.summary : '');
+  }).join('\n');
+  head.appendChild(copyButton(allText, 'all lessons'));
+  box.appendChild(head);
+
+  var list = document.createElement('div');
+  list.className = 'm-lessons-list';
+  c.syllabus.forEach(function(L) {
+    var row = document.createElement('div');
+    row.className = 'm-lesson';
+
+    var num = document.createElement('span');
+    num.className = 'm-lesson-n';
+    num.textContent = L.n;
+    row.appendChild(num);
+
+    var main = document.createElement('div');
+    main.className = 'm-lesson-main';
+
+    var title = document.createElement('div');
+    title.className = 'm-lesson-title';
+    var tspan = document.createElement('span');
+    tspan.textContent = L.title;
+    title.appendChild(tspan);
+    title.appendChild(copyButton(L.title, 'lesson title'));
+    main.appendChild(title);
+
+    if (L.summary) {
+      var sum = document.createElement('div');
+      sum.className = 'm-lesson-sum';
+      var sspan = document.createElement('span');
+      sspan.textContent = L.summary;
+      sum.appendChild(sspan);
+      sum.appendChild(copyButton(L.summary, 'lesson summary'));
+      main.appendChild(sum);
+    }
+
+    row.appendChild(main);
+    list.appendChild(row);
+  });
+  box.appendChild(list);
+}
+
+function fillModal(c) {
+  // ── Banner header — themed by the course's category accent ──
+  var cm = lookupMeta(primaryLabel(c));
+  var accent = cm ? cm.color : '#71514F';
+  document.getElementById('m-banner').style.setProperty('--m-accent', accent);
+  var wm = document.getElementById('m-wm');
+  wm.replaceChildren();
+  if (cm && cm.icon) wm.appendChild(svgNode(cm.icon));
+  document.getElementById('m-eyebrow').textContent = eyebrowText(c);
+  document.getElementById('m-title').textContent = c.name;
+
+  // ── Body ──
+  var top = document.getElementById('m-toprow');
+  top.replaceChildren();
+  top.appendChild(pill(c.status.replace(/-/g, ' '), 'meta-status ' + c.status));
+  top.appendChild(copyButton(c.name, 'course title'));
+  document.getElementById('m-owner').textContent = 'with ' + c.instructor;
+  var desc = document.getElementById('m-desc');
+  desc.replaceChildren();
+  if (c.description) {
+    desc.appendChild(document.createTextNode(c.description));
+    desc.appendChild(copyButton(c.description, 'course description'));
+  }
+
+  var stats = document.getElementById('m-stats');
+  stats.replaceChildren();
+  if (c.videos) stats.appendChild(pill(c.videos + (c.videos === 1 ? ' video' : ' videos'), 'meta-videos'));
+  if (c.lessons) stats.appendChild(pill(c.lessons + ' lessons', 'meta-duration'));
+  stats.appendChild(pill(c.duration, 'meta-duration'));
+
+  var covers = document.getElementById('m-covers');
+  covers.replaceChildren();
+  var labels = (c.modules || []).concat(c.function ? [c.function] : []);
+  if (labels.length) {
+    covers.appendChild(pill('Covers', 'm-section-label'));
+    var row = document.createElement('div');
+    row.className = 'm-chips';
+    (c.modules || []).forEach(function(m) { row.appendChild(metaChip(m)); });
+    if (c.function) row.appendChild(metaChip(c.function));
+    covers.appendChild(row);
+  }
+
+  fillLessons(c);
+
+  var actions = document.getElementById('m-actions');
+  actions.replaceChildren();
+  var art = document.createElement('a');
+  art.className = 'm-action';
+  art.href = 'thumbnail/?course=' + encodeURIComponent(c.slug);
+  art.textContent = 'Open course art →';
+  actions.appendChild(art);
+}
+
+function openCourse(slug) {
+  var c = DATA.courses.find(function(x) { return x.slug === slug; });
+  if (!c) return;
+  fillModal(c);
+  document.getElementById('modal').hidden = false;
+  document.body.style.overflow = 'hidden';
+  if (location.hash !== '#course=' + slug) history.replaceState(null, '', '#course=' + slug);
+  document.getElementById('modal-close').focus();
+}
+
+function closeModal() {
+  document.getElementById('modal').hidden = true;
+  document.body.style.overflow = '';
+  if (location.hash.indexOf('#course=') === 0) history.replaceState(null, '', location.pathname + location.search);
+}
+
+function openFromHash() {
+  var m = location.hash.match(/^#course=(.+)$/);
+  if (m) openCourse(decodeURIComponent(m[1]));
+  else closeModal();
+}
+
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal').addEventListener('click', function(e) {
+  if (e.target.id === 'modal') closeModal();
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape' && !document.getElementById('modal').hidden) closeModal();
+});
+</script>
+</body>
+</html>

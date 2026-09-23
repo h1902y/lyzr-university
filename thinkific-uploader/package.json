@@ -1,0 +1,18 @@
+{
+  "name": "lyzr-university-thinkific-uploader",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Bundle+catalog-driven Playwright automation that creates Lyzr University courses in the Thinkific admin Course Builder (the public API is read-only for authoring). Reads thinkific-upload/ + catalog-data.json, drives: create course, fill details, upload thumbnail, add video/PDF lessons in order, set price, assign collection, publish.",
+  "scripts": {
+    "plan": "node src/upload.mjs --dry-run",
+    "auth": "node src/auth.mjs",
+    "upload": "node src/upload.mjs",
+    "cards:plan": "node src/update-cards.mjs --plan",
+    "cards": "node src/update-cards.mjs",
+    "codegen": "node src/codegen.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.60.0"
+  }
+}

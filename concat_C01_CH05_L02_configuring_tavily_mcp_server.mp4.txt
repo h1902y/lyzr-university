@@ -1,0 +1,3 @@
+file '/Users/hkc/Documents/lyzr/university/scratch_remotion_temp/remotion_intro.mp4'
+file '/Users/hkc/Documents/lyzr/university/revamp/C01_CH05_L02_configuring_tavily_mcp_server.mp4'
+file '/Users/hkc/Documents/lyzr/university/scratch_remotion_temp/remotion_outro.mp4'

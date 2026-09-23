@@ -1,0 +1,46 @@
+Master Course,Chapter,Lesson Title,Video Asset Filename,Descript Link
+Lyzr Foundations,Ch 1. Platform Overview,Introduction to Lyzr Platform,01a Introduction to Lyzr Platform.mp4,https://share.descript.com/view/l0epSX3Joov
+Lyzr Foundations,Ch 1. Platform Overview,Client Success Stories,02a Client Success Stories.mp4,N/A
+Lyzr Foundations,Ch 1. Platform Overview,The Lyzr Stack and Architecture,03a The Lyzr Stack and Architecture.mp4,N/A
+Lyzr Foundations,Ch 2. Architect & Studio Overview,Architect Overview,04a Architect Overview.mp4,N/A
+Lyzr Foundations,Ch 2. Architect & Studio Overview,Studio Overview,05a Studio Overview.mp4,https://share.descript.com/view/QSwoPpR6hKL
+Lyzr Foundations,Ch 2. Architect & Studio Overview,Lyzr Capabilities,06a Lyzr Capabilities.mp4,N/A
+Lyzr Foundations,Ch 3. Enterprise Autonomous Agents,Computer Agent,07a Computer Agent.mp4,N/A
+Lyzr Foundations,Ch 3. Enterprise Autonomous Agents,Git Agent,08a Git Agent.mp4,N/A
+Lyzr for Business Professionals,Ch 1. Agent Studio Lifecycle,Welcome to Agent Studio & Lifecycle,01a Welcome to Agent Studio and Lifecycle.mp4,https://share.descript.com/view/QSwoPpR6hKL
+Lyzr for Business Professionals,Ch 1. Agent Studio Lifecycle,Build: Choose Type and Create Agent,02a Build Choose Type and Create Agent.mp4,https://share.descript.com/view/r0i0W0qxzAh
+Lyzr for Business Professionals,Ch 1. Agent Studio Lifecycle,"Equip: Model, Tool, Memory, Knowledge",03a Equip Model Tool Memory Knowledge.mp4,https://share.descript.com/view/GobPzBquAVF
+Lyzr for Business Professionals,Ch 1. Agent Studio Lifecycle,What Agent Type Should I Build?,04a What Agent Type Should I Build.mp4,https://share.descript.com/view/FOzm28nV9YM
+Lyzr for Business Professionals,Ch 2. Orchestration & Swarms,Lyzr Manager Orchestration,05a Lyzr Manager Orchestration.mp4,https://share.descript.com/view/JxjoIomKT1C
+Lyzr for Business Professionals,Ch 2. Orchestration & Swarms,SuperFlow Basic & Dynamic Flows,06a SuperFlow Basic and Dynamic Flows.mp4,https://share.descript.com/view/e9Ny8ysXwMc
+Lyzr for Business Professionals,Ch 2. Orchestration & Swarms,SuperFlow Advanced Routing & Loops,07a SuperFlow Advanced Routing and Loops.mp4,https://share.descript.com/view/cyOXlcLJI5R
+Lyzr for Business Professionals,Ch 3. Knowledge Base Engineering,RAG in Studio,08a RAG in Studio.mp4,https://share.descript.com/view/iLyDbKWJXxv
+Lyzr for Business Professionals,Ch 3. Knowledge Base Engineering,Build a Knowledge Base,09a Build a Knowledge Base.mp4,https://share.descript.com/view/u8SqXwIKzjT
+Lyzr for Business Professionals,Ch 3. Knowledge Base Engineering,Document Parsing & Ingestion,10a Document Parsing and Ingestion.mp4,https://share.descript.com/view/CGqBLgAbGUG
+Lyzr for Business Professionals,Ch 3. Knowledge Base Engineering,Data Connectors as Live Sources,11a Data Connectors as Live Sources.mp4,https://share.descript.com/view/pUlHqpAkEuL
+Lyzr for Business Professionals,Ch 4. Memory & Knowledge Graphs,Agent Memory in Depth,12a Agent Memory in Depth.mp4,https://share.descript.com/view/zMdeiKC7LUO
+Lyzr for Business Professionals,Ch 4. Memory & Knowledge Graphs,Beyond Vectors: Structured Knowledge,13a Beyond Vectors Structured Knowledge.mp4,N/A
+Lyzr for Business Professionals,Ch 4. Memory & Knowledge Graphs,Build a Knowledge Graph,14a Build a Knowledge Graph.mp4,N/A
+Lyzr for Business Professionals,Ch 4. Memory & Knowledge Graphs,The Semantic Model & Global Context,15a The Semantic Model and Global Context.mp4,N/A
+Lyzr for Business Professionals,Ch 5. Responsible AI & Testing,Responsible AI & Guardrails,16a Responsible AI and Guardrails.mp4,https://share.descript.com/view/c1cv27a45SV
+Lyzr for Business Professionals,Ch 5. Responsible AI & Testing,Agent Simulation & Observability,17a Agent Simulation and Observability.mp4,https://share.descript.com/view/lJdFYCeMQq9
+Lyzr for Technical Professionals,Ch 1. ADK Foundations,What is a Lyzr Agent?,01a What is a Lyzr Agent.mp4,https://share.descript.com/view/l0epSX3Joov
+Lyzr for Technical Professionals,Ch 1. ADK Foundations,Building Your First Agent,02a Your first Agent.mp4,https://share.descript.com/view/yfYCe1knewa
+Lyzr for Technical Professionals,Ch 1. ADK Foundations,Swapping LLM Providers,03a Swapping LLM Providers.mp4,https://share.descript.com/view/hxtkvfWflEe
+Lyzr for Technical Professionals,Ch 1. ADK Foundations,Streaming Responses,04a Streaming Responses.mp4,https://share.descript.com/view/eIDkrH3oXLJ
+Lyzr for Technical Professionals,Ch 1. ADK Foundations,Structured Outputs,05a Structured Outputs.mp4,https://share.descript.com/view/4xzQOA2jpvz
+Lyzr for Technical Professionals,Ch 1. ADK Foundations,Project: Multi-Provider Chatbot,06a Project Multi provider chatbot.mp4,https://share.descript.com/view/QahGYAZPvu7
+Lyzr for Technical Professionals,Ch 2. Multimodal Agents,Image Generation Agents,07a Image generation.mp4,https://share.descript.com/view/ZbJKEPBji0H
+Lyzr for Technical Professionals,Ch 2. Multimodal Agents,File Generation Agents,08a File generation.mp4,https://share.descript.com/view/G3LX75UbRQP
+Lyzr for Technical Professionals,Ch 2. Multimodal Agents,Project: Creative Assistant,09a Project Creative Assistant.mp4,https://share.descript.com/view/6fGAFVIZbaz
+Lyzr for Technical Professionals,Ch 3. RAG & Memory,Technical RAG Fundamentals,10a What is RAG.mp4,https://share.descript.com/view/YjB4kflZeOi
+Lyzr for Technical Professionals,Ch 3. RAG & Memory,Document Ingestion Pipelines,11a Document ingestion.mp4,https://share.descript.com/view/lbzhEJ1MPYD
+Lyzr for Technical Professionals,Ch 3. RAG & Memory,Vector Stores & Custom Retrievers,12a Vector stores and retrieval.mp4,https://share.descript.com/view/kT2yIEf5llZ
+Lyzr for Technical Professionals,Ch 3. RAG & Memory,Agent Memory Basics,13a Agent memory basics.mp4,https://share.descript.com/view/soJ5OJwX7Nk
+Lyzr for Technical Professionals,Ch 3. RAG & Memory,Conversation Memory & Persistence,14a Conversation memory.mp4,https://share.descript.com/view/n6bwiP6ooLy
+Lyzr for Technical Professionals,Ch 3. RAG & Memory,Project: Document Q&A Bot,15a Project — Document Q&A bot.mp4,https://share.descript.com/view/3ryANcnn2MN
+Lyzr for Technical Professionals,Ch 4. Tools & MCP,Why Tools Matter,16a Why tools matter.mp4,https://share.descript.com/view/8KgUjKNXNwX
+Lyzr for Technical Professionals,Ch 4. Tools & MCP,Writing Custom Local Tools,17a Writing local tools.mp4,https://share.descript.com/view/ZYHNqFDjBJY
+Lyzr for Technical Professionals,Ch 4. Tools & MCP,Introduction to Tools & MCP Servers,13a Introduction to Tools and MCP Servers.mp4,N/A
+Lyzr for Technical Professionals,Ch 4. Tools & MCP,Configuring Tavily MCP Server,14a Configuring Tavily MCP Server.mp4,N/A
+Lyzr for Technical Professionals,Ch 4. Tools & MCP,Integrating Gmail & Email Tools,15a Integrating Gmail and Email Action Tools.mp4,N/A

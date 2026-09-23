@@ -1,0 +1,85 @@
+{
+  "_note": "Generic brand/OG templates for the thumbnail generator. Not course-specific — used for OG images, social cards, section headers. Icons: Lucide (ISC). Colors: Lyzr brand accents.",
+  "templates": [
+    {
+      "id": "university",
+      "badge": "LYZR UNIVERSITY",
+      "title": "Learn to build with Lyzr",
+      "emphasis": "build with Lyzr",
+      "sub": "The official Lyzr learning platform — from first prompt to production.",
+      "color": "#71514F",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1em\" height=\"1em\" viewBox=\"0 0 24 24\"><g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0zM22 10v6\"/><path d=\"M6 12.5V16a6 3 0 0 0 12 0v-3.5\"/></g></svg>",
+      "stats": ["3 PRODUCTS", "30 COURSES", "95 VIDEOS"]
+    },
+    {
+      "id": "community",
+      "badge": "LYZR COMMUNITY",
+      "title": "Build agents. Together.",
+      "emphasis": "Together.",
+      "sub": "Questions, builds, and agent patterns — with peers and the Lyzr team.",
+      "color": "#71514F",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1em\" height=\"1em\" viewBox=\"0 0 24 24\"><g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2\"/><circle cx=\"9\" cy=\"7\" r=\"4\"/><path d=\"M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75\"/></g></svg>",
+      "stats": ["ALL LEARNERS", "PEERS + LYZR TEAM"]
+    },
+    {
+      "id": "catalog",
+      "badge": "COURSE CATALOG",
+      "title": "One academy. Three products.",
+      "emphasis": "Three products.",
+      "sub": "Browse 30 courses across 12 modules and 6 use-case verticals.",
+      "color": "#7A639D",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1em\" height=\"1em\" viewBox=\"0 0 24 24\"><g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z\"/><path d=\"M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12\"/><path d=\"M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17\"/></g></svg>",
+      "stats": ["12 MODULES", "6 VERTICALS"]
+    },
+    {
+      "id": "architect",
+      "badge": "ARCHITECT",
+      "title": "Build with Architect",
+      "emphasis": "Architect",
+      "sub": "Describe your app in plain English. Architect ships the full stack.",
+      "color": "#71514F",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1em\" height=\"1em\" viewBox=\"0 0 24 24\"><g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><rect width=\"18\" height=\"7\" x=\"3\" y=\"3\" rx=\"1\"/><rect width=\"9\" height=\"7\" x=\"3\" y=\"14\" rx=\"1\"/><rect width=\"5\" height=\"7\" x=\"16\" y=\"14\" rx=\"1\"/></g></svg>",
+      "stats": ["NO CODE", "8 MODULES"]
+    },
+    {
+      "id": "studio",
+      "badge": "AGENT STUDIO",
+      "title": "Master Agent Studio",
+      "emphasis": "Agent Studio",
+      "sub": "Configure agents visually. Deploy them across your organization.",
+      "color": "#7A639D",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1em\" height=\"1em\" viewBox=\"0 0 24 24\"><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M10 5H3m9 14H3M14 3v4m2 10v4m5-9h-9m9 7h-5m5-14h-7m-6 5v4m0-2H3\"/></svg>",
+      "stats": ["LOW CODE", "24 MODULES"]
+    },
+    {
+      "id": "adk",
+      "badge": "ADK",
+      "title": "Code with the ADK",
+      "emphasis": "the ADK",
+      "sub": "Build agents in Python and embed them anywhere in your codebase.",
+      "color": "#4A6FA8",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1em\" height=\"1em\" viewBox=\"0 0 24 24\"><path fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M12 19h8M4 17l6-6l-6-6\"/></svg>",
+      "stats": ["PYTHON", "14 MODULES"]
+    },
+    {
+      "id": "strategy",
+      "badge": "AI STRATEGY",
+      "title": "AI strategy for business",
+      "emphasis": "for business",
+      "sub": "Landscape, ROI, and the top use cases — for every function.",
+      "color": "#CFA031",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1em\" height=\"1em\" viewBox=\"0 0 24 24\"><g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"m16.24 7.76l-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z\"/><circle cx=\"12\" cy=\"12\" r=\"10\"/></g></svg>",
+      "stats": ["6 VERTICALS", "HR · SALES · VC …"]
+    },
+    {
+      "id": "agentic",
+      "badge": "BUILD AGENTS",
+      "title": "Ship production agents",
+      "emphasis": "production agents",
+      "sub": "Knowledge, memory, tools, voice, orchestration — taught as a craft.",
+      "color": "#EC7843",
+      "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1em\" height=\"1em\" viewBox=\"0 0 24 24\"><g fill=\"none\" stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\"><path d=\"M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594zM20 2v4m2-2h-4\"/><circle cx=\"4\" cy=\"20\" r=\"2\"/></g></svg>",
+      "stats": ["12 MODULES", "STACKING CERTS"]
+    }
+  ]
+}

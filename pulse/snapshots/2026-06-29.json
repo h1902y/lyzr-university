@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2026-06-29T07:03:42.371Z",
+  "week": 3,
+  "overall": {
+    "learners": 88,
+    "enrolled": 167,
+    "engaged": 95,
+    "completed": 36
+  },
+  "courses": {
+    "3443591": {
+      "name": "ADK: Knowledge & Memory",
+      "lessons": 4,
+      "enrolled": 16,
+      "completed": 6
+    },
+    "3443592": {
+      "name": "ADK: Multimodal",
+      "lessons": 6,
+      "enrolled": 7,
+      "completed": 3
+    },
+    "3443593": {
+      "name": "ADK: Foundations",
+      "lessons": 12,
+      "enrolled": 15,
+      "completed": 5
+    },
+    "3445031": {
+      "name": "ADK: Tools & Workflows",
+      "lessons": 8,
+      "enrolled": 9,
+      "completed": 3
+    },
+    "3451858": {
+      "name": "Studio: The Agent Lifecycle",
+      "lessons": 14,
+      "enrolled": 17,
+      "completed": 5
+    },
+    "3458141": {
+      "name": "Studio: Design & Create",
+      "lessons": 10,
+      "enrolled": 9,
+      "completed": 2
+    }
+  },
+  "totalLessons": 54,
+  "liveCourseCount": 6
+}

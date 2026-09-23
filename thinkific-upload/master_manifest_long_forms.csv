@@ -1,0 +1,541 @@
+course,track,chapter,lesson_num,lesson_title,video_file,start_timestamp,end_timestamp,duration,plaintext_content
+01 Lyzr Foundations,Foundations,📂 Chapter 01: Lyzr Platform & Ecosystem Overview,01,📖 Lesson 01: Cold Open — Store Policy Agent,01a Cold Open — Store Policy Agent.mp4,00:00.40,00:24.74,24s,"LEARNING OBJECTIVES
+• Witness an autonomous agent hallucination failure in real time.
+• Understand why unguarded LLMs invent company policies and create business liabilities.
+• Discover how enterprise-grade grounding prevents policy breaches.
+
+OVERVIEW
+What happens when an ungoverned agent invents a store return policy on the fly? This cold open demonstrates the catastrophic failure modes of naive LLM wrappers and sets the stage for why enterprise agent infrastructure is required.
+
+STEP-BY-STEP WALKTHROUGH
+1. Observe an AI customer support bot invent an unapproved price-matching discount.
+2. Analyze why base LLMs optimize for agreeableness over strict compliance.
+3. Identify the business and legal exposure created by ungoverned agent outputs.
+
+KEY TAKEAWAYS
+• Ungoverned LLMs will hallucinate policies when cornered by user prompts.
+• Enterprise AI demands strict policy enforcement and deterministic boundaries."
+01 Lyzr Foundations,Foundations,📂 Chapter 01: Lyzr Platform & Ecosystem Overview,02,📖 Lesson 02: What Lyzr Is — The Three Layers,02a What Lyzr Is — The Three Layers.mp4,00:24.56,02:42.13,2m 18s,"LEARNING OBJECTIVES
+• Master the 3 architectural layers of the Lyzr platform.
+• Understand the separation between Foundation Models, Agentic Infrastructure, and User Applications.
+• Learn how Lyzr provides the missing middle layer of enterprise autonomy.
+
+OVERVIEW
+Lyzr is architected into three distinct layers: the Foundation Layer (LLMs, SLMs, vector DBs), the Agentic Infrastructure Layer (memory, knowledge, tools, governance, orchestration), and the Application Layer (Studio, Architect, client APIs).
+
+STEP-BY-STEP WALKTHROUGH
+1. Deconstruct Layer 1: Multi-model support across OpenAI, Anthropic, Google, and local OSS.
+2. Explore Layer 2: The Lyzr Agent Engine powering deterministic execution, RAG, and tools.
+3. Examine Layer 3: Presentation and deployment interfaces for builders and non-technical teams.
+
+KEY TAKEAWAYS
+• Lyzr acts as the intelligent operating system between foundation models and applications.
+• Enables true model independence without rewriting core business workflows."
+01 Lyzr Foundations,Foundations,📂 Chapter 01: Lyzr Platform & Ecosystem Overview,03,"📖 Lesson 03: Where It Runs — Cloud, Compliance, and Models","03a Where It Runs — Cloud, Compliance, and Models.mp4",02:41.73,04:34.84,1m 53s,"LEARNING OBJECTIVES
+• Understand Lyzr's deployment topologies: SaaS, Private VPC, and On-Premises.
+• Review SOC 2, HIPAA, and GDPR compliance architectures.
+• Learn how enterprise data stays isolated in your corporate boundary.
+
+OVERVIEW
+Before enterprise security teams approve an agent, they ask: where does the data run? Learn how Lyzr's private cloud architecture ensures customer data and agent state never leave your enterprise cloud boundary.
+
+STEP-BY-STEP WALKTHROUGH
+1. Review SaaS multi-tenant vs. dedicated single-tenant VPC deployments.
+2. Inspect private subnet configurations in AWS, GCP, and Azure.
+3. Verify zero-data-retention agreements and enterprise encryption at rest and in transit.
+
+KEY TAKEAWAYS
+• Lyzr runs anywhere: Managed Cloud, Private VPC, or Sovereign On-Premises.
+• Enterprise IP and PII remain 100% inside your security perimeter."
+01 Lyzr Foundations,Foundations,"📂 Chapter 02: Core Capabilities — Models, Memory & Knowledge",04,📖 Lesson 04: Build — Choosing the Model,04a Build — Choosing the Model.mp4,04:34.50,06:07.06,1m 33s,"LEARNING OBJECTIVES
+• Evaluate LLM selection criteria across latency, cost, and reasoning capacity.
+• Configure model fallbacks and multi-provider routing.
+• Map specific agent responsibilities to optimal model tiers.
+
+OVERVIEW
+Every agent begins by choosing the model. Understand how to match task complexity to model capabilities—reserving frontier reasoning models for complex planning while utilizing lightning-fast small models for classification and triage.
+
+STEP-BY-STEP WALKTHROUGH
+1. Access the Model Settings tab inside an agent configuration.
+2. Select and benchmark providers: GPT-4o, Claude 3.5 Sonnet, Gemini 1.5 Pro, Llama 3.
+3. Set temperature, top-p, and max token thresholds to enforce output consistency.
+
+KEY TAKEAWAYS
+• One size does not fit all: assign model tiers based on cognitive demand.
+• Dynamic model routing drastically slashes operating costs without hurting quality."
+01 Lyzr Foundations,Foundations,"📂 Chapter 02: Core Capabilities — Models, Memory & Knowledge",05,"📖 Lesson 05: Memory — Sessions, Users, and Cross-Session Recall","05a Memory — Sessions, Users, and Cross-Session Recall.mp4",06:06.89,07:24.36,1m 17s,"LEARNING OBJECTIVES
+• Distinguish between Short-Term Session Memory and Long-Term Persistent Memory.
+• Implement User-Level memory for personalization across multiple conversations.
+• Configure memory eviction policies and privacy redaction.
+
+OVERVIEW
+A stateless agent has no continuity. Explore Lyzr's memory hierarchy: working session memory, episodic user memory, and persistent semantic recall that allows agents to remember user preferences and past interactions over months.
+
+STEP-BY-STEP WALKTHROUGH
+1. Enable User Memory on your agent in Agent Studio.
+2. Conduct a multi-turn session establishing user context (name, role, project goals).
+3. Start a brand new session and verify cross-session recall of earlier context.
+
+KEY TAKEAWAYS
+• Session memory keeps conversation context; User memory establishes long-term relationships.
+• Semantic memory indexes past interactions for contextual relevance."
+01 Lyzr Foundations,Foundations,"📂 Chapter 02: Core Capabilities — Models, Memory & Knowledge",06,📖 Lesson 06: Knowledge — Grounding Agents in Documents,06a Knowledge — Grounding Agents in Documents.mp4,07:23.59,08:38.54,1m 15s,"LEARNING OBJECTIVES
+• Set up enterprise Knowledge Bases with vector-grounded RAG.
+• Ingest PDFs, Word documents, slide decks, and knowledge base articles.
+• Configure chunking strategies, overlap windows, and embedding models.
+
+OVERVIEW
+Grounding agents in authoritative documents is the first line of defense against hallucinations. Learn how Lyzr parses complex corporate documents, generates dense vector embeddings, and performs high-precision semantic retrieval.
+
+STEP-BY-STEP WALKTHROUGH
+1. Upload enterprise policy documents and user manuals to the Knowledge module.
+2. Configure chunk size and chunk overlap parameters based on document layout.
+3. Test document queries to inspect citation chunks and source attribution.
+
+KEY TAKEAWAYS
+• High-precision RAG ensures answers are grounded directly in source documents.
+• Citations provide verifiable proof and audit trails for every assertion."
+01 Lyzr Foundations,Foundations,"📂 Chapter 02: Core Capabilities — Models, Memory & Knowledge",07,📖 Lesson 07: Knowledge Graphs — Mapping Connections,07a Knowledge Graphs — Mapping Connections.mp4,08:38.30,10:23.27,1m 45s,"LEARNING OBJECTIVES
+• Understand the limitations of flat vector search for interconnected domain knowledge.
+• Implement Knowledge Graph indexing to capture entities and multi-hop relationships.
+• Execute hybrid GraphRAG queries for deep architectural reasoning.
+
+OVERVIEW
+Some knowledge cannot be captured in isolated text chunks. When relationships matter—who reports to whom, which service depends on which database—Lyzr's Knowledge Graph engine maps entities, relations, and dependencies into an actionable knowledge network.
+
+STEP-BY-STEP WALKTHROUGH
+1. Extract entities and relations from corporate organizational charts or system architecture docs.
+2. Explore the visual graph topology showing nodes and labeled edge relationships.
+3. Run a multi-hop query requiring transversal reasoning across 3 connected entities.
+
+KEY TAKEAWAYS
+• Knowledge Graphs solve multi-hop reasoning where vector embeddings fail.
+• GraphRAG captures deep structural relationships across complex corporate datasets."
+01 Lyzr Foundations,Foundations,"📂 Chapter 02: Core Capabilities — Models, Memory & Knowledge",08,📖 Lesson 08: Semantic Models — Querying Real Tables,08a Semantic Models — Querying Real Tables.mp4,10:23.14,12:30.05,2m 07s,"LEARNING OBJECTIVES
+• Connect agents to SQL databases, data warehouses, and tabular stores.
+• Define semantic metadata layers so agents interpret business metrics accurately.
+• Enforce read-only access and parameterized query generation.
+
+OVERVIEW
+Enterprise data lives in relational tables. Lyzr Semantic Models allow agents to understand SQL schemas, foreign keys, and business logic definitions (e.g., how ""ARR"" or ""Active Customer"" is calculated) to generate and execute accurate data queries.
+
+STEP-BY-STEP WALKTHROUGH
+1. Connect a PostgreSQL or Snowflake database connection string.
+2. Define business glossary terms and column descriptions in the semantic catalog.
+3. Ask natural language analytical questions and inspect the generated SQL and visual charts.
+
+KEY TAKEAWAYS
+• Semantic models bridge natural language questions directly to accurate SQL execution.
+• Centralizes business definitions so agents query data using canonical company formulas."
+01 Lyzr Foundations,Foundations,"📂 Chapter 03: Actions — Tools, MCP & Code Skills",09,📖 Lesson 09: Tools — Turning APIs into Agent Actions,09a Tools — Turning APIs into Agent Actions.mp4,12:29.95,14:54.10,2m 24s,"LEARNING OBJECTIVES
+• Transform REST APIs and webhooks into executable agent tools.
+• Define OpenAPI / Swagger schemas for automatic parameter extraction.
+• Manage authentication tokens, headers, and rate limits safely.
+
+OVERVIEW
+Knowing things is only half the battle—agents must take action. Lyzr Tools turn internal and external APIs (Slack, Jira, Salesforce, HubSpot, custom microservices) into structured actions that agents invoke autonomously.
+
+STEP-BY-STEP WALKTHROUGH
+1. Import an OpenAPI specification JSON/YAML into the Tools manager.
+2. Configure OAuth2 / Bearer Token credentials securely in the vault.
+3. Observe an agent parse user intent, extract required arguments, and execute the API call.
+
+KEY TAKEAWAYS
+• Tools give agents hands: they convert conversational requests into live API executions.
+• Strict JSON schema validation ensures parameters are validated before calls are dispatched."
+01 Lyzr Foundations,Foundations,"📂 Chapter 03: Actions — Tools, MCP & Code Skills",10,📖 Lesson 10: MCP — Connecting Model Context Protocol Servers,10a MCP — Connecting Model Context Protocol Servers.mp4,14:53.85,16:48.75,1m 55s,"LEARNING OBJECTIVES
+• Understand the open Model Context Protocol (MCP) standard.
+• Connect whole servers of tools and data sources to Lyzr agents in seconds.
+• Explore pre-built MCP servers for GitHub, Google Drive, Postgres, and Brave Search.
+
+OVERVIEW
+Instead of integrating APIs one by one, the Model Context Protocol (MCP) allows agents to connect to entire servers of actions with a single configuration. Discover how Lyzr natively integrates MCP to instantly expand agent capabilities.
+
+STEP-BY-STEP WALKTHROUGH
+1. Add an MCP server endpoint to your agent profile.
+2. Inspect the auto-discovered tools and resource schemas provided by the MCP server.
+3. Run a command utilizing multiple tools exposed across the connected MCP ecosystem.
+
+KEY TAKEAWAYS
+• MCP standardizes tool and context sharing across modern agent architectures.
+• Instantly connects your agents to hundreds of community and enterprise MCP servers."
+01 Lyzr Foundations,Foundations,"📂 Chapter 03: Actions — Tools, MCP & Code Skills",11,📖 Lesson 11: Skills — Reusable Logic and Real Code Execution,11a Skills — Reusable Logic and Real Code Execution.mp4,16:48.36,18:41.58,1m 53s,"LEARNING OBJECTIVES
+• Package reusable logic, scripts, and deterministic code into Skills.
+• Execute Python scripts safely inside sandboxed execution environments.
+• Share skills across multiple agents in your enterprise workspace.
+
+OVERVIEW
+When agents need to perform exact math, parse spreadsheets, or execute complex business algorithms, text generation is not enough. Lyzr Skills allow agents to write, inspect, and execute real Python code in secure sandboxes.
+
+STEP-BY-STEP WALKTHROUGH
+1. Create a custom Python data analysis skill.
+2. Provide sample CSV data to an agent and request statistical aggregation.
+3. Inspect the sandbox execution output and verify computed numbers.
+
+KEY TAKEAWAYS
+• Skills provide deterministic compute for calculations, transformations, and code execution.
+• Sandboxed environments prevent harmful commands from touching host systems."
+01 Lyzr Foundations,Foundations,📂 Chapter 04: Multi-Agent Orchestration & Workflows,12,📖 Lesson 12: Orchestration — Manager Agents vs. Fixed Workflows,12a Orchestration — Manager Agents vs. Fixed Workflows.mp4,18:41.26,19:02.29,21s,"LEARNING OBJECTIVES
+• Compare dynamic agentic collaboration vs. deterministic sequential workflows.
+• Understand when to delegate decisions to an LLM manager vs. fixed pipeline stages.
+• Design hybrid architectures combining flexibility with reliability.
+
+OVERVIEW
+Real-world business tasks are rarely solved by a single agent. Learn the architectural fork in multi-agent systems: dynamic LLM-driven Manager Agents vs. deterministic step-by-step SuperFlow pipelines.
+
+STEP-BY-STEP WALKTHROUGH
+1. Review a customer onboarding scenario requiring research, validation, and notification.
+2. Compare the failure modes of autonomous delegation vs. rigid pipelines.
+3. Identify the right orchestration pattern based on tolerance for variability.
+
+KEY TAKEAWAYS
+• Manager Agents excel at open-ended creative problem solving.
+• Deterministic pipelines are essential for regulated, repetitive enterprise procedures."
+01 Lyzr Foundations,Foundations,📂 Chapter 04: Multi-Agent Orchestration & Workflows,13,📖 Lesson 13: Manager Agents — Growing a Team of Specialists,13a Manager Agents — Growing a Team of Specialists.mp4,19:01.67,20:37.04,1m 35s,"LEARNING OBJECTIVES
+• Build hierarchical multi-agent teams under a central Lyzr Manager Agent.
+• Define sub-agent specializations: Researcher, Analyst, Writer, Reviewer.
+• Coordinate tasks dynamically with automated task routing.
+
+OVERVIEW
+Instead of packing 100 disparate instructions into one fragile prompt, Lyzr Manager Agents orchestrate teams of specialized sub-agents. The manager decomposes user requests, delegates sub-tasks, synthesizes findings, and guarantees quality.
+
+STEP-BY-STEP WALKTHROUGH
+1. Create a Manager Agent in Agent Studio.
+2. Attach 3 specialized sub-agents with narrow task scopes and distinct tools.
+3. Submit a complex research inquiry and trace how the manager orchestrates delegation.
+
+KEY TAKEAWAYS
+• Specialized agents outperform monolithic mega-prompts every single time.
+• Manager agents provide clean separation of concerns and simpler debugging."
+01 Lyzr Foundations,Foundations,📂 Chapter 04: Multi-Agent Orchestration & Workflows,14,📖 Lesson 14: SuperFlow — Deterministic Workflows with Human Approval,14a SuperFlow — Deterministic Workflows with Human Approval.mp4,20:36.88,24:27.08,3m 50s,"LEARNING OBJECTIVES
+• Build sequential and conditional multi-step workflows in SuperFlow.
+• Incorporate Human-in-the-Loop (HITL) approval checkpoints for sensitive actions.
+• Guarantee zero workflow branching errors in mission-critical processes.
+
+OVERVIEW
+SuperFlow is Lyzr's deterministic orchestration engine. For finance, legal, and compliance workflows where steps must follow an unbending order, SuperFlow chains agents sequentially with mandatory human approval gates before actions are committed.
+
+STEP-BY-STEP WALKTHROUGH
+1. Build an automated invoice reconciliation SuperFlow pipeline.
+2. Configure Step 1 (OCR Extraction) → Step 2 (ERP Matching) → Step 3 (Discrepancy Check).
+3. Insert a Human Approval Gate before initiating wire payment.
+4. Execute a test run and approve the action via email/Slack notification.
+
+KEY TAKEAWAYS
+• SuperFlow guarantees deterministic execution without unpredictable LLM branching.
+• Human-in-the-loop checkpoints eliminate risk for financial and legal transactions."
+01 Lyzr Foundations,Foundations,"📂 Chapter 05: Enterprise Governance, Security & Simulation",15,📖 Lesson 15: Govern — Guardrails and PII Masking,15a Govern — Guardrails and PII Masking.mp4,24:26.62,26:46.06,2m 19s,"LEARNING OBJECTIVES
+• Implement real-time PII masking (SSN, credit cards, emails, medical IDs).
+• Configure input and output guardrails to block offensive or off-brand content.
+• Prevent prompt injection attacks and unauthorized system override attempts.
+
+OVERVIEW
+Autonomous agents cannot be deployed without rigorous governance. Lyzr Govern intercepts inputs and outputs in real time, automatically masking sensitive personal data (PII/PHI) and blocking adversarial jailbreak attempts before they reach the model.
+
+STEP-BY-STEP WALKTHROUGH
+1. Enable the PII Masking policy in the Govern settings tab.
+2. Send a test prompt containing credit card numbers and personal email addresses.
+3. Verify that sensitive tokens are sanitized before reaching the LLM and restored safely on egress.
+
+KEY TAKEAWAYS
+• Lyzr Govern protects corporate reputation and ensures regulatory compliance.
+• Automatic PII anonymization guarantees privacy across third-party LLM providers."
+01 Lyzr Foundations,Foundations,"📂 Chapter 05: Enterprise Governance, Security & Simulation",16,📖 Lesson 16: The Hallucination Manager and Policy Catalog,16a The Hallucination Manager and Policy Catalog.mp4,26:45.51,30:25.51,3m 40s,"LEARNING OBJECTIVES
+• Deploy Lyzr's Hallucination Manager to audit factual consistency in real time.
+• Enforce corporate guidelines from the centralized Policy Catalog.
+• Automate confidence scoring and fallback responses on ungrounded claims.
+
+OVERVIEW
+Beyond basic guardrails, enterprise agents must strictly adhere to corporate rules and ground truth. Lyzr's Hallucination Manager cross-references generated claims against retrieved context, while the Policy Catalog enforces organization-wide operational mandates.
+
+STEP-BY-STEP WALKTHROUGH
+1. Configure factual consistency thresholds in the Hallucination Manager.
+2. Link a corporate compliance policy (e.g., ""Never promise specific delivery dates without ERP confirmation"").
+3. Simulate an ungrounded prompt and observe the policy enforcement intervention.
+
+KEY TAKEAWAYS
+• The Hallucination Manager scores and verifies factual accuracy before users see responses.
+• The Policy Catalog centralizes rule management across every agent in the enterprise."
+01 Lyzr Foundations,Foundations,"📂 Chapter 05: Enterprise Governance, Security & Simulation",17,📖 Lesson 17: Audit Log and Role-Based Access Control,17a Audit Log and Role-Based Access Control.mp4,30:25.01,30:56.98,32s,"LEARNING OBJECTIVES
+• Maintain immutable audit logs of all agent runs, prompts, and tool calls.
+• Configure Role-Based Access Control (RBAC) across teams and departments.
+• Meet enterprise compliance reporting standards (SOC 2, ISO 27001).
+
+OVERVIEW
+Every agent execution, prompt modification, tool invocation, and human approval is logged into an immutable audit trail. Combined with granular RBAC, enterprise administrators maintain full visibility and control over who builds and accesses agents.
+
+STEP-BY-STEP WALKTHROUGH
+1. Inspect the Audit Log dashboard filtered by user, agent, and date range.
+2. Review full execution traces including exact input payloads and returned tool responses.
+3. Assign user roles (Admin, Builder, Viewer) with departmental resource boundaries.
+
+KEY TAKEAWAYS
+• Complete auditability provides forensic proof for enterprise compliance and legal review.
+• RBAC safeguards sensitive agent configurations and prevents unauthorized edits."
+01 Lyzr Foundations,Foundations,"📂 Chapter 05: Enterprise Governance, Security & Simulation",18,📖 Lesson 18: Test — Simulation Engine and Automated Hardening,18a Test — Simulation Engine and Automated Hardening.mp4,30:56.25,34:16.33,3m 20s,"LEARNING OBJECTIVES
+• Run automated synthetic simulations against agents before deploying to production.
+• Test adversarial edge cases, jailbreaks, and stress-load scenarios.
+• Generate automated hardening reports and benchmark accuracy scores.
+
+OVERVIEW
+Don't let end users find your agent's bugs. The Lyzr Simulation Engine spins up automated adversarial agents to bombard your candidate agent with hundreds of synthetic edge cases, testing for hallucination, jailbreaks, and compliance adherence automatically.
+
+STEP-BY-STEP WALKTHROUGH
+1. Launch a simulation test suite against a customer support agent.
+2. Review synthetic evaluation metrics: Accuracy, Policy Adherence, Latency, and Cost.
+3. Apply automated hardening recommendations directly to the agent's system prompt.
+
+KEY TAKEAWAYS
+• Simulated stress testing catches vulnerabilities before they reach production.
+• Benchmark scores provide objective quality gates for CI/CD deployment pipelines."
+01 Lyzr Foundations,Foundations,📂 Chapter 06: Production Deployment & Observability,19,📖 Lesson 19: Deploy — Shipping the Agent to Production,19a Deploy — Shipping the Agent to Production.mp4,34:15.70,35:07.66,52s,"LEARNING OBJECTIVES
+• Deploy agents across multiple channels: Web Embed, Slack, Teams, and REST API.
+• Generate production API keys and embed code snippets.
+• Configure rate limiting and high-availability endpoints.
+
+OVERVIEW
+Once tested and hardened, shipping is a one-click operation. Deploy your agent as an embeddable web widget, an internal Slack or Microsoft Teams bot, or expose it via high-throughput REST API endpoints to integrate with existing apps.
+
+STEP-BY-STEP WALKTHROUGH
+1. Click the Deploy button in Agent Studio.
+2. Select your target channel (Web Chat Widget, Slack App, or REST API).
+3. Copy the embed script or API endpoint and test a production message.
+
+KEY TAKEAWAYS
+• Omnichannel deployment meets users where they already work.
+• High-availability infrastructure automatically scales to match enterprise traffic demand."
+01 Lyzr Foundations,Foundations,📂 Chapter 06: Production Deployment & Observability,20,📖 Lesson 20: Version History and Rollbacks,20a Version History and Rollbacks.mp4,35:07.32,35:29.28,22s,"LEARNING OBJECTIVES
+• Track prompt revisions, tool changes, and configuration diffs over time.
+• Execute instant rollbacks to previous stable versions if issues arise.
+• Tag canonical releases (v1.0, v1.1) for release governance.
+
+OVERVIEW
+Never fear breaking production. Lyzr records every change to system prompts, knowledge configurations, and tool bindings as an immutable commit in Version History, allowing instant one-click rollbacks at any time.
+
+STEP-BY-STEP WALKTHROUGH
+1. Open the Version History timeline for your agent.
+2. Compare visual diffs between the current configuration and an earlier release.
+3. Click ""Rollback to Version"" and verify that the agent reverts state instantly.
+
+KEY TAKEAWAYS
+• Git-like version control brings professional engineering discipline to agent design.
+• Instant rollback capability minimizes downtime and operational risk."
+01 Lyzr Foundations,Foundations,📂 Chapter 06: Production Deployment & Observability,21,📖 Lesson 21: The Control Plane — Code Agents in Private Cloud,21a The Control Plane — Code Agents in Private Cloud.mp4,35:28.37,37:37.75,2m 09s,"LEARNING OBJECTIVES
+• Bridge visual Studio agents with custom Python / ADK code in private infrastructure.
+• Manage the Lyzr Control Plane across multi-cloud environments.
+• Synchronize code-first developer workflows with no-code business builders.
+
+OVERVIEW
+Lyzr bridges the gap between visual configuration and hard engineering. The Control Plane allows developers to deploy custom code agents inside their own cloud while exposing configuration handles to business teams in Agent Studio.
+
+STEP-BY-STEP WALKTHROUGH
+1. Inspect the Control Plane management console.
+2. Register a custom Python ADK agent running in a private Kubernetes cluster.
+3. Observe how business parameters remain editable in Studio without redeploying containers.
+
+KEY TAKEAWAYS
+• The Control Plane unites software engineers and business stakeholders on one platform.
+• Provides enterprise developers with total programmatic control over private execution."
+01 Lyzr Foundations,Foundations,📂 Chapter 06: Production Deployment & Observability,22,"📖 Lesson 22: Monitor — Traces, Spans, and Observability Reports","22a Monitor — Traces, Spans, and Observability Reports.mp4",37:37.60,39:40.83,2m 03s,"LEARNING OBJECTIVES
+• Monitor production agent health with detailed OpenTelemetry traces and spans.
+• Analyze latency bottlenecks across LLM generation, vector retrieval, and tool APIs.
+• Track user sentiment, CSAT scores, and operational costs in real time.
+
+OVERVIEW
+You cannot manage what you do not measure. Lyzr provides end-to-end observability out of the box: trace every single token, measure exact vector search latency, inspect tool payload times, and track organizational spend down to the penny.
+
+STEP-BY-STEP WALKTHROUGH
+1. Open the Monitoring & Tracing dashboard.
+2. Click on an individual transaction trace to inspect the waterfall of spans (RAG → Prompt → LLM → Tool).
+3. Analyze latency distributions and identify slow third-party API dependencies.
+
+KEY TAKEAWAYS
+• Full OpenTelemetry-compatible tracing provides deep visibility into complex agent runs.
+• Real-time observability ensures high performance and prevents unexpected cost spikes."
+01 Lyzr Foundations,Foundations,📂 Chapter 06: Production Deployment & Observability,23,📖 Lesson 23: Recap and Platform Next Steps,23a Recap and Platform Next Steps.mp4,39:40.62,41:10.11,1m 29s,"LEARNING OBJECTIVES
+• Synthesize the full breadth of the Lyzr enterprise agent platform.
+• Understand how to begin your implementation journey across your organization.
+• Connect with Lyzr engineering and enterprise support to launch your first agent.
+
+OVERVIEW
+From prompt to production: you have explored the entire Lyzr enterprise agent platform. Review key architectural takeaways and take the next step to transform your company's operations with autonomous agents.
+
+STEP-BY-STEP WALKTHROUGH
+1. Review the complete agent lifecycle: Build → Equip → Orchestrate → Govern → Test → Deploy → Monitor.
+2. Explore Lyzr University tracks for deep dives into Python ADK and Agent Studio.
+3. Schedule an architectural session or start building today at lyzr.ai.
+
+KEY TAKEAWAYS
+• Lyzr provides the complete, unified enterprise operating system for autonomous agents.
+• Start with rapid prototypes and scale seamlessly into hardened enterprise production."
+Architect Fundamentals,Architect,📂 Chapter 01: Overview & The Three Acts,01,📖 Lesson 01: Welcome & The Three Acts Roadmap,01a Welcome & The Three Acts Roadmap.mp4,00:00.07,01:26.85,1m 27s,"LEARNING OBJECTIVES
+• Understand the shift from rapid local prototyping to team-ready production software.
+• Master the overarching Three Acts framework: Feed It, Connect It, and Ship It.
+• Explore how Lyzr Architect builds full-stack applications with real enterprise agents.
+
+OVERVIEW
+Moving an AI application from a prototype on your personal screen to a production tool for your organization requires three distinct phases: feeding it private company data and documents, connecting it to enterprise tools and external APIs, and deploying it with security, observability, and cost guardrails. In this orientation, we lay out the roadmap using a real-world Vendor Renewal Desk application.
+
+STEP-BY-STEP WALKTHROUGH
+1. Access the Vendor Renewal Desk workspace in Lyzr Architect.
+2. Review the three-act roadmap: Feed It (Knowledge & Artifacts), Connect It (Integrations & MCP), and Ship It (Deploy & Code Export).
+3. Identify the current limitations of basic prompt-only agents (working from static pasted clauses vs. dynamic live data).
+
+KEY TAKEAWAYS
+• Production applications must graduate beyond prompt-only demos into grounded, integrated workflows.
+• The Three Acts (Feed, Connect, Ship) provide a predictable playbook for taking any Architect app live."
+Architect Fundamentals,Architect,"📂 Chapter 02: Act 1 — Feed It (Knowledge, Data & Artifacts)",02,📖 Lesson 02: Knowledge Bases & PDF Contract Ingestion,02a Knowledge Bases & PDF Contract Ingestion.mp4,01:26.85,02:51.16,1m 24s,"LEARNING OBJECTIVES
+• Provision dedicated Knowledge Bases for agents via natural language prompt commands.
+• Ingest multi-page PDF contracts containing complex terms, notice windows, and renewal clauses.
+• Observe how agents quote verifiable document citations rather than hallucinating answers.
+
+OVERVIEW
+Enterprise agents must read authentic source material rather than rely on snippets pasted into prompt fields. In this lesson, we ask Architect in natural language to attach a Knowledge Base to our Cancellation Terms agent. We then upload three real-world vendor contracts as PDFs and inspect the agent's generated brief, confirming exact clause citations and auto-renew trap identification without configuring chunking or vector databases manually.
+
+STEP-BY-STEP WALKTHROUGH
+1. In the Architect build chat, enter the prompt: 'Give the cancellation terms agent a knowledge base of our contract PDFs. Let me attach PDFs to each vendor contract.'
+2. Locate the newly generated 'Knowledge Bases Available' card in the left architectural pane.
+3. Upload vendor contracts as multi-page PDFs directly to the vendor records.
+4. Execute the agent and verify that the output analysis directly quotes clauses, termination penalties, and notice periods from the PDF.
+
+KEY TAKEAWAYS
+• Architect abstracts manual RAG setup—no manual vector databases, chunking parameters, or embedding model selection needed.
+• Agents grounded in authentic PDFs produce verifiable, audit-proof contract briefs."
+Architect Fundamentals,Architect,"📂 Chapter 02: Act 1 — Feed It (Knowledge, Data & Artifacts)",03,📖 Lesson 03: Workspace Database & Data Persistence,03a Workspace Database & Data Persistence.mp4,02:51.16,03:29.26,38s,"LEARNING OBJECTIVES
+• Understand how Architect automatically provisions structured relational databases for your app.
+• Inspect stored vendor profiles, contract terms, and historical agent outputs.
+• Distinguish between unstructured knowledge (PDFs) and structured relational data (Postgres tables).
+
+OVERVIEW
+While Knowledge Bases handle unstructured documents, applications also require robust relational data persistence. Architect provisions and manages a structured database under the hood whenever you build an app. In this lesson, we inspect the Database tab to understand how vendor metadata, contract schemas, and agent executions are permanently recorded.
+
+STEP-BY-STEP WALKTHROUGH
+1. Navigate to the Database tab in the left-hand workspace navigation.
+2. Inspect the automatically generated tables, schemas, and columns for vendor records.
+3. Review how agent execution results are written back to relational records for auditability.
+
+KEY TAKEAWAYS
+• Architect applications are backed by real, persistent relational databases, not ephemeral session state.
+• Unstructured document retrieval (RAG) and structured relational querying seamlessly coexist."
+Architect Fundamentals,Architect,"📂 Chapter 02: Act 1 — Feed It (Knowledge, Data & Artifacts)",04,📖 Lesson 04: Generating Application Artifacts & Documents,04a Generating Application Artifacts & Documents.mp4,03:29.26,04:28.30,59s,"LEARNING OBJECTIVES
+• Direct Architect to produce formatted downstream business documents as Artifacts.
+• Explore the four primary artifact types: feature specs, slide decks, research briefs, and Word/HTML files.
+• Export generated artifacts for stakeholder review and executive sign-off.
+
+OVERVIEW
+Feeding an application documents is only half the equation—enterprise workflows require the application to produce polished, shareable documents in return. Architect introduces Artifacts, allowing agents to generate executive slide decks, comprehensive feature specifications, research summaries, and formatted Word/HTML documents directly from workspace context.
+
+STEP-BY-STEP WALKTHROUGH
+1. Prompt Architect to compile an executive renewal brief or technical specification.
+2. Switch to the Artifacts tab adjacent to Database in the workspace navigation.
+3. Review the generated artifact structure: overview, agent breakdown, database schema, and operational risks.
+4. Export the artifact as a formatted PDF, DOCX, or presentation slide deck.
+
+KEY TAKEAWAYS
+• Artifacts turn raw agent reasoning into professional, shareable deliverables for non-technical stakeholders.
+• Architect natively generates specs, decks, research briefs, and formatted documents."
+Architect Fundamentals,Architect,"📂 Chapter 03: Act 2 — Connect It (Tools, Integrations & MCP)",05,📖 Lesson 05: The Integrations Catalog & Gmail Actions,05a The Integrations Catalog & Gmail Actions.mp4,04:28.30,06:39.77,2m 11s,"LEARNING OBJECTIVES
+• Browse and utilize Architect's pre-built enterprise integrations catalog.
+• Connect external accounts using standard OAuth flows (e.g., Google Workspace / Gmail).
+• Enable agents to trigger real-world communication actions from live app interfaces.
+
+OVERVIEW
+To become genuinely useful, AI agents must take actions in the tools your enterprise already relies on. Architect features a catalog of pre-built integrations covering communication, project management, and developer platforms. In this lesson, we connect Gmail to our Vendor Renewal Desk, complete user authorization, and execute a live renegotiation email sent directly from a real mailbox.
+
+STEP-BY-STEP WALKTHROUGH
+1. Open the Integrations catalog to inspect available connectors (Gmail, Slack, HubSpot, GitHub, Jira, etc.).
+2. Click 'Connect with Google' to initiate standard OAuth permission granting.
+3. Review required scopes and authenticate your organizational email account.
+4. In the live app, generate a renegotiation email draft and click 'Send via Gmail'.
+5. Inspect your real Gmail Sent mailbox to verify transmission with customized vendor terms and dates.
+
+KEY TAKEAWAYS
+• Pre-built catalog integrations provide instant, zero-code connectivity to core SaaS platforms.
+• Live email transmission transforms passive analysis into proactive operational execution."
+Architect Fundamentals,Architect,"📂 Chapter 03: Act 2 — Connect It (Tools, Integrations & MCP)",06,📖 Lesson 06: The Human-in-the-Loop Approval Gate,06a The Human-in-the-Loop Approval Gate.mp4,06:39.77,06:56.78,17s,"LEARNING OBJECTIVES
+• Implement Human-in-the-Loop (HITL) approval gates for sensitive agent actions.
+• Prevent unverified external emails or financial commitments from firing autonomously.
+• Design user-friendly review and confirmation interfaces for human operators.
+
+OVERVIEW
+Autonomous agents should never take irreversible real-world actions without explicit human oversight. In this lesson, we highlight an indispensable architectural pattern: the Human-in-the-Loop gate. The agent performs research, drafts negotiation copy, and prepares payloads—but transmission requires human inspection and button approval.
+
+STEP-BY-STEP WALKTHROUGH
+1. Observe the two-stage execution pattern: 'Draft renegotiation email' followed by 'Approve & Send'.
+2. Inspect the review dialog showing recipient, subject line, proposed terms, and notice dates.
+3. Enforce approval gates on all external write operations (emails, database updates, payment calls).
+
+KEY TAKEAWAYS
+• Anything that touches the outside world must sit behind a human approval gate.
+• Human-in-the-Loop design builds organizational trust and eliminates accidental spam or legal exposure."
+Architect Fundamentals,Architect,"📂 Chapter 03: Act 2 — Connect It (Tools, Integrations & MCP)",07,📖 Lesson 07: Beyond the Catalog - MCP Servers & Custom APIs,07a Beyond the Catalog - MCP Servers & Custom APIs.mp4,06:56.78,08:26.41,1m 30s,"LEARNING OBJECTIVES
+• Connect private internal APIs and vertical SaaS tools outside the standard catalog.
+• Configure Model Context Protocol (MCP) servers with URL and authentication tokens.
+• Import OpenAPI / Swagger schemas to automatically generate custom tool interfaces.
+
+OVERVIEW
+When your workflow requires proprietary internal microservices, internal ERPs, or niche SaaS platforms, Architect provides two universal extension doors: Model Context Protocol (MCP) servers and custom OpenAPI/HTTP tools. In this lesson, we explore how both doors allow agents to interact with any arbitrary software service with zero bespoke glue code.
+
+STEP-BY-STEP WALKTHROUGH
+1. Click the Plus (+) button in the Architect chat and select 'Add MCP Server'.
+2. Configure server name, endpoint URL, and authentication headers (Bearer token, API key).
+3. Alternatively, select 'Add Custom Tool' and provide an OpenAPI / Swagger JSON/YAML schema.
+4. Instruct the agent in plain English how and when to invoke the newly connected tool.
+
+KEY TAKEAWAYS
+• The integration ladder runs from Catalog Tool → MCP Server → Custom OpenAPI Schema.
+• All three integration styles share the same natural language orchestration interface."
+Architect Fundamentals,Architect,"📂 Chapter 04: Act 3 — Ship It (Production, Sharing & Governance)",08,📖 Lesson 08: One-Click Cloud Deployment & Sharing Doors,08a One-Click Cloud Deployment & Sharing Doors.mp4,08:26.41,10:19.10,1m 53s,"LEARNING OBJECTIVES
+• Graduate applications from local sandboxes to managed production cloud URLs.
+• Master the Three Sharing Doors: Teammate Builder, Client Web Link, and Public Marketplace.
+• Configure role-based permissions and public listing visibility toggles.
+
+OVERVIEW
+Once your application is fed with data and connected to tools, it is ready to ship. Architect eliminates DevOps complexity through one-click cloud deployment, instantly provisioning managed hosting, database replication, and agent infrastructure. We then examine the Three Sharing Doors to govern who accesses the application and under what permissions.
+
+STEP-BY-STEP WALKTHROUGH
+1. Click the 'Deploy' button in the upper right corner of the workspace.
+2. Confirm environment settings and launch the live application to its unique public URL.
+3. Explore Door 1 (Teammates): Grant edit/builder privileges via email invitation.
+4. Explore Door 2 (Clients/Users): Share the clean end-user application URL for read/run access.
+5. Explore Door 3 (Marketplace): Toggle public listing to feature your app across the global Lyzr directory.
+
+KEY TAKEAWAYS
+• Deployment handles frontend hosting, relational databases, and multi-agent backends with a single click.
+• Three distinct sharing models ensure appropriate boundaries between creators, users, and the public."
+Architect Fundamentals,Architect,"📂 Chapter 04: Act 3 — Ship It (Production, Sharing & Governance)",09,📖 Lesson 09: Eject to Code - GitHub Sync & Full-Stack Next.js,09a Eject to Code - GitHub Sync & Full-Stack Next.js.mp4,10:19.10,10:59.19,40s,"LEARNING OBJECTIVES
+• Export the entire Architect application as a standard Next.js, React, and Tailwind codebase.
+• Synchronize application source code directly to your GitHub repository.
+• Eliminate vendor lock-in by allowing engineering teams to extend and self-host the code.
+
+OVERVIEW
+The biggest fear with visual no-code builders is outgrowing the platform. Lyzr Architect solves this completely through code ejectability: every application is a legitimate, idiomatic Next.js web application with Tailwind CSS and clean React components. In this lesson, we connect our GitHub account and push the entire codebase to a private repository.
+
+STEP-BY-STEP WALKTHROUGH
+1. Click the GitHub sync option in the application settings drawer.
+2. Authorize your GitHub organization and select the target repository name.
+3. Inspect the synchronized repository containing clean Next.js pages, API routes, and agent orchestration calls.
+4. Clone the repository locally to run `npm run dev` or integrate custom CI/CD pipelines.
+
+KEY TAKEAWAYS
+• You never hit a ceiling with Architect—applications are real, idiomatic Next.js codebases.
+• Engineers can clone, extend, and deploy the application anywhere without proprietary runtimes."
+Architect Fundamentals,Architect,"📂 Chapter 04: Act 3 — Ship It (Production, Sharing & Governance)",10,"📖 Lesson 10: Enterprise Guardrails, Credit Habits & Wrap-up","10a Enterprise Guardrails, Credit Habits & Wrap-up.mp4",10:59.19,12:45.56,1m 46s,"LEARNING OBJECTIVES
+• Enforce enterprise security, compliance, and PII guardrails via the Lyzr Studio engine.
+• Adopt the 4 Golden Habits for optimizing Agent Processing Credit (APC) consumption.
+• Review the complete journey from prompt idea to governed enterprise software.
+
+OVERVIEW
+To satisfy enterprise procurement and security teams, applications must be governed and cost-controlled. In this final lesson, we examine how Architect agents inherit Studio guardrails (PII masking, hallucination filters, deterministic schemas) and establish 4 practical operational habits to keep credit consumption predictable and lean.
+
+STEP-BY-STEP WALKTHROUGH
+1. Review the underlying Lyzr Agent Studio engine powering your Architect agents.
+2. Verify automated safety guardrails: PII detection, topic adherence, and hallucination containment.
+3. Practice Credit Habit 1: Keep agents lean with targeted, 4-5 line system prompts.
+4. Practice Credit Habit 2: Use fast, lightweight models for classification; reserve frontier models for synthesis.
+5. Practice Credit Habit 3: Enforce strict human approval gates on external write actions.
+6. Practice Credit Habit 4: Regularly prune outdated documents from your Knowledge Bases.
+
+KEY TAKEAWAYS
+• Architect agents inherit enterprise-grade Lyzr Studio governance out of the box.
+• Disciplined prompt scoping and model routing ensure cost-effective, predictable APC economics."

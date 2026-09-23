@@ -1,0 +1,188 @@
+{% comment %}
+  Lyzr University — bespoke, fully hand-coded home page.
+  Replaces the Site-Builder section flow with a designed sequence:
+  Hero -> Choose your track -> How it works -> Product CTA -> Community. Footer via layout.
+{% endcomment %}
+
+<main class="home lyzr-home" id="main-content" role="main">
+
+  <section class="lyzr-hero">
+    <span class="lyzr-hero__grid" aria-hidden="true"></span>
+    <span class="lyzr-hero__glow" aria-hidden="true"></span>
+    <div class="lyzr-hero__inner">
+      <span class="lyzr-hero__pill"><span class="lyzr-hero__spark">&#10022;</span> 100% free &middot; self-paced &middot; build-along</span>
+      <h1 class="lyzr-hero__title">Lyzr <em>University</em></h1>
+      <p class="lyzr-hero__sub">Learn to build production-grade AI agents — visually in Lyzr&rsquo;s AI Studio, or in code with the ADK. Self-paced, and always free.</p>
+      <div class="lyzr-hero__actions">
+        <a class="lyzr-btn lyzr-btn--primary" href="#choose-your-track">Choose your track</a>
+        <a class="lyzr-btn lyzr-btn--ghost" href="/collections">Browse all courses</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="lyzr-stats">
+    <div class="lyzr-stats__inner">
+      <div class="lyzr-stat"><span class="lyzr-stat__num">3</span><span class="lyzr-stat__label">learning tracks</span></div>
+      <div class="lyzr-stat"><span class="lyzr-stat__num">100%</span><span class="lyzr-stat__label">free, forever</span></div>
+      <div class="lyzr-stat"><span class="lyzr-stat__num">Self-paced</span><span class="lyzr-stat__label">learn anytime</span></div>
+      <div class="lyzr-stat"><span class="lyzr-stat__num">Certificate</span><span class="lyzr-stat__label">on completion</span></div>
+    </div>
+  </section>
+
+  <section class="lyzr-block lyzr-why">
+    <div class="lyzr-block__body lyzr-why__grid">
+      <div class="lyzr-why__item">
+        <span class="lyzr-why__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg></span>
+        <h3 class="lyzr-why__title">Always free</h3>
+        <p class="lyzr-why__desc">Every course and every track — no paywall, no credit card, ever.</p>
+      </div>
+      <div class="lyzr-why__item">
+        <span class="lyzr-why__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5"/><path d="m3 17 9 5 9-5"/></svg></span>
+        <h3 class="lyzr-why__title">Learn by building</h3>
+        <p class="lyzr-why__desc">Hands-on lessons that end in a working agent — not a quiz.</p>
+      </div>
+      <div class="lyzr-why__item">
+        <span class="lyzr-why__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg></span>
+        <h3 class="lyzr-why__title">Two paths, one destination</h3>
+        <p class="lyzr-why__desc">Build visually in Studio or in code with the ADK — both ship real agents.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lyzr-block lyzr-block--tracks" id="choose-your-track">
+    <div class="lyzr-block__head">
+      <span class="lyzr-block__kicker">Start here</span>
+      <h2 class="lyzr-block__title">Choose your track</h2>
+      <p class="lyzr-block__lead">Everyone begins with Foundations — then pick how you build.</p>
+    </div>
+    <div class="course-categories lyzr-block__body">
+      {% include 'products_category_list' %}
+    </div>
+  </section>
+
+  <section class="lyzr-block lyzr-steps">
+    <div class="lyzr-block__head">
+      <span class="lyzr-block__kicker">How it works</span>
+      <h2 class="lyzr-block__title">From zero to a shipped agent</h2>
+      <p class="lyzr-block__lead">A clear path — learn the concepts, build alongside, then take it to production.</p>
+    </div>
+    <div class="lyzr-block__body lyzr-steps__grid">
+      <div class="lyzr-step">
+        <span class="lyzr-step__num">01</span>
+        <h3 class="lyzr-step__title">Choose your track</h3>
+        <p class="lyzr-step__desc">Start with Foundations, then go visual with Studio or in code with the ADK.</p>
+      </div>
+      <div class="lyzr-step">
+        <span class="lyzr-step__num">02</span>
+        <h3 class="lyzr-step__title">Learn by building</h3>
+        <p class="lyzr-step__desc">Short, hands-on lessons — every concept ends in a working agent, not a quiz.</p>
+      </div>
+      <div class="lyzr-step">
+        <span class="lyzr-step__num">03</span>
+        <h3 class="lyzr-step__title">Ship it in Lyzr&rsquo;s AI Studio</h3>
+        <p class="lyzr-step__desc">Take what you built into production — deploy your first real agent.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lyzr-block lyzr-faq">
+    <div class="lyzr-block__head">
+      <span class="lyzr-block__kicker">Questions</span>
+      <h2 class="lyzr-block__title">Good to know</h2>
+    </div>
+    <div class="lyzr-block__body lyzr-faq__list">
+      <details class="lyzr-faq__item">
+        <summary>Is it really free?</summary>
+        <p>Yes — every course and every track is 100% free. No credit card, no trial that expires.</p>
+      </details>
+      <details class="lyzr-faq__item">
+        <summary>Do I need to know how to code?</summary>
+        <p>Not at all. The <strong>For Business Teams</strong> track builds agents visually in Lyzr&rsquo;s AI Studio. If you code, the <strong>For Developers</strong> track uses the Python ADK.</p>
+      </details>
+      <details class="lyzr-faq__item">
+        <summary>How long does it take?</summary>
+        <p>It&rsquo;s self-paced. Lessons are short and hands-on — start and finish on your own schedule.</p>
+      </details>
+      <details class="lyzr-faq__item">
+        <summary>What will I be able to build?</summary>
+        <p>Real, production-grade AI agents — and you&rsquo;ll ship your first one in Lyzr&rsquo;s AI Studio.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="lyzr-block lyzr-product">
+    <div class="lyzr-product__inner">
+      <span class="lyzr-product__eyebrow">Now build for real</span>
+      <h2 class="lyzr-product__title">Ready to build?</h2>
+      <p class="lyzr-product__sub">Turn what you&rsquo;ve learned into a working agent — open Lyzr&rsquo;s AI Studio and ship your first one today.</p>
+      <a class="lyzr-btn lyzr-btn--light lyzr-btn--lg" href="https://studio.lyzr.ai" target="_blank" rel="noopener">Open Lyzr&rsquo;s AI Studio &#8594;</a>
+    </div>
+  </section>
+
+  <section class="lyzr-block lyzr-community-block">
+    <div class="lyzr-block__head">
+      <span class="lyzr-block__kicker">Community</span>
+      <h2 class="lyzr-block__title">Learn with the Lyzr community</h2>
+      <p class="lyzr-block__lead">Build alongside other Lyzr builders — ask questions, share what you shipped, and get unstuck.</p>
+      <a class="lyzr-btn lyzr-btn--dark" href="/hub/community/415845">Join the community</a>
+    </div>
+  </section>
+
+  <section class="lyzr-block lyzr-more">
+    <div class="lyzr-block__head">
+      <span class="lyzr-block__kicker">Beyond the classroom</span>
+      <h2 class="lyzr-block__title">More ways to work with Lyzr</h2>
+    </div>
+    <div class="lyzr-block__body lyzr-more__grid">
+      <a class="lyzr-more__card" href="https://www.lyzr.ai/partners/" target="_blank" rel="noopener">
+        <span class="lyzr-more__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        <h3>Become a partner</h3>
+        <p>Build and sell on Lyzr. Join the Lyzr Partner Program and grow with us.</p>
+        <span class="lyzr-more__cta">Explore partnership &#8594;</span>
+      </a>
+      <a class="lyzr-more__card" href="https://www.lyzr.ai/book-demo" target="_blank" rel="noopener">
+        <span class="lyzr-more__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+        <h3>Lyzr for your business</h3>
+        <p>Bringing AI agents to your team? Talk to us about Lyzr for your organization.</p>
+        <span class="lyzr-more__cta">Book a demo &#8594;</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+{% schema %}
+{
+  "sections":{
+    "options":[
+      "course_cards",
+      "course_cards_all",
+      "banner",
+      "bonus",
+      "call_to_action",
+      "course_categories_all",
+      "course_categories",
+      "checklist",
+      "countdown",
+      "frequently_asked_questions",
+      "gallery",
+      "icon_and_text",
+      "image_and_text",
+      "instructor",
+      "lead_capture",
+      "pricing_options",
+      "description",
+      "rich_text",
+      "reviews",
+      "showcase",
+      "testimonials",
+      "upsells",
+      "video"
+    ],
+    "defaults":[
+      "banner",
+      "course_cards_all"
+    ]
+  }
+}
+{% endschema %}

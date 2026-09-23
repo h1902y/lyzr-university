@@ -1,0 +1,147 @@
+/* ===========================================================
+   Lyzr Academy — landing image styles
+   Brand-locked: Lyzr Visual Style Guide V2 (warm earth tones,
+   matte, Playfair Display headings, Noto Sans body).
+   No neons, no tech-bro blue, no drop shadows.
+   =========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Noto+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&display=swap');
+
+:root {
+  /* Primary palette */
+  --ferra:        #71514F;
+  --white-amber:  #F3EFEA;
+  --cream-skin:   #E3D0C2;
+  --congo-brown:  #4A2F2D;
+  --lyzr-black:   #27272A;
+  --white:        #FFFFFF;
+
+  /* Ferra tonal ramp */
+  --t-0:    #FFFFFF;
+  --t-0125: #FBF9F7;
+  --t-025:  #F3EFEA;
+  --t-05:   #F0E9E3;
+  --t-1:    #ECE2DA;
+  --t-15:   #E8DACF;
+  --t-2:    #E3D0C2;
+  --t-3:    #DEC6B6;
+  --t-4:    #D2B7A8;
+  --t-5:    #C6A89A;
+  --t-6:    #BA998D;
+  --t-7:    #AE8A80;
+  --t-8:    #9E7A73;
+  --t-9:    #8E6A67;
+  --t-10:   #7F5D5A;
+  --t-11:   #71514F;
+  --t-115:  #5E403E;
+  --t-12:   #4A2F2D;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'Noto Sans', 'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: #2a2a2a; /* dark canvas around the frames so screenshot edges read clean */
+  color: var(--lyzr-black);
+  font-family: var(--font-body);
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  padding: 64px 32px 128px;
+}
+
+.page-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--white-amber);
+  font-size: 28px;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.page-subtitle {
+  font-family: var(--font-body);
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+/* Frame label sits above each image, not part of the screenshot */
+.frame-label {
+  font-family: var(--font-mono);
+  color: #d0d0d0;
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.frame {
+  position: relative;
+  background: var(--white-amber);
+  overflow: hidden;
+}
+
+.frame--16x9  { width: 1600px; height: 900px;  }
+.frame--21x9  { width: 2100px; height: 900px;  }
+.frame--4x5   { width: 800px;  height: 1000px; }
+.frame--square{ width: 1000px; height: 1000px; }
+.frame--32x9  { width: 1600px; height: 450px;  } /* not used by default */
+
+/* ===========================================================
+   Elevate — the signature Lyzr layered decorative element.
+   Diagonal sweep made of stacked planes in the Ferra ramp.
+   =========================================================== */
+.elevate {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.elevate svg { width: 100%; height: 100%; display: block; }
+
+/* ===========================================================
+   Type utilities
+   =========================================================== */
+.headline {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.05;
+  color: var(--lyzr-black);
+  letter-spacing: -0.01em;
+}
+.eyebrow {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ferra);
+  font-size: 16px;
+}
+.subhead {
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--lyzr-black);
+}
+.divider {
+  background: var(--cream-skin);
+  height: 2px;
+  width: 64px;
+}
+
+/* Small reusable circle node for diagrams */
+.node {
+  border-radius: 999px;
+  background: var(--cream-skin);
+}
+.node--ferra { background: var(--ferra); }

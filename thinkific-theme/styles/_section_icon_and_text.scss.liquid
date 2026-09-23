@@ -1,0 +1,90 @@
+// Icon & Text
+// ======================================
+
+.text-icon {
+  &__container {
+    @include make-container;
+  }
+
+  &__list {
+    @include make-row(false);
+    @include justify-content(center);
+  }
+
+  &__list-item {
+    @include screen-tablet-only {
+
+      &:nth-child(2),
+      &:nth-child(4),
+      &:nth-child(6),
+      &:nth-child(8),
+      &:nth-child(10),
+      &:nth-child(12) {
+        border-right: $interface__border;
+      }
+
+      @for $i from 3 to 13 {
+
+        &:nth-child(#{$i}) {
+          border-top: 0;
+        }
+      }
+    }
+    @include screen-md-min {
+      @include make-col(6);
+
+      border-right: 0;
+    }
+    @include screen-lg-min {
+      @include make-col(4);
+
+      &:nth-child(3),
+      &:nth-child(6),
+      &:nth-child(9),
+      &:nth-child(12) {
+        border-right: $interface__border;
+      }
+
+      @for $i from 4 to 13 {
+
+        &:nth-child(#{$i}) {
+          border-top: 0;
+        }
+      }
+    }
+    @include screen-sm-max {
+      border-bottom: 0;
+    }
+    @include make-col(12);
+
+    padding-top: $gutter-width;
+    padding-bottom: $gutter-width;
+    border: $interface__border;
+    background: $interface__background-color;
+    text-align: center;
+
+    &:last-child {
+      border-right: $interface__border;
+      border-bottom: $interface__border;
+    }
+
+    .section__heading--secondary {
+      margin-bottom: $gutter-width / 2;
+    }
+
+    p {
+      @include screen-md-min {
+        padding-right: $gutter-width;
+        padding-left: $gutter-width;
+      }
+
+      margin-bottom: 0;
+    }
+
+    .fa {
+      margin: 0 0 $gutter-width;
+      color: $accent__color;
+      font-size: 2.5rem;
+    }
+  }
+}

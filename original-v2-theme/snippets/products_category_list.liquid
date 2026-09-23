@@ -1,0 +1,20 @@
+{% comment %}
+  Lyzr University — curated "Choose your track" cards.
+  Renders exactly the 3 tracks in journey order: Foundations → Studio → ADK.
+  Matched by collection id (slug isn't exposed in Liquid); Thinkific's default
+  "All Tracks" category (id 1433495) is intentionally omitted.
+    Foundations = 1456222 · Studio = 1445649 · ADK = 1445650
+{% endcomment %}
+<ul class="products__list">
+  {% assign curated_ids = '1456222,1445649,1445650' | split: ',' %}
+  {% for wanted in curated_ids %}
+    {% for collection in site.collections %}
+      {% assign cid = collection.id | append: '' %}
+      {% if cid == wanted %}
+        <li class="products__list-item">
+          {% include 'category_card' product: collection %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</ul>

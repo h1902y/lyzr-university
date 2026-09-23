@@ -1,0 +1,17 @@
+{
+  "title": "Lyzr University — Weekly Pulse",
+  "channel": "#lyzr-academy-pipeline",
+  "channelId": "C0AV50RQ9HQ",
+  "cadence": "weekly",
+  "timezoneNote": "Send Mon 08:00 IST (02:30 UTC)",
+  "liveCourses": [
+    { "id": 3443593, "name": "ADK: Foundations",            "collection": "ADK",    "liveSince": "2026-06-01" },
+    { "id": 3443591, "name": "ADK: Knowledge & Memory",     "collection": "ADK",    "liveSince": "2026-06-01" },
+    { "id": 3443592, "name": "ADK: Multimodal",             "collection": "ADK",    "liveSince": "2026-06-02" },
+    { "id": 3445031, "name": "ADK: Tools & Workflows",      "collection": "ADK",    "liveSince": "2026-06-05" },
+    { "id": 3451858, "name": "Studio: The Agent Lifecycle", "collection": "Studio", "liveSince": "2026-06-09" },
+    { "id": 3458141, "name": "Studio: Design & Create",     "collection": "Studio", "liveSince": "2026-06-16" },
+    { "id": 3467905, "name": "Studio: Knowledge & RAG",     "collection": "Studio", "liveSince": "2026-06-30" }
+  ],
+  "legacyLabel": "Legacy & retired"
+}

@@ -1,0 +1,26 @@
+// Course Cards
+// ======================================
+
+.course-cards {
+
+  &__container {
+    @include make-container;
+    @include display(flex);
+    @include flex-wrap(wrap);
+  }
+
+  &__featured-list-item {
+    width: 100%;
+    padding: {
+      top: 0;
+      right: $gutter-width / 2;
+      bottom: $gutter-width;
+      left: $gutter-width / 2;
+    }
+  }
+
+  .section__headings,
+  .section__content {
+    width: 100%;
+  }
+}

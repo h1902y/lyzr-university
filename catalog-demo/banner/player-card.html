@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lyzr University — Player Card (Dark)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&family=Noto+Sans:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --rust:#C0655A; --ring:#7A382E; --cream:#EDE4DF;
+    --ink:#FFFFFF; --muted:#A3897E;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{margin:0;padding:0}
+  .card{position:relative; width:760px; height:420px; overflow:hidden;
+    background:radial-gradient(120% 130% at 14% 18%, #34221B 0%, #20150F 44%, #160F0B 100%);
+    font-family:'Noto Sans',system-ui,sans-serif; color:var(--ink);}
+  .grid{position:absolute; inset:0;
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size:38px 38px; mask-image:linear-gradient(110deg, #000 0%, rgba(0,0,0,.5) 55%, transparent 85%);}
+  .fx{position:absolute; inset:0; pointer-events:none;}     /* glitter/dots */
+  /* soft rust glow disc + icon, center-right */
+  .ring{position:absolute; right:18px; top:96px; width:252px; height:252px; border-radius:50%;
+    background:radial-gradient(closest-side, rgba(192,101,90,.30), rgba(160,80,70,.08) 46%, rgba(192,101,90,0) 70%);
+    display:flex; align-items:center; justify-content:center;}
+  .ring::after{content:""; position:absolute; inset:0; border-radius:50%; border:1px solid rgba(192,101,90,.18);}
+  .ring svg{width:104px; height:104px; stroke:var(--cream); stroke-width:1.3; fill:none;
+    stroke-linecap:round; stroke-linejoin:round; opacity:.95;}
+  .content{position:absolute; inset:0; padding:32px 40px;}
+  .logo{display:flex; align-items:center; gap:14px;}
+  .logo img{height:36px; filter:brightness(0) invert(1);}
+  .logo .bar{width:1px; height:22px; background:rgba(255,255,255,.34);}
+  .logo .uni{font-family:'JetBrains Mono',monospace; font-weight:500; font-size:14px;
+    letter-spacing:.24em; color:#EDE6E1; text-transform:uppercase;}
+  .eyebrow{margin-top:46px; font-family:'JetBrains Mono',monospace; font-weight:600;
+    font-size:12px; letter-spacing:.26em; text-transform:uppercase; color:var(--rust);}
+  .title{margin-top:16px; font-family:'Playfair Display',Georgia,serif; font-weight:700;
+    font-size:64px; line-height:1.0; letter-spacing:-.02em; color:var(--ink); max-width:480px;}
+  .title em{font-style:italic; font-weight:600; color:var(--rust);}
+  .sub{margin-top:20px; font-size:13.5px; color:var(--muted); font-weight:500;}
+  .pills{position:absolute; left:40px; bottom:32px; display:flex; gap:12px;}
+  .pill{display:flex; align-items:center; gap:8px; padding:8px 15px;
+    border:1px solid rgba(255,255,255,.17); border-radius:100px;
+    font-family:'JetBrains Mono',monospace; font-weight:600; font-size:11px;
+    letter-spacing:.12em; text-transform:uppercase; color:#D6CAC3;}
+  .pill svg{width:13px; height:13px; stroke:var(--rust); fill:none; stroke-width:1.7;
+    stroke-linecap:round; stroke-linejoin:round;}
+  .pill .play{fill:var(--rust); stroke:none;}
+</style>
+</head>
+<body>
+  <div class="card" id="card">
+    <div class="grid"></div>
+    <svg class="fx" id="fx" viewBox="0 0 760 420"></svg>
+    <div class="ring">
+      <svg viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.2"/><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="12" r="2.2"/><path d="M8.1 6.8c4 .6 5.2 2.3 7.5 4.3M8.1 17.2c4-.6 5.2-2.3 7.5-4.3"/></svg>
+    </div>
+    <div class="content">
+      <div class="logo">
+        <img src="../lyzr-logo.png" alt="lyzr">
+        <span class="bar"></span>
+        <span class="uni">University</span>
+      </div>
+      <div class="eyebrow" id="eyebrow">STUDIO · TRACK</div>
+      <div class="title" id="title">Design &amp; <em>Create</em></div>
+      <div class="sub" id="sub">with Felipe · Lyzr Studio</div>
+    </div>
+    <div class="pills">
+      <div class="pill"><svg class="play" viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg><span id="videos">5 Videos</span></div>
+      <div class="pill"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span id="duration">45 Minutes</span></div>
+    </div>
+  </div>
+<script src="icons.js"></script>
+<script>
+  // ── Per-course content from URL params ──────────────────────────────
+  const q = new URLSearchParams(location.search);
+  const setTxt = (id, v) => { if (v != null) document.getElementById(id).textContent = v; };
+  setTxt('eyebrow', q.get('eyebrow')); setTxt('sub', q.get('sub'));
+  setTxt('videos', q.get('videos')); setTxt('duration', q.get('duration'));
+  if (q.get('title') != null) document.getElementById('title').innerHTML =
+    `${q.get('title')} <em>${q.get('accent') || ''}</em>`;
+  const ICONS = {
+    flow:'<circle cx="6" cy="6" r="2.2"/><circle cx="6" cy="18" r="2.2"/><circle cx="18" cy="12" r="2.2"/><path d="M8.1 6.8c4 .6 5.2 2.3 7.5 4.3M8.1 17.2c4-.6 5.2-2.3 7.5-4.3"/>',
+    code:'<path d="M9 7l-5 5 5 5M15 7l5 5-5 5"/>',
+    layers:'<path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 12.5l9 5 9-5"/><path d="M3 17l9 5 9-5"/>',
+    chart:'<path d="M5 4v15h15"/><path d="M8.5 14l3.2-3.4 2.3 2.1 4-4.7"/>',
+    gear:'<circle cx="12" cy="12" r="3.2"/><path d="M12 3.5v2.2M12 18.3v2.2M3.5 12h2.2M18.3 12h2.2M6 6l1.6 1.6M16.4 16.4 18 18M18 6l-1.6 1.6M7.6 16.4 6 18"/>',
+    book:'<path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5z"/><path d="M19 18v3H6.5A1.5 1.5 0 0 1 5 19.5"/>',
+    mic:'<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>',
+    shield:'<path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/>',
+  };
+  Object.assign(ICONS, window.LU_ICONS || {});   // lucide set (icons.js) overrides the inline defaults
+  const ic = q.get('icon');
+  if (ic && ICONS[ic]) { const svg = document.querySelector('.ring svg'); svg.innerHTML = ICONS[ic]; }
+  // Non-course products (e.g. the Community) have no video/duration pills.
+  if (q.get('pills') === 'off') document.querySelector('.pills').style.display = 'none';
+
+  // Auto-fit the title so long course names don't overflow the card. Measure AFTER web fonts load
+  // (Playfair metrics differ from the fallback), then shrink the font until it fits the title box.
+  document.fonts.ready.then(() => {
+    const t = document.getElementById('title');
+    let fs = 64;
+    while (fs > 26 && t.scrollHeight > 172) { fs -= 2; t.style.fontSize = fs + 'px'; }
+  });
+
+  // Deterministic glitter/dots — seeded so every render is identical.
+  let s = 1337; const rnd = () => (s = (s*1103515245 + 12345) & 0x7fffffff) / 0x7fffffff;
+  const fx = document.getElementById('fx'); const NS='http://www.w3.org/2000/svg';
+  const dot=(x,y,r,o,c)=>{const e=document.createElementNS(NS,'circle');e.setAttribute('cx',x);e.setAttribute('cy',y);e.setAttribute('r',r);e.setAttribute('fill',c);e.setAttribute('opacity',o);fx.appendChild(e);};
+  const spark=(x,y,r,o)=>{const e=document.createElementNS(NS,'path');e.setAttribute('d',`M${x} ${y-r}L${x} ${y+r}M${x-r} ${y}L${x+r} ${y}`);e.setAttribute('stroke','#E8C8BF');e.setAttribute('stroke-width','0.8');e.setAttribute('opacity',o);e.setAttribute('stroke-linecap','round');fx.appendChild(e);};
+  for(let i=0;i<70;i++){const x=rnd()*760,y=rnd()*420;const bias=0.55+0.45*(x/760);if(rnd()>bias)continue;dot(x,y,rnd()*0.9+0.5,(rnd()*0.28+0.07).toFixed(2),rnd()>0.5?'#EAD9D2':'#C0655A');}
+  for(let i=0;i<9;i++){spark(180+rnd()*560,30+rnd()*360,rnd()*2.2+1.6,(rnd()*0.3+0.18).toFixed(2));}
+</script>
+</body>
+</html>

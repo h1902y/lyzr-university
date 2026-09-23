@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&family=JetBrains+Mono&display=swap');
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    line-height: 1.6;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  h1 { font-family: 'Playfair Display', serif; font-style: italic; color: #111; font-size: 32px; border-bottom: 2px solid #E05638; padding-bottom: 12px; }
+  h2 { color: #E05638; font-size: 22px; margin-top: 28px; }
+  h3 { color: #333; font-size: 18px; }
+  code, pre { font-family: 'JetBrains Mono', monospace; background: #f4f4f5; padding: 2px 6px; border-radius: 4px; font-size: 14px; }
+  pre { padding: 16px; display: block; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+  th, td { border: 1px solid #e4e4e7; padding: 10px 14px; text-align: left; }
+  th { background: #f4f4f5; color: #111; font-weight: 600; }
+  blockquote { border-left: 4px solid #E05638; margin: 20px 0; padding: 10px 20px; background: #fafafa; font-style: italic; }
+  .header-badge { background: #E05638; color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; letter-spacing: 1px; display: inline-block; margin-bottom: 12px; }
+</style>
+</head>
+<body>
+  <div class="header-badge">LYZR UNIVERSITY · OFFICIAL LESSON NOTES</div>
+  <h1>🛠️ GitAgent Harness: Repo as Source of Truth & Runtime
+
+Treating AI agents as code repositories—how GitAgent transforms Git into the agent harness and GitHub into the enterprise governance engine.
+
+---
+
+#<h1>🎯 Executive Summary & Overview
+
+Connecting an AI agent to a Git repository is often viewed simply as "version control." However, in the GitAgent paradigm, **the repository becomes the agent itself**, while Lyzr Studio operates as the runtime environment.
+
+Instead of managing agents via web UI forms, every aspect of the agent is declared as plain text files in an open specification format.
+
+---
+
+#<h1>📄 The GitAgent File Architecture
+
+When an agent connects to Git, Studio generates four core configuration files:
+
+```text
+my-agent-repo/
+├── soul.md       <h1>Who the agent is (Identity, Tone, Expertise)
+├── rules.md      <h1>What the agent must NEVER do (Guardrails & Policies)
+├── instructions.md <h1>How the agent behaves & steps to execute
+└── agent.yaml    <h1>Declarative configuration (Model, Temperature, Tools, Features)
+```
+
+---
+
+#<h1>⚡ Key Paradigm Shifts
+
+##<h1>1. File-Based Specification Over UI Fields
+Because the agent is defined by files, changes can originate from anywhere:
+* An engineer submitting a GitHub Pull Request.
+* An automated CI script updating `agent.yaml`.
+* A peer AI agent refactoring `rules.md`.
+
+##<h1>2. Studio as a Synchronized Runtime
+Lyzr Studio watches the Git repository. A single click (`Pull from GitHub`) synchronizes Studio's state with the repository's latest commit hash, ensuring the repository remains the immutable **Source of Truth**.
+
+##<h1>3. Native Enterprise Governance
+Instead of building custom administrative workflows, AI agents inherit your enterprise's existing software delivery controls:
+* **Peer Code Reviews:** PR approvals required before policy merged to main.
+* **CI/CD Testing:** Automated simulation suites trigger on every agent commit.
+* **Audit Trails:** Complete history of every agent behavior with author name and timestamp.
+
+---
+
+#<h1>💡 Summary takeaway
+
+> *"Stop asking how to manage agents, and start asking what you would do if an agent were just code—because now it is."*
+
+</body>
+</html>

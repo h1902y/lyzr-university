@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lyzr University — Banner Generator</title>
+<link rel="stylesheet" href="banner.css">
+<script src="../thumbnail/html2canvas.min.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="nav-brand">Lyzr University</span>
+  <a href="../course-catalog-demo.html">Course Catalog</a>
+  <a href="../thumbnail/">Thumbnail Generator</a>
+  <a href="./" class="active">Banner Generator</a>
+</nav>
+
+<div class="header">
+  <div class="header-overline">Brand Art</div>
+  <h1>Banner <em>Generator</em></h1>
+</div>
+
+<div class="controls">
+  <div class="control-group">
+    <label class="control-label" for="src-select">Prefill from</label>
+    <select id="src-select"></select>
+  </div>
+  <div class="control-group grow">
+    <label class="control-label" for="in-eyebrow">Eyebrow</label>
+    <input id="in-eyebrow" type="text" placeholder="LYZR UNIVERSITY">
+  </div>
+  <div class="control-group grow">
+    <label class="control-label" for="in-headline">Headline (wrap *a word* for italic accent)</label>
+    <input id="in-headline" type="text" placeholder="Learn to *build with Lyzr*">
+  </div>
+  <div class="control-group grow">
+    <label class="control-label" for="in-sub">Subheadline</label>
+    <input id="in-sub" type="text" placeholder="Short supporting line">
+  </div>
+  <div class="control-group">
+    <span class="control-label">Theme</span>
+    <div class="toggle-group" id="theme-toggle">
+      <button class="toggle-btn" data-theme="dark">Dark</button>
+      <button class="toggle-btn active" data-theme="light">Light</button>
+    </div>
+  </div>
+  <div class="control-group">
+    <span class="control-label">Size</span>
+    <div class="toggle-group" id="size-toggle">
+      <button class="toggle-btn active" data-size="hero">Hero · 1600×600</button>
+      <button class="toggle-btn" data-size="wide">Page · 1440×720</button>
+      <button class="toggle-btn" data-size="ultrawide">Ultra · 1920×480</button>
+      <button class="toggle-btn" data-size="linkedin">LinkedIn · 1584×396</button>
+      <button class="toggle-btn" data-size="x">X · 1500×500</button>
+      <button class="toggle-btn" data-size="card">Card · 760×420</button>
+      <button class="toggle-btn" data-size="community">Community · 640×160</button>
+      <button class="toggle-btn" data-size="social">Social · 1200×630</button>
+    </div>
+  </div>
+  <button class="btn-download" id="download-btn">Download PNG</button>
+</div>
+
+<div class="stage-wrap">
+  <div class="stage" id="stage">
+    <div class="banner-scale" id="banner-scale">
+      <div id="banner" class="theme-light size-hero">
+        <div class="elevate">
+          <div class="band b1"></div><div class="band b2"></div><div class="band b3"></div>
+          <div class="band b4"></div><div class="band b5"></div>
+        </div>
+        <div class="cat-glow"></div>
+        <div class="banner-watermark" id="b-watermark"></div>
+        <div class="banner-logo-row">
+          <img src="../lyzr-logo.png" alt="Lyzr" class="banner-logo">
+          <span class="banner-logo-divider"></span>
+          <span class="banner-logo-label">University</span>
+        </div>
+        <div class="banner-inner">
+          <div class="banner-accent-bar"></div>
+          <div class="banner-eyebrow" id="b-eyebrow"></div>
+          <div class="banner-headline" id="b-headline"></div>
+          <div class="banner-sub" id="b-sub"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var DATA = null, META = null, GENERIC = null;
+var ITEMS = [];
+var currentTheme = 'light';
+var currentSize = 'hero';
+var SIZES = { hero: [1600, 600], wide: [1440, 720], ultrawide: [1920, 480], linkedin: [1584, 396], x: [1500, 500], card: [760, 420], community: [640, 160], social: [1200, 630] };
+// Thinkific caps the Community Home banner at 250 KB — export that size as JPEG
+var JPEG_SIZES = { community: true };
+var NATIVE_W = 1600, NATIVE_H = 600;
+
+Promise.all([
+  fetch('../catalog-data.json').then(function(r){return r.json();}),
+  fetch('../category-meta.json').then(function(r){return r.json();}),
+  fetch('../generic-templates.json').then(function(r){return r.json();})
+]).then(function(res){
+  DATA = res[0]; META = res[1]; GENERIC = res[2];
+  buildItems();
+  populateSelect();
+  prefillFrom(ITEMS[0]);   // default to the first generic template
+  applyQueryParams();      // optional ?src/&size/&theme/&eyebrow/&headline/&sub/&shot overrides
+  applySize();
+  renderText();
+  if (document.body.classList.contains('export-mode')) document.title = 'EXPORT-READY';
+});
+
+// URL-param overrides — lets headless Chrome screenshot a fully-configured banner (?shot hides the UI)
+function applyQueryParams() {
+  var q = new URLSearchParams(location.search);
+  if (!q.size) return;
+  var srcId = q.get('src');
+  if (srcId) {
+    var idx = ITEMS.findIndex(function(it){ return it.type === 'generic' && it.data.id === srcId; });
+    if (idx >= 0) { prefillFrom(ITEMS[idx]); document.getElementById('src-select').value = String(idx); }
+  }
+  var theme = q.get('theme');
+  if (theme === 'dark' || theme === 'light') {
+    currentTheme = theme;
+    document.querySelectorAll('#theme-toggle .toggle-btn').forEach(function(x){ x.classList.toggle('active', x.dataset.theme === theme); });
+  }
+  var size = q.get('size');
+  if (size && SIZES[size]) {
+    currentSize = size;
+    document.querySelectorAll('#size-toggle .toggle-btn').forEach(function(x){ x.classList.toggle('active', x.dataset.size === size); });
+  }
+  ['eyebrow','headline','sub'].forEach(function(k){
+    if (q.get(k) !== null) document.getElementById('in-' + k).value = q.get(k);
+  });
+  if (q.get('label')) document.querySelector('.banner-logo-label').textContent = q.get('label');
+  if (q.get('accent')) document.getElementById('banner').style.setProperty('--cat', q.get('accent'));
+  if (q.has('shot')) document.body.classList.add('export-mode');
+}
+
+window.addEventListener('resize', fitScale);
+
+function buildItems() {
+  ITEMS = [];
+  GENERIC.templates.forEach(function(t){ ITEMS.push({type:'generic', data:t}); });
+  DATA.courses.forEach(function(c){ ITEMS.push({type:'course', data:c}); });
+}
+
+function lookupMeta(label){ return META.products[label] || META.modules[label] || META.usecases[label] || null; }
+function svgNode(s){ var d = new DOMParser().parseFromString(s, 'image/svg+xml'); return document.importNode(d.documentElement, true); }
+function setIcon(el, s){ el.replaceChildren(); if (s) el.appendChild(svgNode(s)); }
+
+function populateSelect() {
+  var sel = document.getElementById('src-select');
+  sel.replaceChildren();
+  var g = document.createElement('optgroup'); g.label = 'Templates';
+  var c = document.createElement('optgroup'); c.label = 'Courses';
+  ITEMS.forEach(function(item, i){
+    var o = document.createElement('option'); o.value = String(i);
+    if (item.type === 'generic') { o.textContent = item.data.badge + ' — ' + item.data.title; g.appendChild(o); }
+    else { o.textContent = '[' + (item.data.product || item.data.collection) + '] ' + item.data.name; c.appendChild(o); }
+  });
+  sel.append(g, c);
+  sel.addEventListener('change', function(){ prefillFrom(ITEMS[parseInt(sel.value,10)]); renderText(); });
+}
+
+// Prefill the editable fields + accent + watermark from a template/course
+function prefillFrom(item) {
+  var banner = document.getElementById('banner');
+  if (item.type === 'generic') {
+    var t = item.data;
+    document.getElementById('in-eyebrow').value = t.badge;
+    // re-wrap the emphasis word with * for the italic-accent trick
+    var hl = t.title;
+    if (t.emphasis && hl.indexOf(t.emphasis) >= 0) hl = hl.replace(t.emphasis, '*' + t.emphasis + '*');
+    document.getElementById('in-headline').value = hl;
+    document.getElementById('in-sub').value = t.sub || '';
+    banner.style.setProperty('--cat', t.color || '#71514F');
+    setIcon(document.getElementById('b-watermark'), t.icon || '');
+  } else {
+    var c = item.data;
+    var primary = (c.modules && c.modules.length) ? c.modules[0] : (c.function || c.product);
+    var cm = lookupMeta(primary) || lookupMeta(c.product) || null;
+    document.getElementById('in-eyebrow').value = 'LYZR UNIVERSITY' + (c.product ? ' · ' + c.product.toUpperCase() : '');
+    document.getElementById('in-headline').value = c.name;
+    document.getElementById('in-sub').value = (c.description || '').split(' — ')[0] + (c.description && c.description.indexOf(' — ') >= 0 ? '.' : '');
+    banner.style.setProperty('--cat', cm ? cm.color : '#71514F');
+    setIcon(document.getElementById('b-watermark'), cm ? cm.icon : '');
+  }
+}
+
+// Render headline with *word* → <em>; eyebrow + sub are plain text
+function renderHeadline(el, text) {
+  el.replaceChildren();
+  var parts = text.split(/\*([^*]+)\*/);   // odd indices are emphasised
+  parts.forEach(function(seg, i){
+    if (!seg) return;
+    if (i % 2 === 1) { var em = document.createElement('em'); em.textContent = seg; el.appendChild(em); }
+    else el.appendChild(document.createTextNode(seg));
+  });
+}
+
+function renderText() {
+  document.getElementById('b-eyebrow').textContent = document.getElementById('in-eyebrow').value;
+  renderHeadline(document.getElementById('b-headline'), document.getElementById('in-headline').value);
+  document.getElementById('b-sub').textContent = document.getElementById('in-sub').value;
+}
+
+['in-eyebrow','in-headline','in-sub'].forEach(function(id){
+  document.getElementById(id).addEventListener('input', renderText);
+});
+
+function applySize() {
+  var dim = SIZES[currentSize];
+  NATIVE_W = dim[0]; NATIVE_H = dim[1];
+  var banner = document.getElementById('banner');
+  banner.style.width = NATIVE_W + 'px';
+  banner.style.height = NATIVE_H + 'px';
+  banner.className = 'theme-' + currentTheme + ' size-' + currentSize;
+  fitScale();
+}
+
+function fitScale() {
+  var stage = document.getElementById('stage');
+  if (document.body.classList.contains('export-mode')) {
+    stage.style.aspectRatio = '';
+    stage.style.width = NATIVE_W + 'px';
+    stage.style.height = NATIVE_H + 'px';
+    document.getElementById('banner-scale').style.transform = 'none';
+    return;
+  }
+  stage.style.aspectRatio = NATIVE_W + ' / ' + NATIVE_H;
+  var scale = stage.clientWidth / NATIVE_W;
+  document.getElementById('banner-scale').style.transform = 'scale(' + scale + ')';
+}
+
+document.getElementById('theme-toggle').addEventListener('click', function(e){
+  var b = e.target.closest('.toggle-btn'); if (!b) return;
+  currentTheme = b.dataset.theme;
+  document.querySelectorAll('#theme-toggle .toggle-btn').forEach(function(x){ x.classList.toggle('active', x === b); });
+  document.getElementById('banner').className = 'theme-' + currentTheme + ' size-' + currentSize;
+});
+
+document.getElementById('size-toggle').addEventListener('click', function(e){
+  var b = e.target.closest('.toggle-btn'); if (!b) return;
+  currentSize = b.dataset.size;
+  document.querySelectorAll('#size-toggle .toggle-btn').forEach(function(x){ x.classList.toggle('active', x === b); });
+  applySize();
+});
+
+document.getElementById('download-btn').addEventListener('click', function(){
+  var node = document.getElementById('banner');
+  var scaleEl = document.getElementById('banner-scale');
+  var btn = this;
+  btn.textContent = 'Rendering…'; btn.disabled = true;
+  scaleEl.style.transform = 'none';
+  var fontsReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+  fontsReady.then(function(){
+    return html2canvas(node, { width: NATIVE_W, height: NATIVE_H, windowWidth: NATIVE_W, windowHeight: NATIVE_H, scale: 2, backgroundColor: null, useCORS: true });
+  }).then(function(canvas){
+    var hl = document.getElementById('in-headline').value || 'banner';
+    var slug = hl.toLowerCase().replace(/\*/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0, 40);
+    var asJpeg = !!JPEG_SIZES[currentSize];
+    var link = document.createElement('a');
+    link.download = 'lyzr-banner-' + slug + '-' + currentSize + (asJpeg ? '.jpg' : '.png');
+    link.href = asJpeg ? canvas.toDataURL('image/jpeg', 0.88) : canvas.toDataURL('image/png');
+    link.click();
+    fitScale(); btn.textContent = 'Download PNG'; btn.disabled = false;
+  }).catch(function(){ fitScale(); btn.textContent = 'Download PNG'; btn.disabled = false; });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+{% comment %}
+  Site-wide meta tags & SEO schema for Lyzr University
+{% endcomment %}
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#1E1C27">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" type="image/png" href="{% if theme.settings.favicon != blank %}{{ theme.settings.favicon }}{% else %}https://cdn.thinkific.com/51/20180809/f1a1de9d3260c96d3a81ee781bc9808e.ico{% endif %}">
+<link rel="icon" type="image/png" href="{% if theme.settings.favicon != blank %}{{ theme.settings.favicon }}{% else %}https://cdn.thinkific.com/51/20180809/f1a1de9d3260c96d3a81ee781bc9808e.ico{% endif %}">
+
+{% for meta in page.meta %}
+  {{ meta.tag }}
+{% endfor %}
+
+{% if site.has_google_verification_meta_tag %}
+  <meta name="google-site-verification" content="{{ site.google_verification_meta_tag }}">
+{% endif %}
+
+{% comment %}
+  Page specific meta tags & Open Graph
+{% endcomment %}
+
+{% case page.page_identifier %}
+  {% when 'home_landing_page' %}
+    <title>{% if page.seo_title != blank %}{{ page.seo_title }}{% else %}Lyzr University — Master AI Agent Engineering &amp; Production Lifecycle{% endif %}</title>
+    <meta name="description" content="Master the entire lifecycle for production-grade AI agents across three dedicated tracks: Foundations, Lyzr Platform Studio, and Code with Python ADK. 100% free forever.">
+    <meta name="keywords" content="{% if page.keywords != blank %}{{ page.keywords }}{% else %}Lyzr, Lyzr University, AI Agents, Agent Development Kit, AI Studio, Python ADK, LLM Agents, Multi-Agent Systems, Enterprise AI, Free AI Courses{% endif %}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="Lyzr University">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://university.lyzr.ai">
+    <meta property="og:title" content="Lyzr University — Master AI Agent Engineering">
+    <meta property="og:description" content="Master the complete production lifecycle for enterprise AI agents across three dedicated paths: Foundations, AI Studio, and Python ADK. Free forever.">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@LyzrAI">
+    <meta name="twitter:creator" content="@LyzrAI">
+    <meta name="twitter:title" content="Lyzr University — Master AI Agent Engineering">
+    <meta name="twitter:description" content="Master the complete production lifecycle for enterprise AI agents across three dedicated paths: Foundations, AI Studio, and Python ADK. Free forever.">
+
+  {% when 'course_landing_page' %}
+    <title>{% if page.seo_title != blank %}{{ page.seo_title }}{% else %}{{ page.course.name }} — Lyzr University{% endif %}</title>
+    {% if page.is_hidden %}
+      <meta name="robots" content="noindex">
+    {% else %}
+      <meta name="description" content="{% if page.course.description != blank %}{{ page.course.description | strip_html | truncate: 160 }}{% else %}Master enterprise AI agents with Lyzr University.{% endif %}">
+      <meta property="og:site_name" content="Lyzr University">
+      <meta property="og:type" content="website">
+      <meta property="og:title" content="{{ page.course.name }} — Lyzr University">
+      <meta property="og:description" content="{% if page.course.description != blank %}{{ page.course.description | strip_html | truncate: 160 }}{% else %}Master enterprise AI agents with Lyzr University.{% endif %}">
+      {% if page.course.card_image_url != blank %}
+        <meta property="og:image" content="{{ page.course.card_image_url }}">
+        <meta name="twitter:image" content="{{ page.course.card_image_url }}">
+      {% endif %}
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@LyzrAI">
+      <meta name="twitter:title" content="{{ page.course.name }} — Lyzr University">
+      <meta name="twitter:description" content="{% if page.course.description != blank %}{{ page.course.description | strip_html | truncate: 160 }}{% else %}Master enterprise AI agents with Lyzr University.{% endif %}">
+    {% endif %}
+
+  {% when 'bundle_landing_page' or 'community_landing_page' %}
+    {% if page.seo_title != blank %}
+      <title>{{ page.seo_title }}</title>
+    {% else %}
+      <title>{{ page.bundle.name | default: 'Community' }} — Lyzr University</title>
+    {% endif %}
+    {% if page.is_hidden %}
+      <meta name="robots" content="noindex">
+    {% endif %}
+
+  {% when 'page_template' %}
+    {% if page.seo_metatags != blank %}
+      {{ page.seo_metatags }}
+    {% endif %}
+
+  {% when 'coming_soon_page' %}
+    <title>{{ 'liquid.partials.dashboard_course_card.coming_soon' | translate }} — Lyzr University</title>
+    <meta name="description" content="New course coming soon to Lyzr University.">
+
+  {% when 'student_certificate_page' %}
+    <title>{{ 'liquid.partials.student_certificate.certificate_id' | translate }} — Lyzr University</title>
+    <meta name="og:image" content="{{ page.credential_image_url }}">
+    <meta name="twitter:image" content="{{ page.credential_image_url }}">
+    <meta name="twitter:title" content="Check out my Lyzr AI Certification!">
+    <meta name="twitter:card" content="summary_large_image">
+
+  {% when 'collections_landing_page' %}
+    {% if page.seo_title == blank %}
+      <title>All Courses — Lyzr University</title>
+    {% else %}
+      <title>{{ page.seo_title }}</title>
+    {% endif %}
+    <meta name="description" content="Browse all courses and certifications on Lyzr University.">
+
+  {% when 'collection_landing_page' %}
+    <title>{{ page.collection.name }} — Lyzr University</title>
+
+  {% when 'sign_in_page' %}
+    <title>Sign In — Lyzr University</title>
+
+  {% when 'sign_up_page' %}
+    <title>Create Account — Lyzr University</title>
+
+  {% when 'student_dashboard' %}
+    <title>My Student Dashboard — Lyzr University</title>
+
+  {% when 'privacy_policy_page' %}
+    <title>Privacy Policy — Lyzr University</title>
+
+  {% when 'terms_of_use_page' %}
+    <title>Terms of Use — Lyzr University</title>
+
+  {% when 'checkout_page' %}
+    <title>Complete Enrollment — Lyzr University</title>
+
+  {% when 'checkout_thankyou_page' %}
+    <title>Welcome to the Course! — Lyzr University</title>
+
+  {% when 'paypal_confirm_page' %}
+    <title>Payment Confirmation — Lyzr University</title>
+
+  {% when 'checkout_signin_signup_page' %}
+    <title>Sign In or Register — Lyzr University</title>
+
+  {% when 'my_account_billings_page' %}
+    <title>Billing — Lyzr University</title>
+
+  {% when 'my_account_certificates_page' %}
+    <title>My Certificates — Lyzr University</title>
+
+  {% when 'my_account_credit_card_page' %}
+    <title>Credit Card — Lyzr University</title>
+
+  {% when 'my_account_notifications_page' %}
+    <title>Notifications — Lyzr University</title>
+
+  {% when 'my_account_order_page' %}
+    <title>Order Details — Lyzr University</title>
+
+  {% when 'my_account_order_list_page' %}
+    <title>Order History — Lyzr University</title>
+
+  {% when 'my_account_password_page' %}
+    <title>Change Password — Lyzr University</title>
+
+  {% when 'my_account_page' %}
+    <title>Profile Settings — Lyzr University</title>
+
+  {% when 'sign_out_page' %}
+    <title>Sign Out — Lyzr University</title>
+
+  {% when 'new_course_review_page' or 'edit_course_review_page' %}
+    <title>Course Review — Lyzr University</title>
+
+  {% when 'affiliate_index_page' %}
+    <title>Affiliate Dashboard — Lyzr University</title>
+
+  {% when 'affiliate_links_page' %}
+    <title>Affiliate Links — Lyzr University</title>
+
+  {% when 'affiliate_reports_page' %}
+    <title>Affiliate Reports — Lyzr University</title>
+
+  {% when 'affiliate_settings_page' %}
+    <title>Affiliate Settings — Lyzr University</title>
+{% endcase %}

@@ -1,0 +1,222 @@
+// Course Curriculum
+// ======================================
+
+.course-curriculum {
+  &__container {
+    @include make-container;
+    @include screen-md-max {
+      & header {
+        margin-bottom: $margin-3;
+      }
+    }
+  }
+
+  .section__subheading {
+    @include screen-sm-min {
+      margin-top: $margin-base;
+    }
+    margin-bottom: 0;
+  }
+
+
+  &__content {
+    @include screen-md-max {
+      @include flex-direction(column);
+    }
+    @include display(flex);
+
+    gap: 0 40px;
+  }
+
+  &__chapter-container {
+    @include screen-md-max {
+      margin-bottom: 40px;
+    }
+    @include flex-grow(1);
+
+    &--empty {
+      @include screen-md-max {
+        @include flex-direction(column);
+      }
+      @include display(flex);
+    }
+
+    gap: 0 40px;
+  }
+
+  &__chapter-list {
+    @include make-row(false);
+    align-self: flex-start;
+    width: 100%;
+    list-style: none;
+
+    .course-curriculum__chapter {
+      border-bottom: 1px solid $body__text-color;
+    }
+
+    &--empty {
+      margin-bottom: 40px;
+      opacity: 40%;
+
+      ol {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__chapter-header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: $padding-3;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    text-align: left;
+    cursor: pointer;
+
+    .toga-icon {
+      @include transition(all 0.25s ease);
+      color: $accent__color;
+      font-size: 1.5rem;
+    }
+
+    &.collapse {
+      .toga-icon {
+        transform: rotate(-180deg);
+      }
+
+      .course-curriculum__chapter-title {
+        position: relative;
+      }
+
+      .course-curriculum__chapter-content {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__chapter-content {
+    @include transition(opacity 200ms ease);
+    padding: 0 $padding-3 $padding-base;
+    list-style: none;
+
+    a {
+      text-decoration: none;
+
+      p {
+        text-decoration: underline;
+      }
+
+      &:active,
+      &:hover {
+        p {
+          text-decoration: none;
+        }
+      }
+    }
+
+    li {
+      position: relative;
+      margin-bottom: 1em;
+      line-height: 1.5;
+    }
+
+    &--collapsed {
+      display: none;
+    }
+  }
+
+  &__chapter {
+    @include make-col(12);
+    @include display(flex);
+
+    padding-right: 0;
+    padding-left: 0;
+    line-height: 1;
+  }
+
+  &__chapter-content-wrapper {
+    @include flex-grow(1);
+    overflow: hidden;
+
+    ol {
+      margin: 0;
+      list-style: none;
+    }
+
+    &.disabled {
+      pointer-events: none;
+    }
+  }
+
+  &__chapter-title {
+    position: relative;
+    margin: 0;
+    padding-right: $gutter-width;
+    font-family: $body__font-family;
+    font-size: $body__font-size * 1.2;
+    font-weight: $body__font-weight;
+  }
+
+  &__lesson-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    p {
+      margin: $margin-base / 2 0;
+      padding-right: 1rem;
+    }
+  }
+
+  &__chapter-lesson {
+    display: flex;
+
+    &--free {
+      margin: $margin-base / 2 0;
+      padding: 5px $margin-base;
+      border-radius: 5px;
+      background-color: $accent__color;
+      color: dynamic-contrast-color($accent__color);
+      font-size: $body__font-size * 0.875;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    i {
+      margin: $margin-base / 2 0;
+      padding-right: 1rem;
+      font-size: 1.5rem;
+      vertical-align: sub;
+    }
+  }
+
+  &__chapter-toggle {
+    .button--link {
+      margin-top: $gutter-width;
+      padding: 0;
+      border: 0;
+      background: none;
+      color: $link__color;
+      font-family: $body__font-family;
+      font-weight: normal;
+      text-transform: none;
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: $link__color--active;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__card {
+    margin-bottom: $margin-2;
+  }
+}

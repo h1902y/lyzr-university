@@ -1,0 +1,742 @@
+{
+  "collections": [
+    {
+      "id": "foundations",
+      "name": "Lyzr Foundation",
+      "tagline": "Foundational concepts & strategy",
+      "axis": "product"
+    },
+    {
+      "id": "foundations-new",
+      "name": "Lyzr Foundation (New)",
+      "tagline": "Enablement & Masterclasses",
+      "axis": "product"
+    },
+    {
+      "id": "track-studio",
+      "name": "Studio Track",
+      "tagline": "Build visually in AI Studio",
+      "axis": "product"
+    },
+    {
+      "id": "track-adk",
+      "name": "ADK Track",
+      "tagline": "Build in code with Python SDK",
+      "axis": "product"
+    }
+  ],
+  "categories": {
+    "products": [
+      "Architect",
+      "Studio",
+      "ADK"
+    ]
+  },
+  "courses": [
+    {
+      "slug": "track-adk-foundations",
+      "name": "ADK: Foundations",
+      "collection": "track-adk",
+      "product": "ADK",
+      "modules": [
+        "Getting Started",
+        "Agents"
+      ],
+      "function": "",
+      "level": "Foundations",
+      "status": "live",
+      "instructor": "Felipe",
+      "videos": 6,
+      "lessons": 6,
+      "duration": "~45 min",
+      "description": "Agent fundamentals in code \u2014 what a Lyzr agent is, your first agent, swapping LLM providers, streaming, structured outputs, and a multi-provider chatbot project.",
+      "syllabus": [
+        {
+          "n": "01",
+          "title": "What is a Lyzr Agent",
+          "summary": "What an agent really is \u2014 an LLM plus role, goal, instructions, and a run loop."
+        },
+        {
+          "n": "02",
+          "title": "Your first Agent",
+          "summary": "Create and run your first agent with create_agent and agent.run()."
+        },
+        {
+          "n": "03",
+          "title": "Swapping LLM Providers",
+          "summary": "Switch between GPT, Claude, and Gemini by changing a single line."
+        },
+        {
+          "n": "04",
+          "title": "Streaming Responses",
+          "summary": "Stream tokens as they're generated instead of waiting for the full reply."
+        },
+        {
+          "n": "05",
+          "title": "Structured Outputs",
+          "summary": "Constrain output to a Pydantic schema for reliable, typed results."
+        },
+        {
+          "n": "06",
+          "title": "Project: Multi-provider chatbot",
+          "summary": "Capstone \u2014 build a chatbot that swaps providers and streams structured replies."
+        }
+      ],
+      "thumbnail": "thumbnails/track-adk-foundations.png",
+      "thumbnailTheme": "light"
+    },
+    {
+      "slug": "track-adk-multimodal",
+      "name": "ADK: Multimodal",
+      "collection": "track-adk",
+      "product": "ADK",
+      "modules": [
+        "Multimodal"
+      ],
+      "function": "",
+      "level": "Core",
+      "status": "live",
+      "instructor": "Felipe",
+      "videos": 3,
+      "lessons": 3,
+      "duration": "~25 min",
+      "description": "Multimodal agents in code \u2014 image generation, file generation, and a creative-assistant project.",
+      "syllabus": [
+        {
+          "n": "07",
+          "title": "Image generation",
+          "summary": "Generate images from a prompt inside an agent."
+        },
+        {
+          "n": "08",
+          "title": "File generation",
+          "summary": "Have an agent produce a document or file as its output."
+        },
+        {
+          "n": "09",
+          "title": "Project: Creative assistant",
+          "summary": "Capstone \u2014 one prompt in, a hero image and a marketing PDF out."
+        }
+      ],
+      "thumbnail": "thumbnails/track-adk-multimodal.png",
+      "thumbnailTheme": "light"
+    },
+    {
+      "slug": "track-adk-knowledge-memory",
+      "name": "ADK: Knowledge & Memory",
+      "collection": "track-adk",
+      "product": "ADK",
+      "modules": [
+        "Knowledge & RAG",
+        "Memory"
+      ],
+      "function": "",
+      "level": "Core",
+      "status": "live",
+      "instructor": "Felipe",
+      "videos": 6,
+      "lessons": 6,
+      "duration": "~50 min",
+      "description": "RAG and memory in code \u2014 what RAG is, document ingestion, vector stores and retrieval, agent and conversation memory, and a document Q&A bot capstone.",
+      "syllabus": [
+        {
+          "n": "10",
+          "title": "What is RAG?",
+          "summary": "Retrieval-augmented generation \u2014 ground answers in your own documents."
+        },
+        {
+          "n": "11",
+          "title": "Document ingestion",
+          "summary": "Load PDFs, docs, and websites into a knowledge base."
+        },
+        {
+          "n": "12",
+          "title": "Vector stores and retrieval",
+          "summary": "How embeddings and vector search surface the right chunks per query."
+        },
+        {
+          "n": "13",
+          "title": "Agent memory basics",
+          "summary": "Give an agent memory so it carries context across calls."
+        },
+        {
+          "n": "14",
+          "title": "Conversation memory",
+          "summary": "Persist the back-and-forth of a session as conversation memory."
+        },
+        {
+          "n": "15",
+          "title": "Project: Document Q&A bot",
+          "summary": "Capstone \u2014 a RAG bot that answers questions over real documents."
+        }
+      ],
+      "thumbnail": "thumbnails/track-adk-knowledge-memory.png",
+      "thumbnailTheme": "light"
+    },
+    {
+      "slug": "track-adk-tools-workflows",
+      "name": "ADK: Tools & Workflows",
+      "collection": "track-adk",
+      "product": "ADK",
+      "modules": [
+        "Tools & Integrations",
+        "Orchestration"
+      ],
+      "function": "",
+      "level": "Core",
+      "status": "live",
+      "instructor": "Felipe",
+      "videos": 4,
+      "lessons": 4,
+      "duration": "~10 min",
+      "description": "Give agents the ability to act in code \u2014 why tools matter, writing local tools, agent context (standing knowledge in the system prompt), and multi-step workflows with a manager agent. All four lessons recorded.",
+      "syllabus": [
+        {
+          "n": "16",
+          "title": "Why tools matter",
+          "summary": "Why a text-only agent can't query data or act \u2014 and how tools close the gap."
+        },
+        {
+          "n": "17",
+          "title": "Writing local tools",
+          "summary": "Hand an agent multiple Python-function tools and let it choose and chain them."
+        },
+        {
+          "n": "18",
+          "title": "Agent context",
+          "summary": "Standing knowledge in the system prompt via contexts=[...], added or removed between calls."
+        },
+        {
+          "n": "19",
+          "title": "Multi-step workflows",
+          "summary": "Orchestrate specialists with a manager agent via managed_agents."
+        }
+      ],
+      "thumbnail": "thumbnails/track-adk-tools-workflows.png",
+      "thumbnailTheme": "light"
+    },
+    {
+      "slug": "track-adk-gitagent-oss",
+      "name": "ADK: GitAgent & OSS",
+      "collection": "track-adk",
+      "product": "ADK",
+      "modules": [
+        "Tools & Integrations"
+      ],
+      "function": "",
+      "level": "Advanced",
+      "status": "coming-soon",
+      "instructor": "Shreyas",
+      "videos": 4,
+      "lessons": 4,
+      "duration": "~36 min",
+      "description": "Developer tooling and open source \u2014 GitAgent install, automating code reviews, OpenGAP, and contributing to Lyzr open source.",
+      "thumbnail": "thumbnails/track-adk-gitagent-oss.png",
+      "thumbnailTheme": "light"
+    },
+    {
+      "slug": "track-architect-fundamentals",
+      "name": "Architect: Fundamentals",
+      "collection": "track-adk",
+      "product": "Architect",
+      "modules": [
+        "Getting Started",
+        "Agents"
+      ],
+      "function": "",
+      "level": "Foundations",
+      "status": "coming-soon",
+      "instructor": "Suyash",
+      "videos": 4,
+      "lessons": 4,
+      "duration": "~40 min",
+      "description": "Build full agentic apps with no code \u2014 what Architect is, designing your first agent in plain English, advanced configuration, and an enterprise agent-design walkthrough.",
+      "thumbnail": "thumbnails/track-architect-fundamentals.png",
+      "thumbnailTheme": "light"
+    },
+    {
+      "slug": "legacy-agent-building",
+      "name": "Lyzr Agent Building",
+      "collection": "foundations",
+      "product": "Studio",
+      "modules": [
+        "Agents"
+      ],
+      "function": "",
+      "level": "Foundations",
+      "status": "legacy",
+      "instructor": "Lyzr Team",
+      "videos": 24,
+      "lessons": 24,
+      "duration": "~2.5 hrs",
+      "description": "Build production agents on Lyzr's AI Studio \u2014 core components, tool calling, agentic RAG, and manager orchestration \u2014 then industry deep-dives (sales, HR, banking, e-commerce, VC, insurance, marketing) and cloneable blueprints.",
+      "syllabus": [
+        {
+          "n": "1",
+          "title": "Foundations & Orientation",
+          "summary": "5 lessons"
+        },
+        {
+          "n": "2",
+          "title": "Core Concepts of Agent Building",
+          "summary": "5 lessons"
+        },
+        {
+          "n": "3",
+          "title": "Prioritizing & Selecting the Right Use Cases",
+          "summary": "3 lessons"
+        },
+        {
+          "n": "4",
+          "title": "Industry Deep Dives",
+          "summary": "8 lessons"
+        },
+        {
+          "n": "5",
+          "title": "Cloneable Blueprints",
+          "summary": "2 lessons"
+        },
+        {
+          "n": "6",
+          "title": "Cost, ROI & Performance Economics",
+          "summary": "1 lessons"
+        }
+      ],
+      "thumbnail": "thumbnails/legacy-agent-building.png",
+      "thumbnailTheme": "light"
+    },
+    {
+      "slug": "legacy-agent-engineering-developers",
+      "name": "Lyzr Agent Engineering for Developers",
+      "collection": "foundations",
+      "product": "ADK",
+      "modules": [
+        "Orchestration"
+      ],
+      "function": "",
+      "level": "Advanced",
+      "status": "legacy",
+      "instructor": "Lyzr Team",
+      "videos": 29,
+      "lessons": 36,
+      "duration": "~3 hrs",
+      "description": "Agent engineering from the ground up \u2014 LLM and RAG foundations, agent architecture, orchestration and multi-agent systems, responsible AI and guardrails, AgentOps and evaluation, cost/ROI, and real-world blueprinting.",
+      "syllabus": [
+        {
+          "n": "1",
+          "title": "Foundations of AI Agents",
+          "summary": "7 lessons"
+        },
+        {
+          "n": "2",
+          "title": "Core Concepts of Agent Architecture",
+          "summary": "6 lessons"
+        },
+        {
+          "n": "3",
+          "title": "Agent Orchestration & Workflows",
+          "summary": "8 lessons"
+        },
+        {
+          "n": "4",
+          "title": "Responsible AI, Safety & Governance",
+          "summary": "5 lessons"
+        },
+        {
+          "n": "5",
+          "title": "AgentOps, Observability & Testing",
+          "summary": "4 lessons"
+        },
+        {
+          "n": "6",
+          "title": "Cost, ROI & Performance Economics",
+          "summary": "2 lessons"
+        },
+        {
+          "n": "7",
+          "title": "Real-World Use Cases & Blueprinting",
+          "summary": "4 lessons"
+        }
+      ],
+      "thumbnail": "thumbnails/legacy-agent-engineering-developers.png",
+      "thumbnailTheme": "light"
+    },
+    {
+      "slug": "legacy-value-enablement-business",
+      "name": "Lyzr Value Enablement for Business Users",
+      "collection": "foundations",
+      "product": "",
+      "modules": [],
+      "function": "AI Strategy",
+      "level": "Strategy",
+      "status": "legacy",
+      "instructor": "Lyzr Team",
+      "videos": 20,
+      "lessons": 29,
+      "duration": "~2 hrs",
+      "description": "Enablement for business teams \u2014 the Lyzr product ecosystem, a use-case prioritization framework, industry deep-dives, and customer-conversation and solutioning skills with objection handling and ROI.",
+      "syllabus": [
+        {
+          "n": "1",
+          "title": "Foundations & Orientation",
+          "summary": "5 lessons"
+        },
+        {
+          "n": "2",
+          "title": "Understanding Lyzr\u2019s Product Ecosystem",
+          "summary": "4 lessons"
+        },
+        {
+          "n": "3",
+          "title": "Prioritizing & Selecting the Right Use Cases",
+          "summary": "4 lessons"
+        },
+        {
+          "n": "4",
+          "title": "Industry Deep Dives",
+          "summary": "9 lessons"
+        },
+        {
+          "n": "5",
+          "title": "Customer Conversations & Agent Solutioning",
+          "summary": "7 lessons"
+        }
+      ],
+      "thumbnail": "thumbnails/legacy-value-enablement-business.png",
+      "thumbnailTheme": "light"
+    },
+    {
+      "slug": "track-studio-foundations",
+      "name": "Studio: Foundations (The Agent Lifecycle)",
+      "collection": "track-studio",
+      "product": "Studio",
+      "modules": [
+        "Foundations"
+      ],
+      "function": "",
+      "level": "Foundations",
+      "status": "live",
+      "instructor": "Felipe",
+      "videos": 7,
+      "lessons": 7,
+      "duration": "~1 hr",
+      "description": "The whole agent lifecycle on one agent \u2014 orient in Studio, then build, govern, test, deploy, and monitor a single agent end to end.",
+      "syllabus": [
+        {
+          "n": "01",
+          "title": "Welcome to Agent Studio & the lifecycle",
+          "summary": "Tour the nav and the Build\u2192Govern\u2192Test\u2192Deploy\u2192Monitor loop."
+        },
+        {
+          "n": "02",
+          "title": "Build: choose a type & create an agent",
+          "summary": "Pick an agent type and create one from role, goal, instructions."
+        },
+        {
+          "n": "03",
+          "title": "Equip: model, tool, knowledge",
+          "summary": "Connect an LLM, attach a tool, add a knowledge base."
+        },
+        {
+          "n": "04",
+          "title": "Govern: add guardrails",
+          "summary": "Apply basic input/output guardrails before it goes anywhere."
+        },
+        {
+          "n": "05",
+          "title": "Test: run the Simulation Engine",
+          "summary": "Validate behaviour against scenarios pre-ship."
+        },
+        {
+          "n": "06",
+          "title": "Deploy: ship it",
+          "summary": "Deploy to an environment and go live."
+        },
+        {
+          "n": "07",
+          "title": "Project: one agent, full lifecycle",
+          "summary": "Carry one agent through every stage; read its first traces."
+        }
+      ],
+      "thumbnail": "thumbnails/studio-the-agent-lifecycle.png",
+      "thumbnailTheme": "light"
+    },
+    {
+      "slug": "track-studio-building-orchestrating",
+      "name": "Studio: Building & Orchestrating Agents",
+      "collection": "track-studio",
+      "product": "Studio",
+      "modules": [
+        "Build"
+      ],
+      "function": "",
+      "level": "Build",
+      "status": "live",
+      "instructor": "Felipe",
+      "videos": 7,
+      "lessons": 7,
+      "duration": "~1 hr",
+      "description": "Decide what to build and build it \u2014 the agent-type decision framework, building multi-agent systems with managers, custom tool calling, and models in production.",
+      "syllabus": [
+        {
+          "n": "01",
+          "title": "What agent type should I build?",
+          "summary": "Decision framework: single Agent vs Manager vs SuperFlow vs Workflow vs Proxy vs Voice."
+        },
+        {
+          "n": "02",
+          "title": "Lyzr Manager",
+          "summary": "Coordinate sub-agents with a manager agent."
+        },
+        {
+          "n": "03",
+          "title": "Managers, part 2 \u2014 editing from the agent page",
+          "summary": "Modify sub-agents and orchestrate settings directly on the agent canvas."
+        },
+        {
+          "n": "04",
+          "title": "SuperFlow: Invoice Reconciliation",
+          "summary": "Multi-agent reconciliation pattern in practice."
+        },
+        {
+          "n": "05",
+          "title": "SuperFlow: Loops",
+          "summary": "Implement repeating patterns and iterative loops in SuperFlow."
+        },
+        {
+          "n": "06",
+          "title": "Models in depth",
+          "summary": "Providers, parameters, routing, and selection in Studio."
+        },
+        {
+          "n": "07",
+          "title": "Tools in production",
+          "summary": "Tool schemas, authentication, API integrations, and validation."
+        }
+      ],
+      "thumbnail": "thumbnails/studio-design-create.png",
+      "thumbnailTheme": "light"
+    },
+    {
+      "slug": "track-studio-grounding-knowledge",
+      "name": "Studio: Grounding Agents in Knowledge",
+      "collection": "track-studio",
+      "product": "Studio",
+      "modules": [
+        "Ground"
+      ],
+      "function": "",
+      "level": "Ground",
+      "status": "live",
+      "instructor": "Felipe",
+      "videos": 9,
+      "lessons": 9,
+      "duration": "~1.5 hrs",
+      "description": "Ground agents in your data \u2014 RAG, knowledge bases, document parsing, live data connectors, agent memory, and building semantic models overlaying knowledge graphs.",
+      "syllabus": [
+        {
+          "n": "01",
+          "title": "RAG in Studio",
+          "summary": "How retrieval-augmented generation works here."
+        },
+        {
+          "n": "02",
+          "title": "Build a Knowledge Base",
+          "summary": "Create, structure, and attach a knowledge base."
+        },
+        {
+          "n": "03",
+          "title": "Document parsing & ingestion",
+          "summary": "File types, chunking strategies, and parsing quality."
+        },
+        {
+          "n": "04",
+          "title": "Data Connectors as live sources",
+          "summary": "Keep a KB synced from external systems in real-time."
+        },
+        {
+          "n": "05",
+          "title": "Agent memory in depth",
+          "summary": "Memory types, configuration, and retrieval logic."
+        },
+        {
+          "n": "06",
+          "title": "Beyond vectors: structured knowledge",
+          "summary": "When a graph/semantic model beats plain RAG."
+        },
+        {
+          "n": "07",
+          "title": "Build a Knowledge Graph",
+          "summary": "Model entities and relationships on a graph database."
+        },
+        {
+          "n": "08",
+          "title": "The Semantic Model",
+          "summary": "Define a domain schema for grounded answers."
+        },
+        {
+          "n": "09",
+          "title": "Project: document Q&A agent with memory",
+          "summary": "End-to-end RAG + memory + structured query build."
+        }
+      ],
+      "thumbnail": "thumbnails/studio-knowledge-rag.png",
+      "thumbnailTheme": "light"
+    },
+    {
+      "slug": "track-studio-governing-testing",
+      "name": "Studio: Governing & Testing Agents",
+      "collection": "track-studio",
+      "product": "Studio",
+      "modules": [
+        "Govern",
+        "Test"
+      ],
+      "function": "",
+      "level": "Govern & Test",
+      "status": "live",
+      "instructor": "Felipe",
+      "videos": 2,
+      "lessons": 2,
+      "duration": "~30 min",
+      "description": "Make agents safe and validate before you ship \u2014 the Responsible AI safety surface, guardrails, stress testing, and the Simulation Engine.",
+      "syllabus": [
+        {
+          "n": "01",
+          "title": "Responsible AI in Studio",
+          "summary": "The safety surface, toxicity, bias, PII handling, and prompt-injection defense."
+        },
+        {
+          "n": "02",
+          "title": "The Simulation Engine",
+          "summary": "Stress test agents against scenario suites and check evaluation metrics."
+        }
+      ],
+      "thumbnail": "thumbnails/studio-responsible-ai.png",
+      "thumbnailTheme": "light"
+    },
+    {
+      "slug": "track-studio-voice",
+      "name": "Studio: Voice Agents",
+      "collection": "track-studio",
+      "product": "Studio",
+      "modules": [
+        "Voice"
+      ],
+      "status": "coming-soon",
+      "instructor": "Lyzr Team",
+      "videos": 0,
+      "lessons": 0,
+      "duration": "",
+      "description": "Build agents that talk \u2014 voice architecture, telephony/SIP integrations, tuning latency, and customer-service voice agents.",
+      "syllabus": []
+    },
+    {
+      "slug": "track-studio-deploy-scale",
+      "name": "Studio: Deploy & Scale",
+      "collection": "track-studio",
+      "product": "Studio",
+      "modules": [
+        "Deploy"
+      ],
+      "status": "coming-soon",
+      "instructor": "Lyzr Team",
+      "videos": 0,
+      "lessons": 0,
+      "duration": "",
+      "description": "Ship and scale \u2014 deployment configs, environment promotion (dev/staging/prod), and the Agent Gateway.",
+      "syllabus": []
+    },
+    {
+      "slug": "track-studio-observability",
+      "name": "Studio: Monitor & Observe",
+      "collection": "track-studio",
+      "product": "Studio",
+      "modules": [
+        "Monitor"
+      ],
+      "status": "coming-soon",
+      "instructor": "Lyzr Team",
+      "videos": 0,
+      "lessons": 0,
+      "duration": "",
+      "description": "See what agents do in production \u2014 traces, transcripts, and operational reports.",
+      "syllabus": []
+    },
+    {
+      "slug": "track-studio-reuse-distribute",
+      "name": "Studio: Reuse & Distribute",
+      "collection": "track-studio",
+      "product": "Studio",
+      "modules": [
+        "Distribute"
+      ],
+      "status": "coming-soon",
+      "instructor": "Lyzr Team",
+      "videos": 0,
+      "lessons": 0,
+      "duration": "",
+      "description": "Scale through reuse \u2014 agent templates, blueprints, and the Lyzr App Store.",
+      "syllabus": []
+    },
+    {
+      "slug": "track-overview-lyzr-overview",
+      "name": "Lyzr Overview and Offerings",
+      "collection": "hidden",
+      "product": "Overview",
+      "modules": [
+        "Overview"
+      ],
+      "status": "hidden",
+      "instructor": "Lyzr Team",
+      "videos": 8,
+      "lessons": 8,
+      "duration": "~12 min",
+      "description": "A comprehensive walk-through of Lyzr's offerings. Learn about the 5-layer stack (Infrastructure, Integration, Framework, Studio, Architect) and explore visual Studio builders, Computer Agents, and Git-native agent harnesses.",
+      "syllabus": [
+        {
+          "n": "01",
+          "title": "Introduction to Lyzr",
+          "summary": "Understand the challenges of scaling from simple prototypes to complex production agent lifecycles."
+        },
+        {
+          "n": "02",
+          "title": "Client Success Stories",
+          "summary": "Real-world case studies of WTW, Accenture, and KPMG implementing agent systems."
+        },
+        {
+          "n": "03",
+          "title": "The Lyzr Stack",
+          "summary": "Detailed look at the five architectural layers of the Lyzr agent platform."
+        },
+        {
+          "n": "04",
+          "title": "Architect",
+          "summary": "Using Lyzr Architect to design agent workflows and generate UI blueprints."
+        },
+        {
+          "n": "05",
+          "title": "Studio",
+          "summary": "Visual low-code agent creation, knowledge bases, and API integrations in Lyzr Studio."
+        },
+        {
+          "n": "06",
+          "title": "Lyzr Capabilities",
+          "summary": "PII redaction, toxicity filters, prompt safety, hallucination checks, and RAG/Knowledge Graph integrations."
+        },
+        {
+          "n": "07",
+          "title": "Computer Agent",
+          "summary": "Importing custom agents from Git repos and running them in your own harness."
+        },
+        {
+          "n": "08",
+          "title": "Git Agent",
+          "summary": "Understanding Git-native multimodal agent harnesses defined entirely by repository files."
+        }
+      ],
+      "thumbnail": "thumbnails/track-overview-lyzr-overview.png",
+      "thumbnailTheme": "light"
+    }
+  ]
+}

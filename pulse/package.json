@@ -1,0 +1,12 @@
+{
+  "name": "university-pulse",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Weekly Lyzr University analytics digest posted to Slack (Thinkific enrollments → learner funnel + content pipeline, week-over-week).",
+  "scripts": {
+    "dry-run": "node pulse.mjs --dry-run",
+    "test-post": "node pulse.mjs --channel-test",
+    "pulse": "node pulse.mjs"
+  }
+}

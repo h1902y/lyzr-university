@@ -1,0 +1,3 @@
+file '/Users/hkc/Documents/lyzr/university/remotion-branding/public/intro_bumper.mp4'
+file '/Users/hkc/Documents/lyzr/university/revamp/C01_CH05_L03_integrating_gmail_email_tools.mp4'
+file '/Users/hkc/Documents/lyzr/university/remotion-branding/public/outro_bumper.mp4'

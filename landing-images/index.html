@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lyzr Academy — landing images index</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { background: var(--white-amber); }
+    .index {
+      max-width: 880px; margin: 0 auto; padding: 100px 40px;
+      font-family: var(--font-body); color: var(--lyzr-black);
+    }
+    .index h1 {
+      font-family: var(--font-display); font-weight: 700;
+      font-size: 56px; line-height: 1.05; margin-bottom: 16px;
+    }
+    .index p.lede {
+      font-size: 20px; color: #555; max-width: 640px; margin-bottom: 56px;
+    }
+    .index a.card-link {
+      display: block; padding: 32px 40px;
+      background: var(--cream-skin);
+      border-radius: 6px; text-decoration: none; color: var(--lyzr-black);
+      margin-bottom: 20px;
+      transition: background 0.15s ease;
+    }
+    .index a.card-link:hover { background: #D5BFAE; }
+    .index a.card-link h2 {
+      font-family: var(--font-display); font-weight: 600;
+      font-size: 28px; margin-bottom: 8px;
+    }
+    .index a.card-link p {
+      font-size: 16px; color: #555;
+    }
+    .index .arrow {
+      float: right; color: var(--ferra); font-size: 28px; line-height: 1;
+    }
+    .footer {
+      margin-top: 64px; padding-top: 32px;
+      border-top: 1px solid var(--cream-skin);
+      font-size: 14px; color: #777;
+    }
+    code { font-family: var(--font-mono); background: var(--cream-skin); padding: 2px 6px; border-radius: 3px; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="index">
+    <h1>Lyzr Academy — landing images</h1>
+    <p class="lede">Brand-locked HTML/CSS compositions for the Academy and SDK Track landing pages. Open a page, maximise the browser window, and screenshot each frame at its labeled dimensions.</p>
+
+    <a class="card-link" href="academy.html">
+      <span class="arrow">→</span>
+      <h2>Academy — 6 images</h2>
+      <p>Hero · Craftsmanship · Pedagogy diagram · Course card · Audience composition · Closing banner</p>
+    </a>
+
+    <a class="card-link" href="sdk-track.html">
+      <span class="arrow">→</span>
+      <h2>SDK Track — 6 images</h2>
+      <p>Hero · Capstones grid · Curriculum schematic · What's different · How it works · Closing banner</p>
+    </a>
+
+    <a class="card-link" href="highlights.html">
+      <span class="arrow">→</span>
+      <h2>SDK Track Highlights — 3 images</h2>
+      <p>Provider-agnostic · One coherent surface · Production-shaped — for the Thinkific Highlights block</p>
+    </a>
+
+    <div class="footer">
+      <p>Each frame is sized to a target aspect (16:9, 4:5, square, 21:9). To capture: macOS <code>⌘⇧4</code> then drag, or Windows <code>⊞⇧S</code>. Snap to the frame edge — the dark canvas around each frame is just spacing.</p>
+      <p style="margin-top:12px;">Brand tokens live in <code>styles.css</code>. Edit there to recolor globally.</p>
+    </div>
+  </div>
+</body>
+</html>

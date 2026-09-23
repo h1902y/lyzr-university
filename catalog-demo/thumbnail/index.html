@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lyzr University — Thumbnail Generator</title>
+<link rel="stylesheet" href="thumbnail.css">
+<script src="html2canvas.min.js"></script>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="nav-brand">Lyzr University</span>
+  <a href="../course-catalog-demo.html">Course Catalog</a>
+  <a href="./" class="active">Thumbnail Generator</a>
+  <a href="../banner/">Banner Generator</a>
+</nav>
+
+<div class="header">
+  <div class="header-overline">Course Art</div>
+  <h1>Thumbnail <em>Generator</em></h1>
+</div>
+
+<div class="controls">
+  <div class="control-group">
+    <label class="control-label" for="course-select">Template / Course</label>
+    <select id="course-select"></select>
+  </div>
+  <div class="control-group">
+    <span class="control-label">Theme</span>
+    <div class="toggle-group" id="theme-toggle">
+      <button class="toggle-btn" data-theme="dark">Dark</button>
+      <button class="toggle-btn active" data-theme="light">Light</button>
+    </div>
+  </div>
+  <div class="control-group">
+    <span class="control-label">Size</span>
+    <div class="toggle-group" id="size-toggle">
+      <button class="toggle-btn active" data-size="wide">16:9 · 1280×720</button>
+      <button class="toggle-btn" data-size="og">OG · 1200×630</button>
+    </div>
+  </div>
+  <button class="btn-download" id="download-btn">Download PNG</button>
+</div>
+
+<div class="stage-wrap">
+  <div class="stage" id="stage">
+    <div class="thumb-scale" id="thumb-scale">
+      <div id="thumbnail" class="theme-light">
+        <div class="elevate">
+          <div class="band b1"></div>
+          <div class="band b2"></div>
+          <div class="band b3"></div>
+          <div class="band b4"></div>
+          <div class="band b5"></div>
+        </div>
+        <div class="cat-glow"></div>
+        <div class="thumb-watermark" id="t-watermark"></div>
+        <div class="thumb-inner">
+          <div class="thumb-logo-row">
+            <img src="../lyzr-logo.png" alt="Lyzr" class="thumb-logo">
+            <span class="thumb-logo-divider"></span>
+            <span class="thumb-logo-label">University</span>
+          </div>
+          <div class="thumb-body">
+            <div class="thumb-accent-bar"></div>
+            <span class="thumb-badge">
+              <span class="badge-ico" id="t-badge-ico"></span>
+              <span id="t-badge-text">STUDIO</span>
+            </span>
+            <div class="thumb-title" id="t-title">Course Title</div>
+            <div class="thumb-sub" id="t-sub"></div>
+          </div>
+          <div class="thumb-footer" id="t-footer"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var DATA = null, META = null, GENERIC = null;
+var ITEMS = [];           // flat list: generics first, then courses
+var currentItem = null;
+var currentTheme = 'light';
+var currentSize = 'wide';
+var SIZES = { wide: [1280, 720], og: [1200, 630] };
+var NATIVE_W = 1280, NATIVE_H = 720;
+
+Promise.all([
+  fetch('../catalog-data.json').then(function(r) { return r.json(); }),
+  fetch('../category-meta.json').then(function(r) { return r.json(); }),
+  fetch('../generic-templates.json').then(function(r) { return r.json(); })
+]).then(function(res) {
+  DATA = res[0]; META = res[1]; GENERIC = res[2];
+  buildItems();
+  populateSelect();
+  // Deep-link: ?course=<slug> preselects that course (from the catalog modal).
+  currentItem = ITEMS[0];
+  var qs = new URLSearchParams(location.search).get('course');
+  if (qs) {
+    var idx = ITEMS.findIndex(function(it) { return it.type === 'course' && it.data.slug === qs; });
+    if (idx >= 0) {
+      currentItem = ITEMS[idx];
+      document.getElementById('course-select').value = String(idx);
+      applyCourseTheme(currentItem);
+    }
+  }
+  applySize();
+  renderItem();
+});
+
+window.addEventListener('resize', fitScale);
+
+function buildItems() {
+  ITEMS = [];
+  GENERIC.templates.forEach(function(t) { ITEMS.push({ type: 'generic', data: t }); });
+  DATA.courses.forEach(function(c) { ITEMS.push({ type: 'course', data: c }); });
+}
+
+function applySize() {
+  var dim = SIZES[currentSize];
+  NATIVE_W = dim[0]; NATIVE_H = dim[1];
+  var thumb = document.getElementById('thumbnail');
+  thumb.style.width = NATIVE_W + 'px';
+  thumb.style.height = NATIVE_H + 'px';
+  fitScale();
+}
+
+function fitScale() {
+  var stage = document.getElementById('stage');
+  stage.style.aspectRatio = NATIVE_W + ' / ' + NATIVE_H;
+  var scale = stage.clientWidth / NATIVE_W;
+  document.getElementById('thumb-scale').style.transform = 'scale(' + scale + ')';
+}
+
+function lookupMeta(label) {
+  if (META.products[label]) return META.products[label];
+  if (META.modules[label]) return META.modules[label];
+  if (META.usecases[label]) return META.usecases[label];
+  return null;
+}
+
+function svgNode(svgString) {
+  var doc = new DOMParser().parseFromString(svgString, 'image/svg+xml');
+  return document.importNode(doc.documentElement, true);
+}
+function setIcon(container, svgString) {
+  container.replaceChildren();
+  if (svgString) container.appendChild(svgNode(svgString));
+}
+function hexToRgba(hex, alpha) {
+  var h = hex.replace('#', '');
+  return 'rgba(' + parseInt(h.substring(0,2),16) + ',' + parseInt(h.substring(2,4),16) + ',' + parseInt(h.substring(4,6),16) + ',' + alpha + ')';
+}
+function lighten(hex, ratio) {
+  var h = hex.replace('#', '');
+  var r = parseInt(h.substring(0,2),16), g = parseInt(h.substring(2,4),16), b = parseInt(h.substring(4,6),16);
+  return 'rgb(' + Math.round(r+(255-r)*ratio) + ',' + Math.round(g+(255-g)*ratio) + ',' + Math.round(b+(255-b)*ratio) + ')';
+}
+
+function populateSelect() {
+  var sel = document.getElementById('course-select');
+  sel.replaceChildren();
+
+  var gGroup = document.createElement('optgroup');
+  gGroup.label = 'Generic / OG';
+  var cGroup = document.createElement('optgroup');
+  cGroup.label = 'Courses';
+
+  ITEMS.forEach(function(item, i) {
+    var opt = document.createElement('option');
+    opt.value = String(i);
+    if (item.type === 'generic') {
+      opt.textContent = item.data.badge + ' — ' + item.data.title;
+      gGroup.appendChild(opt);
+    } else {
+      opt.textContent = '[' + (item.data.product || 'Use Case') + '] ' + item.data.name;
+      cGroup.appendChild(opt);
+    }
+  });
+  sel.append(gGroup, cGroup);
+  sel.addEventListener('change', function() {
+    currentItem = ITEMS[parseInt(sel.value, 10)];
+    applyCourseTheme(currentItem);
+    renderItem();
+  });
+}
+
+// Course entries carry a default thumbnailTheme; honor it when one is selected.
+function applyCourseTheme(item) {
+  if (item.type !== 'course' || !item.data.thumbnailTheme) return;
+  currentTheme = item.data.thumbnailTheme;
+  document.querySelectorAll('#theme-toggle .toggle-btn').forEach(function(b) {
+    b.classList.toggle('active', b.dataset.theme === currentTheme);
+  });
+}
+
+// Title splitter — emphasise an explicit substring (generic) or the tail after :/– (course)
+function setTitleEmphasis(el, title, emphasis) {
+  el.replaceChildren();
+  var idx = title.indexOf(emphasis);
+  if (idx >= 0) {
+    if (idx > 0) el.appendChild(document.createTextNode(title.substring(0, idx)));
+    var em = document.createElement('em');
+    em.textContent = emphasis;
+    el.appendChild(em);
+    if (idx + emphasis.length < title.length) el.appendChild(document.createTextNode(title.substring(idx + emphasis.length)));
+  } else {
+    el.textContent = title;
+  }
+}
+function setTitleSplit(el, title) {
+  el.replaceChildren();
+  var m = title.match(/^(.*?)[:–-]\s+(.*)$/);
+  if (m) {
+    el.appendChild(document.createTextNode(m[1]));
+    el.appendChild(document.createElement('br'));
+    var em = document.createElement('em');
+    em.textContent = m[2];
+    el.appendChild(em);
+  } else {
+    el.textContent = title;
+  }
+}
+
+function makeChip(cls, iconSvg, text) {
+  var chip = document.createElement('span');
+  chip.className = 'thumb-chip ' + cls;
+  if (iconSvg) {
+    var ico = document.createElement('span'); ico.className = 'chip-ico';
+    setIcon(ico, iconSvg);
+    chip.appendChild(ico);
+  }
+  var txt = document.createElement('span'); txt.textContent = text;
+  chip.appendChild(txt);
+  return chip;
+}
+
+var ICON_VIDEO = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></g></svg>';
+var ICON_CLOCK = '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></g></svg>';
+
+function renderItem() {
+  var thumb = document.getElementById('thumbnail');
+  var footer = document.getElementById('t-footer');
+  var dark = currentTheme === 'dark';
+
+  if (currentItem.type === 'generic') {
+    var t = currentItem.data;
+    thumb.style.setProperty('--cat', t.color);
+    setIcon(document.getElementById('t-watermark'), t.icon);
+    setIcon(document.getElementById('t-badge-ico'), t.icon);
+    document.getElementById('t-badge-text').textContent = t.badge;
+    setTitleEmphasis(document.getElementById('t-title'), t.title, t.emphasis || '');
+
+    var sub = document.getElementById('t-sub');
+    sub.replaceChildren();
+    var subTxt = document.createElement('span'); subTxt.textContent = t.sub;
+    sub.appendChild(subTxt);
+
+    footer.replaceChildren();
+    (t.stats || []).forEach(function(s, i) {
+      footer.appendChild(makeChip(i === 0 ? 'primary' : 'meta', null, s));
+    });
+  } else {
+    var c = currentItem.data;
+    var primaryLabel = (c.modules && c.modules.length) ? c.modules[0]
+                     : (c.usecases && c.usecases.length) ? c.usecases[0] : c.product;
+    var primaryMeta = lookupMeta(primaryLabel);
+    var productMeta = c.product ? META.products[c.product] : null;
+    var catColor = primaryMeta ? primaryMeta.color : (productMeta ? productMeta.color : '#71514F');
+    thumb.style.setProperty('--cat', catColor);
+
+    setIcon(document.getElementById('t-watermark'), primaryMeta ? primaryMeta.icon : (productMeta ? productMeta.icon : ''));
+
+    var badgeMeta = productMeta || (c.usecases && c.usecases.length ? META.usecases[c.usecases[0]] : null);
+    setIcon(document.getElementById('t-badge-ico'), badgeMeta ? badgeMeta.icon : '');
+    document.getElementById('t-badge-text').textContent = c.product ? c.product.toUpperCase() : 'USE CASE';
+
+    setTitleSplit(document.getElementById('t-title'), c.name);
+
+    var sub2 = document.getElementById('t-sub');
+    sub2.replaceChildren();
+    var w = document.createElement('span'); w.textContent = 'with ';
+    var nm = document.createElement('strong'); nm.textContent = c.instructor;
+    sub2.append(w, nm);
+    if (primaryLabel && primaryLabel !== c.product) {
+      var dt = document.createElement('span'); dt.className = 'dot'; dt.textContent = '·';
+      var tp = document.createElement('span'); tp.textContent = primaryLabel;
+      sub2.append(dt, tp);
+    }
+
+    footer.replaceChildren();
+    footer.appendChild(makeChip('primary', ICON_VIDEO, c.videos + (c.videos === 1 ? ' VIDEO' : ' VIDEOS')));
+    footer.appendChild(makeChip('meta', ICON_CLOCK, c.duration.toUpperCase()));
+
+    var cats = (c.modules || []).concat(c.usecases || []).slice(0, 2);
+    cats.forEach(function(label) {
+      var cm = lookupMeta(label);
+      if (!cm) return;
+      var chip = makeChip('cat', cm.icon, label.toUpperCase());
+      chip.style.background = hexToRgba(cm.color, dark ? 0.22 : 0.13);
+      chip.style.borderColor = hexToRgba(cm.color, dark ? 0.5 : 0.32);
+      chip.style.color = dark ? '#F6F2ED' : cm.color;
+      chip.querySelector('.chip-ico').style.color = dark ? lighten(cm.color, 0.45) : cm.color;
+      footer.appendChild(chip);
+    });
+  }
+
+  thumb.className = 'theme-' + currentTheme;
+  thumb.style.width = NATIVE_W + 'px';
+  thumb.style.height = NATIVE_H + 'px';
+}
+
+document.getElementById('theme-toggle').addEventListener('click', function(e) {
+  var btn = e.target.closest('.toggle-btn'); if (!btn) return;
+  currentTheme = btn.dataset.theme;
+  document.querySelectorAll('#theme-toggle .toggle-btn').forEach(function(b) { b.classList.toggle('active', b === btn); });
+  renderItem();
+});
+
+document.getElementById('size-toggle').addEventListener('click', function(e) {
+  var btn = e.target.closest('.toggle-btn'); if (!btn) return;
+  currentSize = btn.dataset.size;
+  document.querySelectorAll('#size-toggle .toggle-btn').forEach(function(b) { b.classList.toggle('active', b === btn); });
+  applySize();
+});
+
+document.getElementById('download-btn').addEventListener('click', function() {
+  var node = document.getElementById('thumbnail');
+  var scaleEl = document.getElementById('thumb-scale');
+  var btn = this;
+  btn.textContent = 'Rendering…';
+  btn.disabled = true;
+
+  // Capture at true 1:1 — the preview's transform:scale() reflows text in html2canvas
+  scaleEl.style.transform = 'none';
+
+  var fontsReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
+  fontsReady
+    .then(function() {
+      return html2canvas(node, {
+        width: NATIVE_W,
+        height: NATIVE_H,
+        windowWidth: NATIVE_W,
+        windowHeight: NATIVE_H,
+        scale: 2,
+        backgroundColor: null,
+        useCORS: true
+      });
+    })
+    .then(function(canvas) {
+      var slug = currentItem.type === 'generic' ? currentItem.data.id : currentItem.data.slug;
+      var link = document.createElement('a');
+      link.download = 'lyzr-university-' + slug + '-' + currentSize + '.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      fitScale();
+      btn.textContent = 'Download PNG';
+      btn.disabled = false;
+    })
+    .catch(function() { fitScale(); btn.textContent = 'Download PNG'; btn.disabled = false; });
+});
+</script>
+</body>
+</html>

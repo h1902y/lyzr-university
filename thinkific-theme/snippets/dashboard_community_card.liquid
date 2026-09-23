@@ -1,0 +1,47 @@
+{% comment %}
+  This is the student dashboard community card.
+{% endcomment %}
+
+<div class="card card--dashboard">
+  {% unless community.is_presell %}
+    <a class="card__course-link" href="{{ community.url }}">
+  {% endunless %}
+    <div class="card__img-container">
+      <img
+        src="{{ community.card_image_url }}"
+        alt=""
+        class="card__img"
+        loading="lazy"
+      />
+    </div>
+    <div class="card__body card__body--large">
+      <h3 class="card__name card__name--community section__heading--secondary">
+        {{ community.name }}
+      </h3>
+      <p class="card__posts">
+        {{ 'liquid.partials.student_dashboard.text_community_posts' | translate: count: community.post_count }}
+      </p>
+    </div>
+  {% unless community.is_presell %}
+    </a>
+  {% endunless %}
+  {% if site.community_landing_pages_enabled %}
+    <div class="card__details">
+      <a href="{{ community.links.landing_page_url }}" class="card__overview" aria-label="{{ community.name }}: {{ 'liquid.partials.dashboard_course_card.link_see_overview' | translate }}">
+        <i class="fa fa-edit" aria-hidden="true"></i>
+        {{ 'liquid.partials.dashboard_course_card.link_see_overview' | translate }}
+      </a>
+      {% if community.is_presell %}
+        <span class="card__coming-soon">
+          <i class="fa fa-clock-o" aria-hidden="true"></i>
+          {{ 'liquid.partials.dashboard_course_card.coming_soon' | translate }}
+        </span>
+      {% else %}
+        <a href="{{ community.url }}" class="card__resume" aria-label="{{ community.name }}: {{ 'liquid.partials.community_landing_page_action_buttons.link_resume' | translate }}">
+          <i class="fa fa-external-link" aria-hidden="true"></i>
+          {{ 'liquid.partials.community_landing_page_action_buttons.link_resume' | translate }}
+        </a>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

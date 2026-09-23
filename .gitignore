@@ -36,7 +36,7 @@ __pycache__/
 venv/
 
 # --- Browser automation profiles & runtime state ---
-.browser-profile/
+.browser-profile*/
 auth.json
 progress.json
 screenshots/

@@ -1,38 +1,41 @@
-# 🏛️ Lyzr Architect: Complete 3-Part Master Course Manifest
+# 🏛️ Lyzr Architect: Complete Master Course Manifest
 
 > **Course Title:** `Lyzr Architect: From Prototype to Production` (or `Architect Fundamentals`)  
 > **LMS Category / Track:** `1 - Tracks / Architect`  
-> **Thinkific Course ID:** `#3489969` (Draft)  
-> **Curriculum Scope:** Complete 3-Part Video Series (Orientation, Full Build, Production Deployment)  
-> **Total Course Duration:** **47 minutes 18 seconds** (2,839 seconds across 17 structured lessons)  
-> **Source Descript Recordings:**
-> • Part 1 (AR 01): [https://share.descript.com/view/AV2FqiJ2tjS](https://share.descript.com/view/AV2FqiJ2tjS) (12m 34s)  
-> • Part 2 (AR 02): [https://share.descript.com/view/HJ7w4MDq4io](https://share.descript.com/view/HJ7w4MDq4io) (21m 59s)  
-> • Part 3 (AR 03): [https://share.descript.com/view/D3JR0UMPLL6](https://share.descript.com/view/D3JR0UMPLL6) (12m 45s)  
+> **Thinkific Course ID:** `#3534316` (or `#3489969`)  
+> **Curriculum Structure:** **5 Chapters** · **18 Lessons** (1 Video MP4 + 1 Formatted Text Block per lesson)  
+> **Total Video Runtime:** **12 minutes 34 seconds** (754s across 18 focused micro-lessons)  
+> **Primary Video Source:** [https://share.descript.com/view/AV2FqiJ2tjS](https://share.descript.com/view/AV2FqiJ2tjS)  
+> **Video Files Location:** `university/thinkific-upload/1 - Tracks/Architect/20 Architect Fundamentals (AR01 Backup)/`  
+> 
+> **Related Advanced Recordings:**  
+> • Part 2 (Live Build / Deep Dive): [https://share.descript.com/view/HJ7w4MDq4io](https://share.descript.com/view/HJ7w4MDq4io) (21m 59s)  
+> • Part 3 (Advanced 3-Acts Architecture): [https://share.descript.com/view/D3JR0UMPLL6](https://share.descript.com/view/D3JR0UMPLL6) (12m 45s)  
 
 ---
 
 ## 📋 High-Level Master Syllabus Table
 
-| # | Module / Chapter | Lesson Title | Duration | Descript Source | Video Filename |
+| # | Chapter | Lesson Title | Duration | Video Filename | Suggested Handout |
 |---|---|---|---|---|---|
-| **01** | Module 1 | Open & Orientation — An App That Thinks | 28s | AR 01 | `01a Open & Orientation.mp4` |
-| **02** | Module 1 | What Architect Is — Real Studio Agents Underneath | 56s | AR 01 | `02a What Architect Is.mp4` |
-| **03** | Module 1 | Workspace Navigation & The Plus Menu | 2m 31s | AR 01 | `03a Workspace Navigation & Plus Menu.mp4` |
-| **04** | Module 1 | The Four Core Tabs & Engine Room | 2m 59s | AR 01 | `04a The Four Core Tabs & Engine Room.mp4` |
-| **05** | Module 1 | Prompt Anatomy, Library & Production Economics | 5m 40s | AR 01 | `05a Prompt Anatomy Library & Economics.mp4` |
-| **06** | Module 2 | The First Prompt & The AI Interview | 4m 37s | AR 02 | `06a The First Prompt & The AI Interview.mp4` |
-| **07** | Module 2 | Arguing with the Plan Before Building | 2m 44s | AR 02 | `07a Arguing with the Plan Before Building.mp4` |
-| **08** | Module 2 | Starting the Build & Agent Delegation | 2m 29s | AR 02 | `08a Starting the Build & Agent Delegation.mp4` |
-| **09** | Module 2 | Iterative Refinement & Proposal Mode | 4m 28s | AR 02 | `09a Iterative Refinement & Proposal Mode.mp4` |
-| **10** | Module 2 | Verification, Custom Styling & Environment Secrets | 7m 39s | AR 02 | `10a Verification Styling & Secrets.mp4` |
-| **11** | Module 3 | Welcome & The Three Acts Roadmap | 1m 27s | AR 03 | `11a Welcome & The Three Acts Roadmap.mp4` |
-| **12** | Module 3 | Act 1: Knowledge Bases & PDF Contract Ingestion | 1m 24s | AR 03 | `12a Knowledge Bases & PDF Contract Ingestion.mp4` |
-| **13** | Module 3 | Act 1: Database Persistence & Artifact Documents | 1m 37s | AR 03 | `13a Database Persistence & Artifact Documents.mp4` |
-| **14** | Module 3 | Act 2: Integrations Catalog, Gmail & Approval Gate | 2m 28s | AR 03 | `14a Integrations Catalog Gmail & Approval Gate.mp4` |
-| **15** | Module 3 | Act 2: Beyond the Catalog — MCP Servers & Custom Tools | 1m 30s | AR 03 | `15a Beyond Catalog MCP & Custom Tools.mp4` |
-| **16** | Module 3 | Act 3: One-Click Cloud Deployment & The 3 Sharing Doors | 1m 53s | AR 03 | `16a One-Click Deployment & 3 Sharing Doors.mp4` |
-| **17** | Module 3 | Act 3: Eject to Code, Guardrails & Credit Habits | 2m 26s | AR 03 | `17a Eject to Code Guardrails & Credits.mp4` |
+| **01** | Chapter 01: Orientation & Foundations | Open & Orientation | 28s | `01a Open & Orientation.mp4` | `01b Open & Orientation Notes.pdf` |
+| **02** | Chapter 01: Orientation & Foundations | What Architect Is | 22s | `02a What Architect Is.mp4` | `02b What Architect Is Notes.pdf` |
+| **03** | Chapter 01: Orientation & Foundations | Real Studio Agents | 35s | `03a Real Studio Agents.mp4` | `03b Real Studio Agents Notes.pdf` |
+| **04** | Chapter 01: Orientation & Foundations | What It Is Good For | 55s | `04a What It Is Good For.mp4` | `04b What It Is Good For Notes.pdf` |
+| **05** | Chapter 02: Workspace Setup & Interface Tour | Workspace Setup | 33s | `05a Workspace Setup.mp4` | `05b Workspace Setup Notes.pdf` |
+| **06** | Chapter 02: Workspace Setup & Interface Tour | Sidebar & Interface Tour | 28s | `06a Sidebar & Interface Tour.mp4` | `06b Sidebar & Interface Tour Notes.pdf` |
+| **07** | Chapter 02: Workspace Setup & Interface Tour | The Plus Menu | 21s | `07a The Plus Menu.mp4` | `07b The Plus Menu Notes.pdf` |
+| **08** | Chapter 02: Workspace Setup & Interface Tour | Studio Themes | 15s | `08a Studio Themes.mp4` | `08b Studio Themes Notes.pdf` |
+| **09** | Chapter 03: The Four Core Tabs & App Testing | The Four Studio Tabs | 10s | `09a The Four Studio Tabs.mp4` | `09b The Four Studio Tabs Notes.pdf` |
+| **10** | Chapter 03: The Four Core Tabs & App Testing | The Plan Tab Spec | 37s | `10a The Plan Tab Spec.mp4` | `10b The Plan Tab Spec Notes.pdf` |
+| **11** | Chapter 03: The Four Core Tabs & App Testing | Agents Engine Room | 41s | `11a Agents Engine Room.mp4` | `11b Agents Engine Room Notes.pdf` |
+| **12** | Chapter 03: The Four Core Tabs & App Testing | App Live Run & Testing | 1m 34s | `12a App Live Run & Testing.mp4` | `12b App Live Run & Testing Notes.pdf` |
+| **13** | Chapter 04: Prompt Library & Prompt Architecture | The Prompt Library | 21s | `13a The Prompt Library.mp4` | `13b The Prompt Library Notes.pdf` |
+| **14** | Chapter 04: Prompt Library & Prompt Architecture | Prompt Reveal | 23s | `14a Prompt Reveal.mp4` | `14b Prompt Reveal Notes.pdf` |
+| **15** | Chapter 04: Prompt Library & Prompt Architecture | Prompt Anatomy & Architecture | 1m 07s | `15a Prompt Anatomy & Architecture.mp4` | `15b Prompt Anatomy & Architecture Notes.pdf` |
+| **16** | Chapter 05: Production Economics, Governance & Next Steps | The Honest Bit & Trade-offs | 1m 13s | `16a The Honest Bit & Trade-offs.mp4` | `16b The Honest Bit & Trade-offs Notes.pdf` |
+| **17** | Chapter 05: Production Economics, Governance & Next Steps | Credits & Usage | 1m 59s | `17a Credits & Usage.mp4` | `17b Credits & Usage Notes.pdf` |
+| **18** | Chapter 05: Production Economics, Governance & Next Steps | Wrap-up & Next Steps | 39s | `18a Wrap-up & Next Steps.mp4` | `18b Wrap-up & Next Steps Notes.pdf` |
 
 ---
 
@@ -40,22 +43,23 @@
 
 > [!TIP]
 > **Thinkific Builder Instructions:**
-> 1. Create 3 Chapters in Thinkific corresponding to the 3 Modules below.
-> 2. For each lesson, copy the **Lesson Title** and attach/upload the corresponding video.
-> 3. In the lesson body, paste the formatted text block below (formatted without raw markdown to ensure 100% clean rendering in Thinkific).
+> 1. Create **5 Chapters** in Thinkific corresponding to the 5 Chapters below.
+> 2. For each lesson, copy the **Lesson Title** and attach/upload the corresponding video (`NNa <Title>.mp4`).
+> 3. In the lesson body, paste the formatted text block below into Thinkific's **Text Block**.
+> *(Text is formatted cleanly with plain-text bullet points and headers to prevent raw markdown syntax glitches in Thinkific).*
 
 
 ================================================================================
-### 📂 Module 1: Orientation & Foundations (AR 01)
-**Chapter Name to Copy:** `📂 Module 1: Orientation & Foundations (AR 01)`
-
+### 📂 Chapter 01: Orientation & Foundations
+**Chapter Name to Copy:** `📂 Chapter 01: Orientation & Foundations`
 ================================================================================
 
-#### 📖 Lesson 01: Open & Orientation — An App That Thinks
-- **Lesson Title to Copy:** `📖 Lesson 01: Open & Orientation — An App That Thinks`
+#### 📖 Lesson 01: Open & Orientation
+- **Lesson Title to Copy:** `📖 Lesson 01: Open & Orientation`
 - **Video Filename:** `01a Open & Orientation.mp4`
 - **Duration:** 28s
-- **Descript Cut Range:** `00:00.01 to 00:27.65`
+- **Descript Cut Range:** `00:00.01` to `00:27.65`
+- **Suggested Handout:** `01b Open & Orientation Notes.pdf`
 
 **Copy the exact block below into Thinkific Lesson Text Block:**
 ```text
@@ -65,7 +69,7 @@ LEARNING OBJECTIVES
 • Learn the core philosophy: generating real production agents, not throwaway prototypes.
 
 OVERVIEW
-Most tools that turn a prompt into an app give you a toy—a static website or an inflexible script. Lyzr Architect changes this paradigm completely: you describe what you want in plain English, and Architect specifies, designs, and provisions real, production-ready Lyzr agents underneath.
+Most tools that turn a prompt into an app give you a toy—a static mock or an inflexible script. Lyzr Architect changes this paradigm completely: you describe what you want in plain English, and Architect specifies, designs, and provisions real, production-ready Lyzr agents underneath.
 
 STEP-BY-STEP WALKTHROUGH
 1. Access architect.new in your web browser.
@@ -79,471 +83,520 @@ KEY TAKEAWAYS
 
 ---
 
-#### 📖 Lesson 02: What Architect Is — Real Studio Agents Underneath
-- **Lesson Title to Copy:** `📖 Lesson 02: What Architect Is — Real Studio Agents Underneath`
+#### 📖 Lesson 02: What Architect Is
+- **Lesson Title to Copy:** `📖 Lesson 02: What Architect Is`
 - **Video Filename:** `02a What Architect Is.mp4`
-- **Duration:** 56s
-- **Descript Cut Range:** `00:27.30 to 01:23.98`
+- **Duration:** 22s
+- **Descript Cut Range:** `00:27.30` to `00:49.75`
+- **Suggested Handout:** `02b What Architect Is Notes.pdf`
 
 **Copy the exact block below into Thinkific Lesson Text Block:**
 ```text
 LEARNING OBJECTIVES
-• Define the core architecture of Lyzr Architect.
+• Define the core capabilities of Lyzr Architect.
 • Understand how prompt specifications automatically generate backend logic and frontend UI.
-• Learn how Architect provisions real agents on top of Lyzr Agent Studio.
+• Learn the boundary between Architect and raw code development.
 
 OVERVIEW
-Every agent built in Architect isn't an isolated mock; it is a genuine Lyzr Agent Studio agent equipped with instructions, models, tools, and guardrails. Understand the seamless boundary between no-code prompt generation and enterprise multi-agent infrastructure.
+Architect is a full-stack generative system. When you provide an app description, it simultaneously plans the application specification, creates the underlying autonomous agents, wires their tools and memory, and generates an interactive, responsive frontend application.
 
 STEP-BY-STEP WALKTHROUGH
-1. Review how natural language prompts decompose into agent roles.
-2. Inspect the connection between Architect and the underlying Lyzr Agent Studio engine.
-3. Identify how frontend Next.js views bind to backend agent actions.
+1. Enter a detailed description of your business application or workflow.
+2. Watch Architect parse requirements into multi-agent roles and responsibilities.
+3. Notice the simultaneous generation of system prompts, tool bindings, and UI layouts.
 
 KEY TAKEAWAYS
-• Architect is powered by Lyzr Agent Studio under the hood.
-• You get enterprise agent capabilities without manual boilerplate code.
+• Architect handles the entire app stack from a single natural language brief.
+• Both frontend interaction and backend agent orchestration are synthesized together.
 ```
 
 ---
 
-#### 📖 Lesson 03: Workspace Navigation & The Plus Menu
-- **Lesson Title to Copy:** `📖 Lesson 03: Workspace Navigation & The Plus Menu`
-- **Video Filename:** `03a Workspace Navigation & Plus Menu.mp4`
-- **Duration:** 2m 31s
-- **Descript Cut Range:** `01:23.65 to 03:54.87`
+#### 📖 Lesson 03: Real Studio Agents
+- **Lesson Title to Copy:** `📖 Lesson 03: Real Studio Agents`
+- **Video Filename:** `03a Real Studio Agents.mp4`
+- **Duration:** 35s
+- **Descript Cut Range:** `00:49.42` to `01:23.98`
+- **Suggested Handout:** `03b Real Studio Agents Notes.pdf`
 
 **Copy the exact block below into Thinkific Lesson Text Block:**
 ```text
 LEARNING OBJECTIVES
-• Tour the workspace layout, sidebar controls, and project switching.
-• Master the Plus (+) menu to bring in files, pre-existing agents, and tools.
-• Customize the visual aesthetic with Studio Theme presets.
+• Understand how Architect connects to Lyzr Agent Studio.
+• Learn why Architect agents are not black-box silos, but inspectable Studio assets.
+• Explore the transition from rapid prompt creation to visual Studio customization.
 
 OVERVIEW
-Navigate the Architect builder workspace with confidence. Learn how the sidebar organizes your active applications, how the Plus menu serves as your ingestion portal for external assets, and how built-in themes give your app a polished look in seconds.
+The defining superpower of Lyzr Architect is that every agent it creates is a real Lyzr Studio agent. This means nothing is locked in a proprietary closed loop—you can open any agent generated by Architect directly inside Lyzr Agent Studio to inspect prompts, attach tools, configure knowledge bases, and modify governance.
 
 STEP-BY-STEP WALKTHROUGH
-1. Explore the left-hand navigation sidebar and active app switcher.
-2. Click the Plus (+) button in the prompt box to inspect file upload and agent import options.
-3. Cycle through Studio Themes to select dark, light, and branded styling.
+1. Inspect the agents generated by Architect.
+2. Cross-reference the agent IDs in your Lyzr Agent Studio dashboard.
+3. Modify model parameters, guardrails, and instructions visually in Studio whenever deeper customization is needed.
 
 KEY TAKEAWAYS
-• The Plus menu is the central portal for attaching context and external assets.
-• Themes allow rapid UI branding directly inside the builder.
+• Zero lock-in: Architect apps are powered by standard Lyzr Studio agents.
+• You have full granular control to refine and extend generated agents at any time.
 ```
 
 ---
 
-#### 📖 Lesson 04: The Four Core Tabs & Engine Room
-- **Lesson Title to Copy:** `📖 Lesson 04: The Four Core Tabs & Engine Room`
-- **Video Filename:** `04a The Four Core Tabs & Engine Room.mp4`
-- **Duration:** 2m 59s
-- **Descript Cut Range:** `03:54.87 to 06:54.46`
+#### 📖 Lesson 04: What It Is Good For
+- **Lesson Title to Copy:** `📖 Lesson 04: What It Is Good For`
+- **Video Filename:** `04a What It Is Good For.mp4`
+- **Duration:** 55s
+- **Descript Cut Range:** `01:23.65` to `02:18.77`
+- **Suggested Handout:** `04b What It Is Good For Notes.pdf`
 
 **Copy the exact block below into Thinkific Lesson Text Block:**
 ```text
 LEARNING OBJECTIVES
-• Master the four core tabs: Plan, Database, Agents (Engine Room), and Live App.
-• Read and modify the PRD in the Plan tab before provisioning code.
-• Observe the Agents Engine Room delegating tasks and test the live application.
+• Identify the highest-leverage use cases for Lyzr Architect.
+• Differentiate between quick internal tools, customer-facing workflows, and departmental copilots.
+• Understand when to use Architect vs. low-code Studio vs. the Python ADK.
 
 OVERVIEW
-The heart of Architect lives in its four core tabs. The Plan tab holds your product specification, Database tracks your relational records, the Agents Engine Room displays the multi-agent delegation log, and the Live App tab provides an interactive preview.
+Architect excels when speed-to-value is paramount: operational dashboards, document review copilots, customer support triage bots, lead qualification pipelines, and departmental automated assistants. It empowers business stakeholders, product managers, and rapid prototypers to build real apps in minutes without waiting for engineering sprint cycles.
 
 STEP-BY-STEP WALKTHROUGH
-1. Inspect the Plan Tab to review the auto-generated PRD and feature spec.
-2. Navigate to the Agents tab (Engine Room) to see agent delegation and schema creation logs.
-3. Switch to the Live App tab to test interactive user flows in real time.
+1. Evaluate your team's operational bottlenecks (e.g., invoice review, resume screening, competitive monitoring).
+2. Draft a functional problem statement describing inputs, processing steps, and desired outputs.
+3. Feed the brief into Architect to stand up a functional working application immediately.
 
 KEY TAKEAWAYS
-• The Plan tab is your high-leverage architectural contract.
-• The Engine Room reveals real-time agent execution and multi-agent coordination.
-```
-
----
-
-#### 📖 Lesson 05: Prompt Anatomy, Library & Production Economics
-- **Lesson Title to Copy:** `📖 Lesson 05: Prompt Anatomy, Library & Production Economics`
-- **Video Filename:** `05a Prompt Anatomy Library & Economics.mp4`
-- **Duration:** 5m 40s
-- **Descript Cut Range:** `06:54.05 to 12:34.21`
-
-**Copy the exact block below into Thinkific Lesson Text Block:**
-```text
-LEARNING OBJECTIVES
-• Deconstruct high-performing prompt anatomy and leverage the built-in Prompt Library.
-• Understand trade-offs between rapid prototyping and deep architectural specs.
-• Master Agent Processing Credits (APC) usage and cost optimization habits.
-
-OVERVIEW
-Effective prompting in Architect is a craft. Explore Lyzr's best-in-class Prompt Library, dissect the components of an effective build prompt, and learn how transparent APC pricing ensures predictable costs as you transition to production.
-
-STEP-BY-STEP WALKTHROUGH
-1. Browse the Prompt Library for pre-built app architectures.
-2. Analyze prompt structure: user persona, data schema, agent tasks, and human gates.
-3. Inspect the Usage & Billing dashboard to track APC credit spend across model tiers.
-
-KEY TAKEAWAYS
-• Specific prompts generate cleaner architectures on the first pass.
-• APC credit monitoring keeps operating expenses predictable.
+• Architect dramatically shrinks the time from idea to working software.
+• Ideal for internal tools, POCs, departmental workflows, and rapid customer demos.
 ```
 
 ---
 
 
 ================================================================================
-### 📂 Module 2: Planning, Building & Design (AR 02)
-**Chapter Name to Copy:** `📂 Module 2: Planning, Building & Design (AR 02)`
-
+### 📂 Chapter 02: Workspace Setup & Interface Tour
+**Chapter Name to Copy:** `📂 Chapter 02: Workspace Setup & Interface Tour`
 ================================================================================
 
-#### 📖 Lesson 06: The First Prompt & The AI Interview
-- **Lesson Title to Copy:** `📖 Lesson 06: The First Prompt & The AI Interview`
-- **Video Filename:** `06a The First Prompt & The AI Interview.mp4`
-- **Duration:** 4m 37s
-- **Descript Cut Range:** `00:00.30 to 04:37.90`
+#### 📖 Lesson 05: Workspace Setup
+- **Lesson Title to Copy:** `📖 Lesson 05: Workspace Setup`
+- **Video Filename:** `05a Workspace Setup.mp4`
+- **Duration:** 33s
+- **Descript Cut Range:** `02:18.41` to `02:51.11`
+- **Suggested Handout:** `05b Workspace Setup Notes.pdf`
 
 **Copy the exact block below into Thinkific Lesson Text Block:**
 ```text
 LEARNING OBJECTIVES
-• Understand why your first prompt is an invitation to an architectural interview, not a final spec.
-• Compare short 4-line prompts against 450-word detailed specifications.
-• Answer high-leverage architectural questions regarding data storage and human sign-off.
+• Set up your Architect account and workspace environment.
+• Understand team workspace permissions and organizational context.
+• Ensure proper API keys and LLM provider credentials are ready.
 
 OVERVIEW
-When you submit your initial prompt in Architect, it does not blindly generate code; it interviews you. In this lesson, we write a 4-line prompt for our Vendor Renewal Desk and participate in the AI interview, making non-negotiable decisions on data persistence and human approval gates.
+Setup in Architect is near-instantaneous. Signing in connects you directly to your organization's Lyzr workspace, sharing provider credentials, credit allowances, and agent libraries seamlessly across your team.
 
 STEP-BY-STEP WALKTHROUGH
-1. Enter the 4-line Vendor Renewal Desk prompt in the build chat.
-2. Observe the AI interview asking critical architectural questions instead of superficial styling questions.
-3. Select sample data to validate the prototype before wiring to real enterprise databases.
-4. Enforce that cancellation emails must be signed off by a human before transmission.
+1. Navigate to architect.new and authenticate with your Lyzr organizational account.
+2. Confirm your active organization and workspace in the top navigation.
+3. Verify available balance and model credentials before starting generation.
 
 KEY TAKEAWAYS
-• Your first prompt opens a conversation with an architectural planner.
-• Decisions made during the interview determine data flow and security boundaries.
+• Zero environment setup or complex dependency installation required.
+• Integrated authentication connects directly to your shared Lyzr enterprise organization.
 ```
 
 ---
 
-#### 📖 Lesson 07: Arguing with the Plan Before Building
-- **Lesson Title to Copy:** `📖 Lesson 07: Arguing with the Plan Before Building`
-- **Video Filename:** `07a Arguing with the Plan Before Building.mp4`
-- **Duration:** 2m 44s
-- **Descript Cut Range:** `04:37.90 to 07:21.80`
+#### 📖 Lesson 06: Sidebar & Interface Tour
+- **Lesson Title to Copy:** `📖 Lesson 06: Sidebar & Interface Tour`
+- **Video Filename:** `06a Sidebar & Interface Tour.mp4`
+- **Duration:** 28s
+- **Descript Cut Range:** `02:50.95` to `03:19.32`
+- **Suggested Handout:** `06b Sidebar & Interface Tour Notes.pdf`
 
 **Copy the exact block below into Thinkific Lesson Text Block:**
 ```text
 LEARNING OBJECTIVES
-• Review the generated PRD in the Plan tab before any code is generated.
-• Identify data sources detected and agent permissions.
-• Edit and constrain features while changes are completely free and instantaneous.
+• Navigate the core Architect workspace layout.
+• Understand project organization, history, and active app sessions.
+• Familiarize yourself with the primary navigation elements.
 
 OVERVIEW
-Editing a text paragraph costs nothing; changing your mind after five agents are provisioned costs a full rebuild. Learn how to 'argue with the plan' in the Plan tab, refining contract sorting rules and safety constraints before triggering the build.
+A tour of the Architect sidebar and interface. Learn how projects are cataloged, how recent builds are retrieved, and where key configuration options reside for effortless day-to-day navigation.
 
 STEP-BY-STEP WALKTHROUGH
-1. Open the Plan tab to review the generated PRD, schema, and agent responsibilities.
-2. Click 'Edit' on the Plan tab to modify feature requirements (e.g., sorting urgent renewals to the top).
-3. Verify that Architect redraws the affected architectural sections dynamically.
+1. Explore the left sidebar containing recent project builds and app history.
+2. Use the search bar to locate previously generated agentic apps.
+3. Toggle between workspace settings, prompt libraries, and the main canvas.
 
 KEY TAKEAWAYS
-• The Plan tab is the highest leverage 90 seconds in the entire build process.
-• Catching structural flaws in the plan avoids expensive downstream rework.
+• All generated applications are automatically versioned and saved in your project history.
+• Clean sidebar navigation allows seamless switching between different agent builds.
 ```
 
 ---
 
-#### 📖 Lesson 08: Starting the Build & Agent Delegation
-- **Lesson Title to Copy:** `📖 Lesson 08: Starting the Build & Agent Delegation`
-- **Video Filename:** `08a Starting the Build & Agent Delegation.mp4`
-- **Duration:** 2m 29s
-- **Descript Cut Range:** `07:21.80 to 09:51.10`
+#### 📖 Lesson 07: The Plus Menu
+- **Lesson Title to Copy:** `📖 Lesson 07: The Plus Menu`
+- **Video Filename:** `07a The Plus Menu.mp4`
+- **Duration:** 21s
+- **Descript Cut Range:** `03:19.16` to `03:40.39`
+- **Suggested Handout:** `07b The Plus Menu Notes.pdf`
 
 **Copy the exact block below into Thinkific Lesson Text Block:**
 ```text
 LEARNING OBJECTIVES
-• Initiate the multi-agent build process from the approved plan.
-• Observe the multi-agent delegation log as agents provision database schemas, pages, and tools.
-• Inspect the initial working application in the interactive live preview.
+• Discover quick actions available in the prompt bar Plus menu.
+• Learn how to attach contextual documents and external references to prompts.
+• Utilize preset modifiers to steer app generation behavior.
 
 OVERVIEW
-With the plan locked in, we launch the build. Watch the left-hand pane display real-time agent delegation as specialized agents create PostgreSQL schemas, generate React components, and wire agent execution logic.
+The Plus menu inside the prompt bar expands beyond simple text entry. It allows you to attach sample data, upload context documents, choose design system constraints, and inject specialized operational directives before hitting generate.
 
 STEP-BY-STEP WALKTHROUGH
-1. Select what artifacts to carry into the build (Plan required, mock-ups and skill files optional).
-2. Click 'Build' and monitor the multi-agent delegation stream.
-3. Interact with the provisioned Vendor Renewal Desk application in the preview window.
+1. Click the + icon in the main prompt input bar.
+2. Review available attachment options (reference documents, sample CSVs, schema definitions).
+3. Select modifier tags to guide domain focus (e.g., Financial, Healthcare, Support).
 
 KEY TAKEAWAYS
-• Architect orchestrates multiple specialist agents to assemble full-stack code.
-• The initial build produces an interactive, functional application ready for refinement.
+• Ground your prompt with concrete reference files and schemas using the Plus menu.
+• Enriches agent planning with real context from the first interaction.
 ```
 
 ---
 
-#### 📖 Lesson 09: Iterative Refinement & Proposal Mode
-- **Lesson Title to Copy:** `📖 Lesson 09: Iterative Refinement & Proposal Mode`
-- **Video Filename:** `09a Iterative Refinement & Proposal Mode.mp4`
-- **Duration:** 4m 28s
-- **Descript Cut Range:** `09:51.10 to 14:19.80`
+#### 📖 Lesson 08: Studio Themes
+- **Lesson Title to Copy:** `📖 Lesson 08: Studio Themes`
+- **Video Filename:** `08a Studio Themes.mp4`
+- **Duration:** 15s
+- **Descript Cut Range:** `03:40.18` to `03:55.08`
+- **Suggested Handout:** `08b Studio Themes Notes.pdf`
 
 **Copy the exact block below into Thinkific Lesson Text Block:**
 ```text
 LEARNING OBJECTIVES
-• Master the golden rule of prompting: 'Vague about how, specific about what done means.'
-• Leverage Proposal Mode to inspect proposed file changes before committing.
-• Reject unnecessary complexity and keep UI/logic focused on user goals.
+• Customize the visual aesthetic and color palette of generated applications.
+• Apply branded themes to match enterprise corporate identities.
+• Switch between light, dark, and custom UI styling instantly.
 
 OVERVIEW
-Building the first 80% of an app is fast; the remaining 20% requires disciplined refinement. Discover Architect's Proposal Mode, which reads your codebase and proposes changes without touching files, allowing you to debate and review diffs before applying them.
+Architect makes UI styling effortless. Through the Themes selector, you can dynamically switch color themes, font stylings, and layout accents so the generated application feels native to your company brand.
 
 STEP-BY-STEP WALKTHROUGH
-1. Submit an iterative request: 'Add a visual renewal notice badge and calculate days until deadline.'
-2. Inspect the proposed architectural changes in Proposal Mode.
-3. Debate unnecessary features (e.g., rejecting complex currency pickers in favor of clean defaults).
-4. Approve and merge the verified changes into the live app.
+1. Click the Themes dropdown in the top control bar.
+2. Preview available themes across dark mode, light mode, and high-contrast palettes.
+3. Select your desired theme to immediately re-skin the live application interface.
 
 KEY TAKEAWAYS
-• Be specific about outcomes, not implementation details.
-• Proposal Mode ensures zero accidental code breakage during iteration.
-```
-
----
-
-#### 📖 Lesson 10: Verification, Custom Styling & Environment Secrets
-- **Lesson Title to Copy:** `📖 Lesson 10: Verification, Custom Styling & Environment Secrets`
-- **Video Filename:** `10a Verification Styling & Secrets.mp4`
-- **Duration:** 7m 39s
-- **Descript Cut Range:** `14:19.80 to 21:59.50`
-
-**Copy the exact block below into Thinkific Lesson Text Block:**
-```text
-LEARNING OBJECTIVES
-• Run automated verification to test agent configuration against instructions.
-• Apply custom global CSS and theme styling for bespoke enterprise branding.
-• Manage environment variables and encrypted API secrets securely.
-
-OVERVIEW
-The final stage of the build process involves rigorous verification, aesthetic polishing, and security hardening. Learn how Architect verifies that agents follow their system prompts, how to inject custom Tailwind/CSS styles, and how secrets are encrypted at rest.
-
-STEP-BY-STEP WALKTHROUGH
-1. Run the automated verification suite to test agent prompt adherence and tool outputs.
-2. Paste custom styles into the `globals.css` editor to match company brand kits.
-3. Add external API tokens (LLM keys, email services) in the encrypted Environment Variables drawer.
-
-KEY TAKEAWAYS
-• Automated verification confirms agents perform as specified before user exposure.
-• Secrets are encrypted at rest and never leaked into client-side code.
+• One-click theming aligns generated tools with corporate branding standards.
+• Theme changes apply instantly across the entire application interface.
 ```
 
 ---
 
 
 ================================================================================
-### 📂 Module 3: Production, Integrations & Deployment (AR 03)
-**Chapter Name to Copy:** `📂 Module 3: Production, Integrations & Deployment (AR 03)`
-
+### 📂 Chapter 03: The Four Core Tabs & App Testing
+**Chapter Name to Copy:** `📂 Chapter 03: The Four Core Tabs & App Testing`
 ================================================================================
 
-#### 📖 Lesson 11: Welcome & The Three Acts Roadmap
-- **Lesson Title to Copy:** `📖 Lesson 11: Welcome & The Three Acts Roadmap`
-- **Video Filename:** `11a Welcome & The Three Acts Roadmap.mp4`
-- **Duration:** 1m 27s
-- **Descript Cut Range:** `00:00.07 to 01:26.85`
+#### 📖 Lesson 09: The Four Studio Tabs
+- **Lesson Title to Copy:** `📖 Lesson 09: The Four Studio Tabs`
+- **Video Filename:** `09a The Four Studio Tabs.mp4`
+- **Duration:** 10s
+- **Descript Cut Range:** `03:54.87` to `04:04.53`
+- **Suggested Handout:** `09b The Four Studio Tabs Notes.pdf`
 
 **Copy the exact block below into Thinkific Lesson Text Block:**
 ```text
 LEARNING OBJECTIVES
-• Understand the shift from rapid local prototyping to team-ready production software.
-• Master the overarching Three Acts framework: Feed It, Connect It, and Ship It.
-• Explore how Lyzr Architect builds full-stack applications with real enterprise agents.
+• Understand the 4 fundamental tabs of every Architect application project.
+• Map the mental model: Plan → Agents → App → Config.
+• Learn how the tab structure separates spec, backend, frontend, and settings.
 
 OVERVIEW
-Moving an AI application from a prototype on your personal screen to a production tool for your organization requires three distinct phases: feeding it private company data and documents, connecting it to enterprise tools and external APIs, and deploying it with security, observability, and cost guardrails.
+Every application in Architect is decomposed into four synchronized workspaces: the Plan tab (technical specification), the Agents tab (agent roles & prompts), the App tab (live UI & user testing), and the Config tab (environment settings).
 
 STEP-BY-STEP WALKTHROUGH
-1. Access the Vendor Renewal Desk workspace in Lyzr Architect.
-2. Review the three-act roadmap: Feed It (Knowledge & Artifacts), Connect It (Integrations & MCP), and Ship It (Deploy & Code Export).
-3. Identify the current limitations of basic prompt-only agents.
+1. Observe the four tab buttons at the top of the Architect canvas.
+2. Understand how changes made in one tab propagate across the others.
+3. Use the tab bar to inspect each layer of your application independently.
 
 KEY TAKEAWAYS
-• Production applications must graduate beyond prompt-only demos into grounded, integrated workflows.
-• The Three Acts provide a predictable playbook for taking any Architect app live.
+• The 4-tab model gives total visibility into every tier of your application.
+• No black boxes: inspect the plan, the engine, and the interface side by side.
 ```
 
 ---
 
-#### 📖 Lesson 12: Act 1: Knowledge Bases & PDF Contract Ingestion
-- **Lesson Title to Copy:** `📖 Lesson 12: Act 1: Knowledge Bases & PDF Contract Ingestion`
-- **Video Filename:** `12a Knowledge Bases & PDF Contract Ingestion.mp4`
-- **Duration:** 1m 24s
-- **Descript Cut Range:** `01:26.85 to 02:51.16`
+#### 📖 Lesson 10: The Plan Tab Spec
+- **Lesson Title to Copy:** `📖 Lesson 10: The Plan Tab Spec`
+- **Video Filename:** `10a The Plan Tab Spec.mp4`
+- **Duration:** 37s
+- **Descript Cut Range:** `04:04.18` to `04:40.90`
+- **Suggested Handout:** `10b The Plan Tab Spec Notes.pdf`
 
 **Copy the exact block below into Thinkific Lesson Text Block:**
 ```text
 LEARNING OBJECTIVES
-• Provision dedicated Knowledge Bases for agents via natural language prompt commands.
-• Ingest multi-page PDF contracts containing complex terms, notice windows, and renewal clauses.
-• Observe how agents quote verifiable document citations rather than hallucinating answers.
+• Deconstruct the Plan tab and its role as the application specification.
+• Learn how Architect defines system goals, user personas, and workflow states.
+• Edit the technical spec to steer regeneration and refine application logic.
 
 OVERVIEW
-Enterprise agents must read authentic source material rather than rely on snippets pasted into prompt fields. Attach a Knowledge Base to the Cancellation Terms agent, upload three real-world vendor contracts as PDFs, and inspect exact clause citations and auto-renew trap identification without manual vector DB setup.
+The Plan tab is the blueprint. Architect translates your initial natural language prompt into a comprehensive, structured product requirement document (PRD) detailing data models, state machines, and multi-agent coordination steps.
 
 STEP-BY-STEP WALKTHROUGH
-1. In the Architect build chat, enter: 'Give the cancellation terms agent a knowledge base of our contract PDFs. Let me attach PDFs to each vendor contract.'
-2. Locate the newly generated 'Knowledge Bases Available' card in the left architectural pane.
-3. Upload vendor contracts as multi-page PDFs directly to vendor records.
-4. Verify that the output brief directly quotes clauses, termination penalties, and notice periods.
+1. Open the Plan tab to review the generated architecture specification.
+2. Inspect sections: Target Audience, Functional Requirements, Agent Topology, and Edge Cases.
+3. Directly edit spec text to refine how agents should behave before running the app.
 
 KEY TAKEAWAYS
-• Architect abstracts manual RAG setup—no manual vector databases or chunking parameters needed.
-• Agents grounded in authentic PDFs produce verifiable, audit-proof contract briefs.
+• The Plan tab gives you an auditable architectural spec for your application.
+• Editing the plan provides precise deterministic control over agent behavior.
 ```
 
 ---
 
-#### 📖 Lesson 13: Act 1: Database Persistence & Artifact Documents
-- **Lesson Title to Copy:** `📖 Lesson 13: Act 1: Database Persistence & Artifact Documents`
-- **Video Filename:** `13a Database Persistence & Artifact Documents.mp4`
-- **Duration:** 1m 37s
-- **Descript Cut Range:** `02:51.16 to 04:28.30`
+#### 📖 Lesson 11: Agents Engine Room
+- **Lesson Title to Copy:** `📖 Lesson 11: Agents Engine Room`
+- **Video Filename:** `11a Agents Engine Room.mp4`
+- **Duration:** 41s
+- **Descript Cut Range:** `04:40.46` to `05:21.17`
+- **Suggested Handout:** `11b Agents Engine Room Notes.pdf`
 
 **Copy the exact block below into Thinkific Lesson Text Block:**
 ```text
 LEARNING OBJECTIVES
-• Understand how Architect automatically provisions structured relational databases.
-• Direct Architect to produce formatted downstream business documents as Artifacts.
-• Explore the four primary artifact types: feature specs, slide decks, research briefs, and Word/HTML files.
+• Inspect the underlying agents generated to power the application.
+• Review system instructions, role definitions, and tool assignments per agent.
+• Understand how multi-agent teams collaborate under the hood.
 
 OVERVIEW
-While Knowledge Bases handle unstructured documents, applications also require robust relational data persistence and polished outbound deliverables. Explore the Database tab and direct Architect to compile executive renewal briefs and presentation slide decks as Artifacts.
+The Agents tab is the engine room. Here, you see every autonomous agent created for your app. Architect automatically crafts specialized system instructions, assigns necessary tool permissions, and defines input/output contracts for each agent on the team.
 
 STEP-BY-STEP WALKTHROUGH
-1. Inspect the Database tab to view automatically provisioned relational tables and schemas.
-2. Prompt Architect to compile an executive renewal brief or technical specification.
-3. Switch to the Artifacts tab adjacent to Database to inspect and export generated slide decks or Word documents.
+1. Switch to the Agents tab to view the roster of active agents.
+2. Click on an individual agent to review its detailed system prompt.
+3. Inspect attached tools, memory stores, and model parameters.
 
 KEY TAKEAWAYS
-• Unstructured document retrieval and structured relational querying seamlessly coexist in Architect.
-• Artifacts turn raw agent reasoning into professional, shareable deliverables for stakeholders.
+• Each agent has a clear, focused role (e.g., Triage, Analysis, Reporting).
+• All prompts and instructions are fully transparent and editable.
 ```
 
 ---
 
-#### 📖 Lesson 14: Act 2: Integrations Catalog, Gmail & Approval Gate
-- **Lesson Title to Copy:** `📖 Lesson 14: Act 2: Integrations Catalog, Gmail & Approval Gate`
-- **Video Filename:** `14a Integrations Catalog Gmail & Approval Gate.mp4`
-- **Duration:** 2m 28s
-- **Descript Cut Range:** `04:28.30 to 06:56.78`
+#### 📖 Lesson 12: App Live Run & Testing
+- **Lesson Title to Copy:** `📖 Lesson 12: App Live Run & Testing`
+- **Video Filename:** `12a App Live Run & Testing.mp4`
+- **Duration:** 1m 34s
+- **Descript Cut Range:** `05:20.87` to `06:54.46`
+- **Suggested Handout:** `12b App Live Run & Testing Notes.pdf`
 
 **Copy the exact block below into Thinkific Lesson Text Block:**
 ```text
 LEARNING OBJECTIVES
-• Connect external accounts using standard OAuth flows (e.g., Google Workspace / Gmail).
-• Enable agents to trigger real-world communication actions from live app interfaces.
-• Implement Human-in-the-Loop (HITL) approval gates to prevent unverified external actions.
+• Interact with the live, generated front-end application in real time.
+• Execute test inputs, file uploads, and conversation flows.
+• Observe live agent execution traces and verify end-to-end functionality.
 
 OVERVIEW
-Connect Gmail to our Vendor Renewal Desk, complete user authorization, and execute a live renegotiation email sent directly from a real mailbox. Emphasize the vital architectural pattern: the Human-in-the-Loop gate—where the agent drafts the negotiation, but a human must explicitly approve before sending.
+The App tab provides a live, fully interactive web application ready to test immediately. Run realistic user inputs, upload sample documents, submit forms, and watch the underlying agents process requests and render responses.
 
 STEP-BY-STEP WALKTHROUGH
-1. Open the Integrations catalog and click 'Connect with Google' to initiate OAuth permission granting.
-2. In the live app, generate a renegotiation email draft.
-3. Observe the Human-in-the-Loop approval dialog showing recipient, subject line, and proposed terms.
-4. Click 'Approve & Send via Gmail' and verify transmission in your real Sent mailbox.
+1. Navigate to the App tab to view the rendered user interface.
+2. Submit a realistic test query or data payload into the app form.
+3. Watch the live execution spinner and inspect the formatted response output.
+4. Test edge cases to verify input validation and agent reasoning accuracy.
 
 KEY TAKEAWAYS
-• Pre-built catalog integrations provide instant connectivity to core SaaS platforms.
-• Anything that touches the outside world must sit behind a human approval gate.
+• Zero deployment delay: test a fully functional web app within seconds of generation.
+• Live feedback loop enables rapid iterative tuning of prompts and specifications.
 ```
 
 ---
 
-#### 📖 Lesson 15: Act 2: Beyond the Catalog — MCP Servers & Custom Tools
-- **Lesson Title to Copy:** `📖 Lesson 15: Act 2: Beyond the Catalog — MCP Servers & Custom Tools`
-- **Video Filename:** `15a Beyond Catalog MCP & Custom Tools.mp4`
-- **Duration:** 1m 30s
-- **Descript Cut Range:** `06:56.78 to 08:26.41`
+
+================================================================================
+### 📂 Chapter 04: Prompt Library & Prompt Architecture
+**Chapter Name to Copy:** `📂 Chapter 04: Prompt Library & Prompt Architecture`
+================================================================================
+
+#### 📖 Lesson 13: The Prompt Library
+- **Lesson Title to Copy:** `📖 Lesson 13: The Prompt Library`
+- **Video Filename:** `13a The Prompt Library.mp4`
+- **Duration:** 21s
+- **Descript Cut Range:** `06:54.05` to `07:15.14`
+- **Suggested Handout:** `13b The Prompt Library Notes.pdf`
 
 **Copy the exact block below into Thinkific Lesson Text Block:**
 ```text
 LEARNING OBJECTIVES
-• Connect private internal APIs and vertical SaaS tools outside the standard catalog.
-• Configure Model Context Protocol (MCP) servers with URL and authentication tokens.
-• Import OpenAPI / Swagger schemas to automatically generate custom tool interfaces.
+• Browse curated application prompts across various enterprise domains.
+• Learn how high-performing prompt templates are constructed.
+• Use library templates as springboards for custom business tools.
 
 OVERVIEW
-When workflows require proprietary microservices or niche SaaS platforms, Architect provides two universal extension doors: Model Context Protocol (MCP) servers and custom OpenAPI/HTTP tools. Learn how both allow agents to interact with any software service with zero bespoke code.
+Never start from a blank page. The Prompt Library contains proven, tested prompts across customer support, marketing, HR, finance, engineering, and legal operations to kickstart your next build.
 
 STEP-BY-STEP WALKTHROUGH
-1. Click the Plus (+) button in the chat and select 'Add MCP Server'.
-2. Configure server name, endpoint URL, and authentication headers.
-3. Alternatively, select 'Add Custom Tool' and provide an OpenAPI Swagger schema.
-4. Instruct the agent in plain English how to query the custom endpoint.
+1. Open the Prompt Library from the navigation menu.
+2. Filter by functional department (e.g., Sales, Operations, Product).
+3. Click "Use Template" on a curated app prompt to populate your workspace.
 
 KEY TAKEAWAYS
-• The integration ladder runs from Catalog Tool → MCP Server → Custom OpenAPI Schema.
-• All three integration styles share the same natural language orchestration interface.
+• The Prompt Library accelerates building with enterprise-tested blueprints.
+• Provides proven patterns for multi-agent prompt structuring.
 ```
 
 ---
 
-#### 📖 Lesson 16: Act 3: One-Click Cloud Deployment & The 3 Sharing Doors
-- **Lesson Title to Copy:** `📖 Lesson 16: Act 3: One-Click Cloud Deployment & The 3 Sharing Doors`
-- **Video Filename:** `16a One-Click Deployment & 3 Sharing Doors.mp4`
-- **Duration:** 1m 53s
-- **Descript Cut Range:** `08:26.41 to 10:19.10`
+#### 📖 Lesson 14: Prompt Reveal
+- **Lesson Title to Copy:** `📖 Lesson 14: Prompt Reveal`
+- **Video Filename:** `14a Prompt Reveal.mp4`
+- **Duration:** 23s
+- **Descript Cut Range:** `07:14.92` to `07:37.42`
+- **Suggested Handout:** `14b Prompt Reveal Notes.pdf`
 
 **Copy the exact block below into Thinkific Lesson Text Block:**
 ```text
 LEARNING OBJECTIVES
-• Graduate applications from local sandboxes to managed production cloud URLs.
-• Master the Three Sharing Doors: Teammate Builder, Client Web Link, and Public Marketplace.
-• Configure role-based permissions and public listing visibility toggles.
+• Inspect the underlying system prompts generated by Architect behind the scenes.
+• Understand how natural language briefs are expanded into structured directives.
+• Learn how prompt expansion prevents hallucinations and ensures predictable output.
 
 OVERVIEW
-Architect eliminates DevOps complexity through one-click cloud deployment, instantly provisioning managed hosting, database replication, and agent infrastructure. We then examine the Three Sharing Doors to govern who accesses the application and under what permissions.
+When you click generate, Architect performs sophisticated prompt expansion. In this lesson, we reveal the exact prompt engineering techniques used to turn a short phrase into robust, multi-paragraph production instructions.
 
 STEP-BY-STEP WALKTHROUGH
-1. Click the 'Deploy' button in the upper right corner of the workspace.
-2. Launch the live application to its unique public production URL.
-3. Explore Door 1 (Teammates): Grant edit/builder privileges via email invitation.
-4. Explore Door 2 (Clients/Users): Share the clean end-user application URL for read/run access.
-5. Explore Door 3 (Marketplace): Toggle public listing to feature your app across the global directory.
+1. Trigger prompt expansion on a sample brief.
+2. Compare the raw user input with the generated system prompt.
+3. Observe how edge cases, format constraints, and safety guidelines are injected automatically.
 
 KEY TAKEAWAYS
-• Deployment handles frontend hosting, relational databases, and multi-agent backends with a single click.
-• Three distinct sharing models ensure appropriate boundaries between creators, users, and the public.
+• Architect automatically applies expert prompt engineering best practices.
+• Reduces ambiguous instructions into crisp, deterministic agent behaviors.
 ```
 
 ---
 
-#### 📖 Lesson 17: Act 3: Eject to Code, Guardrails & Credit Habits
-- **Lesson Title to Copy:** `📖 Lesson 17: Act 3: Eject to Code, Guardrails & Credit Habits`
-- **Video Filename:** `17a Eject to Code Guardrails & Credits.mp4`
-- **Duration:** 2m 26s
-- **Descript Cut Range:** `10:19.10 to 12:45.56`
+#### 📖 Lesson 15: Prompt Anatomy & Architecture
+- **Lesson Title to Copy:** `📖 Lesson 15: Prompt Anatomy & Architecture`
+- **Video Filename:** `15a Prompt Anatomy & Architecture.mp4`
+- **Duration:** 1m 07s
+- **Descript Cut Range:** `07:37.17` to `08:44.24`
+- **Suggested Handout:** `15b Prompt Anatomy & Architecture Notes.pdf`
 
 **Copy the exact block below into Thinkific Lesson Text Block:**
 ```text
 LEARNING OBJECTIVES
-• Export the entire application as a standard Next.js, React, and Tailwind codebase via GitHub sync.
-• Enforce enterprise security, compliance, and PII guardrails via the Lyzr Studio engine.
-• Adopt the 4 Golden Habits for optimizing Agent Processing Credit (APC) consumption.
+• Master the structural anatomy of high-performing agent prompts.
+• Learn the 5 critical components: Persona, Objective, Constraints, Tools, and Output Schema.
+• Apply architectural prompt patterns to your own custom agent workflows.
 
 OVERVIEW
-Eliminate vendor lock-in by ejecting your application directly to a GitHub repository as an idiomatic Next.js web application. Review underlying Lyzr Studio guardrails (PII masking, hallucination filters) and master the 4 operational habits to keep APC credit spend lean.
+Great agents require great prompt anatomy. Deconstruct the five indispensable building blocks of production prompts: Role definition, Task boundary, Contextual rules, Error recovery strategies, and Structured output formatting.
 
 STEP-BY-STEP WALKTHROUGH
-1. Authorize your GitHub organization and synchronize the full Next.js codebase.
-2. Verify enterprise safety guardrails: PII detection, topic adherence, and hallucination containment.
-3. Practice the 4 Credit Habits: lean prompts, smart model routing, strict human approval gates, and pruned knowledge bases.
+1. Review the 5-part prompt architecture template.
+2. Analyze how each section constrains the LLM to prevent off-topic drift.
+3. Practice refactoring a vague prompt into an architecturally sound specification.
 
 KEY TAKEAWAYS
-• You never hit a ceiling with Architect—applications are real, idiomatic Next.js codebases.
-• Disciplined prompt scoping and model routing ensure cost-effective, predictable APC economics.
+• Production prompts require strict structural separation of role, constraints, and schemas.
+• Well-architected prompts yield consistent, reproducible agent executions.
+```
+
+---
+
+
+================================================================================
+### 📂 Chapter 05: Production Economics, Governance & Next Steps
+**Chapter Name to Copy:** `📂 Chapter 05: Production Economics, Governance & Next Steps`
+================================================================================
+
+#### 📖 Lesson 16: The Honest Bit & Trade-offs
+- **Lesson Title to Copy:** `📖 Lesson 16: The Honest Bit & Trade-offs`
+- **Video Filename:** `16a The Honest Bit & Trade-offs.mp4`
+- **Duration:** 1m 13s
+- **Descript Cut Range:** `08:43.87` to `09:56.80`
+- **Suggested Handout:** `16b The Honest Bit & Trade-offs Notes.pdf`
+
+**Copy the exact block below into Thinkific Lesson Text Block:**
+```text
+LEARNING OBJECTIVES
+• Understand the realistic boundaries and trade-offs of prompt-generated applications.
+• Recognize when an app outgrows Architect and needs Agent Studio or the ADK.
+• Adopt best practices for transitioning from prototype to hardened enterprise service.
+
+OVERVIEW
+An honest, transparent discussion on software trade-offs. While Architect stands up 80-90% of an application in seconds, deep custom integrations, bespoke legacy database queries, and niche algorithmic pipelines often require transition into Studio or code.
+
+STEP-BY-STEP WALKTHROUGH
+1. Identify common architectural limits (complex stateful DB migrations, high-throughput microservices).
+2. Learn the migration path: export agents to Lyzr Agent Studio with a single click.
+3. Embed generated agents into Python or TypeScript codebases via API endpoints.
+
+KEY TAKEAWAYS
+• Use Architect for rapid build and validation; use Studio & ADK for deep custom engineering.
+• Seamless export pathways ensure you never hit an architectural dead end.
+```
+
+---
+
+#### 📖 Lesson 17: Credits & Usage
+- **Lesson Title to Copy:** `📖 Lesson 17: Credits & Usage`
+- **Video Filename:** `17a Credits & Usage.mp4`
+- **Duration:** 1m 59s
+- **Descript Cut Range:** `09:56.49` to `11:55.52`
+- **Suggested Handout:** `17b Credits & Usage Notes.pdf`
+
+**Copy the exact block below into Thinkific Lesson Text Block:**
+```text
+LEARNING OBJECTIVES
+• Understand Lyzr's APC (Agent Processing Credits) consumption model.
+• Track credit usage across LLM model calls, tool executions, and prompt generation.
+• Optimize credit spend across development, testing, and production phases.
+
+OVERVIEW
+Lyzr operates on transparent, forecastable Agent Processing Credits (APC). Learn exactly what operations consume credits (prompt synthesis, agent generation, live chat runs) and how to monitor organizational quotas effectively.
+
+STEP-BY-STEP WALKTHROUGH
+1. Access the Usage and Billing dashboard in your workspace.
+2. Inspect credit consumption per application run and model tier.
+3. Apply model selection strategies (e.g., using fast/efficient models for triage, frontier models for deep reasoning) to maximize efficiency.
+
+KEY TAKEAWAYS
+• APC pricing provides predictable, usage-based forecasting for agent operations.
+• Fine-tune model assignments in Studio to drastically cut operating costs.
+```
+
+---
+
+#### 📖 Lesson 18: Wrap-up & Next Steps
+- **Lesson Title to Copy:** `📖 Lesson 18: Wrap-up & Next Steps`
+- **Video Filename:** `18a Wrap-up & Next Steps.mp4`
+- **Duration:** 39s
+- **Descript Cut Range:** `11:55.19` to `12:34.21`
+- **Suggested Handout:** `18b Wrap-up & Next Steps Notes.pdf`
+
+**Copy the exact block below into Thinkific Lesson Text Block:**
+```text
+LEARNING OBJECTIVES
+• Review key accomplishments from the Architect Fundamentals course.
+• Identify next learning paths: Lyzr Agent Studio and the Python ADK.
+• Share your generated applications with teammates and stakeholders.
+
+OVERVIEW
+Congratulations! You now master the craft of building agentic applications from scratch in Lyzr Architect. Review key milestones and explore recommended next steps across the Lyzr University curriculum.
+
+STEP-BY-STEP WALKTHROUGH
+1. Copy the shareable preview link of your completed application.
+2. Explore the Lyzr Agent Studio track to deepen your knowledge of multi-agent governance.
+3. Join the Lyzr Community to showcase your creations and collaborate with other builders.
+
+KEY TAKEAWAYS
+• You are equipped to rapidly design, test, and ship agentic software in Architect.
+• Continue your journey into visual orchestration in Studio and code engineering with ADK.
 ```
 
 ---
